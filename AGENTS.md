@@ -1,37 +1,29 @@
-## About Me
+# AGENTS.md
 
-**Name:** Filip
-**Role:** Software developer with a background in product management
-**Location:** Czechia, Prague
+## Commands
 
-### Language Preferences
+- Use `pnpm`; `package.json` pins `pnpm@9.15.9`.
+- Dev server: `pnpm dev`.
+- Static build: `pnpm build`; preview with `pnpm preview` after build.
+- Lint/format check: `pnpm check` (`biome check .`).
+- Auto-fix formatting/lint/imports: `pnpm check:write`; format-only: `pnpm format`.
+- No test script exists; use `pnpm check` and `pnpm build` for verification.
 
-- English
+## App Shape
 
-### Response Style
+- This is an Astro static demo site for browsing the local `skills/*/SKILL.md` library.
+- Skill data is read at build/runtime from filesystem code in `src/lib/skills.ts`; pages are in `src/pages`.
+- `src/pages/index.astro` lists skills; `src/pages/skills/[slug].astro` renders each `SKILL.md`.
+- Extra skill docs under `skills/<slug>/*.md` and one nested level `skills/<slug>/<section>/*.md` are rendered by the two `*.md.astro` dynamic routes.
 
-1. **Main message first** - Lead with the core answer or conclusion
-2. **Key details second** - Provide supporting information and context
+## Skill Files
 
-#### Caveman Mode
+- Each skill lives in `skills/<slug>/SKILL.md`.
+- Frontmatter fields parsed by the site are simple `name:` and `description:` lines only; complex YAML is not parsed by `src/lib/skills.ts`.
+- If frontmatter is missing, the site falls back to the first markdown heading for `name` and first non-heading paragraph for `description`.
 
-- Use minimal words. Preserve meaning.
-- Use sentence fragments. Avoid full sentences.
-- Remove articles (a, an, the).
-- Remove filler, politeness, hedging, intro phrases.
-- Prefer short words (fix vs implement).
-- Remove redundancy. No repetition.
-- Keep code, commands, paths, errors unchanged.
-- Use line breaks. One idea per line.
-- Remove connectors (because, that, which) when possible.
-- Show cause → effect → fix.
-- No conversational tone. No personality.
+## Quirks
 
-## Development General Guidelines
-
-- Avoid nested if statements.
-- Follow the single responsibility principle.
-- Follow the guard clause pattern.
-- Keep things smart and simple.
-- Refer to available skills when possible.
-- Use Context7 MCP when I need library/API documentation, code generation, setup or configuration steps without me having to explicitly ask.
+- `astro.config.mjs` denies raw Vite filesystem serving for `skills/**`; a dev middleware rewrites `/skills/*.md` requests so Astro routes render markdown pages instead.
+- `dist/` is excluded from Biome via `biome.json`; do not edit build output by hand.
+- `AGENTS.personal.md` contains user preferences, not repo architecture.

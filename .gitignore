@@ -1,0 +1,33 @@
+node_modules/
+dist/
+.astro/
+.playwright-mcp/**/*
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Package managers
+.npm/
+.pnpm-store/
+
+# Test and coverage output
+coverage/
+test-results/
+playwright-report/

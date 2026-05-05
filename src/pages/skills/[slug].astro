@@ -1,0 +1,68 @@
+---
+import { getSkill, getSkills } from '../../lib/skills';
+import '../../styles/global.css';
+import { marked } from 'marked';
+
+export async function getStaticPaths() {
+  const skills = await getSkills();
+
+  return skills.map((skill) => ({
+    params: { slug: skill.slug }
+  }));
+}
+
+const { slug } = Astro.params;
+const skill = await getSkill(String(slug));
+const content = marked.parse(skill.body, { async: false });
+const installCommand = `npx skills add https://github.com/flpbalada/fb-skills --skill ${skill.slug}`;
+const githubUrl = `https://github.com/flpbalada/fb-skills/blob/main/${skill.relativePath}`;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='white'/%3E%3Crect x='3' y='3' width='10' height='10' fill='black'/%3E%3C/svg%3E" />
+    <title>{skill.name} | Local Skills</title>
+  </head>
+  <body>
+    <main class="shell">
+      <a class="back" href="/">Back to skills</a>
+
+      <section class="hero detail-hero">
+        <p class="eyebrow">{skill.relativePath}</p>
+        <h1>{skill.name}</h1>
+        <p>{skill.description}</p>
+        <div class="install-command" aria-label="Installation command">
+          <code>{installCommand}</code>
+          <button class="icon-button" data-copy={installCommand} aria-label="Copy install command" title="Copy install command">
+            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+              <rect x="9" y="9" width="10" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="2" />
+              <path d="M5 15.5V6.5A1.5 1.5 0 0 1 6.5 5h9" fill="none" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </button>
+        </div>
+        <div class="actions">
+          <button data-copy={skill.content}>Copy markdown</button>
+          <a class="github-link" href={githubUrl} aria-label={`Open ${skill.name} on GitHub`}>
+            <svg aria-hidden="true" viewBox="0 0 16 16" width="20" height="20">
+              <path
+                fill="currentColor"
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.62 7.62 0 0 1 8 3.86c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"
+              />
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </section>
+
+      <section aria-labelledby="source-heading">
+        <div class="section-title">
+          <h2 id="source-heading">Skill Docs</h2>
+        </div>
+        <article class="markdown" set:html={content} />
+      </section>
+    </main>
+    <script is:inline src="/copy.js"></script>
+  </body>
+</html>

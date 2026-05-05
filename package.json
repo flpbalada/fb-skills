@@ -1,0 +1,23 @@
+{
+  "name": "fb-skills-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.15.9",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "biome check .",
+    "check:write": "biome check --write .",
+    "format": "biome format --write ."
+  },
+  "dependencies": {
+    "astro": "^5.7.13",
+    "marked": "^15.0.12",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.14"
+  }
+}

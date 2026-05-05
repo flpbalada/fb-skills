@@ -1,0 +1,374 @@
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --panel: #ffffff;
+  --panel-strong: #f7f7f7;
+  --ink: #0a0a0a;
+  --muted: #5f5f5f;
+  --line: #d9d9d9;
+  --soft: #f2f2f2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+code,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: var(--ink);
+  color: var(--bg);
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 700;
+  padding: 0.6rem 0.85rem;
+}
+
+button:hover {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.icon-button {
+  align-items: center;
+  aspect-ratio: 1;
+  justify-content: center;
+  padding: 0;
+  width: 2.5rem;
+}
+
+.icon-button svg {
+  height: 1.1rem;
+  width: 1.1rem;
+}
+
+.primary-link,
+.github-link {
+  align-items: center;
+  border: 1px solid var(--ink);
+  display: inline-flex;
+  font-weight: 800;
+  gap: 0.5rem;
+  justify-content: center;
+  line-height: 1;
+  min-height: 2.75rem;
+  padding: 0.75rem 0.9rem;
+  text-decoration: none;
+}
+
+.primary-link {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.primary-link:hover,
+.github-link:hover {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.github-link:hover {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+input {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 0;
+  color: var(--ink);
+  padding: 0.8rem 0.9rem;
+  width: 100%;
+}
+
+input:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.shell {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: clamp(1rem, 3vw, 2rem) 1rem 4rem;
+}
+
+.hero,
+.skill-row,
+.markdown {
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.hero {
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  padding: clamp(1.25rem, 4vw, 2.25rem);
+}
+
+.detail-hero {
+  margin-top: 1rem;
+}
+
+.hero h1 {
+  max-width: 760px;
+  font-size: clamp(2.25rem, 6vw, 4rem);
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+  margin: 0 0 0.85rem;
+}
+
+.hero-heading {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.hero-heading h1 {
+  margin-bottom: 0.85rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: clamp(1rem, 1.6vw, 1.125rem);
+  max-width: 680px;
+  margin: 0;
+}
+
+.eyebrow {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  margin: 0 0 0.9rem;
+  text-transform: uppercase;
+}
+
+.section-title h2 {
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.actions,
+.install-command,
+.section-title {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.install-command {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  justify-content: space-between;
+  margin: 1.25rem 0 0.9rem;
+  padding: 0.75rem;
+}
+
+.install-command code {
+  color: var(--ink);
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.section-title {
+  justify-content: space-between;
+  margin: 2rem 0 0.9rem;
+}
+
+.section-title span {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.skill-list {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+
+.skill-row {
+  border-width: 0 0 1px;
+  display: grid;
+  gap: clamp(0.5rem, 2vw, 1.25rem);
+  grid-template-columns: minmax(11rem, 0.38fr) 1fr;
+  padding: 1rem 0;
+}
+
+.skill-row:hover {
+  background: var(--panel-strong);
+}
+
+.skill-row a {
+  font-size: 1rem;
+  font-weight: 850;
+  line-height: 1.35;
+}
+
+.skill-row p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0 0 0.4rem;
+}
+
+.skill-row code {
+  background: var(--soft);
+  border-radius: 0;
+  color: var(--muted);
+  display: inline-block;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  padding: 0.25rem 0.45rem;
+}
+
+.back {
+  color: var(--muted);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.markdown {
+  font-size: 1rem;
+  line-height: 1.7;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.markdown > *:first-child {
+  margin-top: 0;
+}
+
+.markdown > *:last-child {
+  margin-bottom: 0;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+  margin-bottom: 0.65em;
+  margin-top: 1.7em;
+}
+
+.markdown h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.markdown h2 {
+  font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+.markdown h3 {
+  font-size: 1.2rem;
+}
+
+.markdown p,
+.markdown li {
+  color: var(--muted);
+}
+
+.markdown table {
+  border-collapse: collapse;
+  display: block;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.markdown th,
+.markdown td {
+  border: 1px solid var(--line);
+  padding: 0.65rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.markdown th {
+  background: var(--soft);
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.markdown td {
+  color: var(--muted);
+}
+
+.markdown pre {
+  background: var(--ink);
+  color: var(--bg);
+  overflow: auto;
+  padding: 1rem;
+}
+
+.markdown code {
+  background: var(--soft);
+  padding: 0.12rem 0.28rem;
+}
+
+.markdown pre code {
+  background: transparent;
+  padding: 0;
+}
+
+@media (max-width: 680px) {
+  button {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .icon-button {
+    width: 2.5rem;
+  }
+
+  .skill-row {
+    grid-template-columns: 1fr;
+    padding: 0.9rem 0;
+  }
+}

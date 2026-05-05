@@ -1,0 +1,54 @@
+---
+import { marked } from 'marked';
+import { getSkill, getSkillDocument, getSkillDocuments } from '../../../lib/skills';
+import '../../../styles/global.css';
+
+export async function getStaticPaths() {
+  const documents = await getSkillDocuments();
+  const rootDocuments = documents.filter((document) => !document.path.includes('/'));
+
+  return rootDocuments.map((document) => ({
+    params: {
+      slug: document.slug,
+      document: document.path.replace(/\.md$/, '')
+    }
+  }));
+}
+
+const { slug, document: documentName } = Astro.params;
+const documentPath = `${String(documentName)}.md`;
+const skill = await getSkill(String(slug));
+const document = await getSkillDocument(String(slug), documentPath);
+const content = marked.parse(document.body, { async: false });
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='white'/%3E%3Crect x='3' y='3' width='10' height='10' fill='black'/%3E%3C/svg%3E" />
+    <title>{document.title} | {skill.name}</title>
+  </head>
+  <body>
+    <main class="shell">
+      <a class="back" href={`/skills/${skill.slug}/`}>Back to {skill.name}</a>
+
+      <section class="hero detail-hero">
+        <p class="eyebrow">{document.relativePath}</p>
+        <h1>{document.title}</h1>
+        <p>{skill.name}</p>
+        <div class="actions">
+          <button data-copy={document.content}>Copy markdown</button>
+        </div>
+      </section>
+
+      <section aria-labelledby="source-heading">
+        <div class="section-title">
+          <h2 id="source-heading">Document</h2>
+        </div>
+        <article class="markdown" set:html={content} />
+      </section>
+    </main>
+    <script is:inline src="/copy.js"></script>
+  </body>
+</html>
