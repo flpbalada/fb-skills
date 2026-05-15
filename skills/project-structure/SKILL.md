@@ -1,6 +1,6 @@
 ---
 name: project-structure
-description: Guides React/Next.js/TypeScript project organization using feature-based architecture. Use when structuring new projects, reorganizing codebases, or deciding where to place new code.
+description: Guides React, Next.js, and TypeScript project organization using feature-based architecture inspired by Bulletproof React. Use when structuring new projects, reorganizing codebases, deciding where new code belongs, preventing cross-feature imports, or enforcing shared -> features -> app dependency flow.
 ---
 
 # Project Structure: Feature-Based Architecture
@@ -39,6 +39,7 @@ Each feature is a self-contained module:
 ```
 src/features/users/
 ├── api/           # API requests & React Query hooks
+├── assets/        # Feature-specific static files
 ├── components/    # Feature-scoped UI components
 ├── hooks/         # Feature-scoped hooks
 ├── stores/        # Feature state (Zustand, etc.)
@@ -72,6 +73,8 @@ src/features/users/
 | Feature-specific component | `features/[name]/components/` | `features/users/components/UserCard.tsx` |
 | Reusable UI component | `components/` | `components/Button.tsx` |
 | Feature API calls | `features/[name]/api/` | `features/users/api/getUsers.ts` |
+| Shared API calls | `api/` or `lib/api/` | `api/client.ts`, `lib/api/users.ts` |
+| Feature asset | `features/[name]/assets/` | `features/users/assets/avatar-fallback.png` |
 | Shared utility | `utils/` | `utils/formatDate.ts` |
 | Feature utility | `features/[name]/utils/` | `features/users/utils/validateUser.ts` |
 | Global state | `stores/` | `stores/authStore.ts` |
@@ -145,6 +148,10 @@ module.exports = {
 ```
 
 ## Common Patterns
+
+### Shared API Folder
+
+Keep API calls in `features/[name]/api/` by default. Use a shared `api/` or `lib/api/` folder only when calls are reused across multiple features or the API surface is large enough to justify one central client layer.
 
 ### Feature API with React Query
 
