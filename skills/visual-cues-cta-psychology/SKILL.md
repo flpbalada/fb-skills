@@ -6,65 +6,68 @@ description:
   optimizing user attention flow through interfaces.
 ---
 
-# Visual Cues & CTA Psychology - Guiding User Attention
+# Visual Cues and CTA Psychology
 
-Visual cues leverage human attention and perception to guide user behavior and direct focus toward specific elements. Understanding how the visual system processes information enables designers to create more effective call-to-action experiences.
+## When to use
 
-## When to Use This Skill
+- Designing CTA hierarchy.
+- Improving landing page conversion flow.
+- Guiding attention through an interface.
+- Auditing button placement, labels, or visual emphasis.
 
-- Designing landing pages and conversion funnels
-- Creating button hierarchies and CTA elements
-- Optimizing user attention flow
-- Improving click-through rates
-- Designing hero sections and key content
-- Planning information architecture visually
+## Goal
 
-## Core Principle
+Make the next valuable action easy to notice, understand, and take.
 
-Human attention follows predictable patterns:
-1. **Evolutionary triggers** (faces, movement, eyes)
-2. **Learned patterns** (reading direction, F/Z)
-3. **Design signals** (size, color, contrast)
-4. **Directional cues** (arrows, gaze, lines)
+## Rules
 
-## Reading Pattern Quick Guide
+- One primary CTA per decision area.
+- Put CTA where user has enough context to act.
+- Use contrast for priority, not decoration.
+- Match CTA copy to user intent.
+- Keep secondary actions visually quieter.
+- Do not use visual cues to push unclear or risky actions.
 
-| Pattern | Use For | CTA Placement |
-|---------|---------|---------------|
-| **F-Pattern** | Text-heavy content | First 2 paragraphs, subheadings |
-| **Z-Pattern** | Visual/landing pages | Bottom-right (terminal area) |
-| **Gutenberg** | General pages | Top-left (start), bottom-right (end) |
+## Attention Cues
 
----
+- Position: above fold, end of section, or after proof.
+- Contrast: color, size, weight, whitespace.
+- Direction: gaze, arrows, layout flow.
+- Repetition: repeated CTA after major persuasion points.
+- Proximity: place reassurance near high-risk CTA.
 
-## Progressive Disclosure
+## Reading Patterns
 
-| Topic | File | When to Use |
-|-------|------|-------------|
-| Eye patterns & gaze | [context/gaze-patterns.md](context/gaze-patterns.md) | F-pattern, Z-pattern, thumb zones |
-| Visual cue types | [context/visual-cue-types.md](context/visual-cue-types.md) | Arrows, gaze direction, encapsulation |
-| CTA design | [context/cta-design.md](context/cta-design.md) | Button color, copy, placement |
+- F-pattern: text-heavy pages need clear left-edge anchors.
+- Z-pattern: simple landing pages can guide from headline to proof to CTA.
+- Layered scanning: headings, visuals, and CTAs should tell the story quickly.
 
-## CTA Quick Reference
+## CTA Copy
 
-### Color Psychology
+- Use action plus outcome.
+- Prefer specific verbs.
+- Avoid vague labels like `Submit` when intent matters.
+- Reduce perceived risk with context: trial, demo, preview, save.
 
-| Color | Effect | Best For |
-|-------|--------|----------|
-| Red | Urgency, action | Limited time CTAs |
-| Orange | Friendly, confident | Sign ups, trials |
-| Green | Safety, growth | Positive actions |
-| Blue | Trust, professional | B2B, financial |
-| Purple | Premium, creative | Luxury products |
+## Flow
 
-### Copy Patterns
+1. Identify primary user action.
+2. Identify hesitation before action.
+3. Check visual hierarchy.
+4. Place proof or reassurance near CTA.
+5. Rewrite CTA copy for action and outcome.
+6. Reduce competing actions.
+7. Define conversion metric.
 
-**First Person (Outperforms):** "Get My Free Guide", "Start My Trial"
-**Action + Benefit:** "Start Saving Today", "Get Instant Access"
-**Risk Reduction:** "Try Free for 14 Days", "No Credit Card Required"
+## Output
 
-## Resources
-
-- [Don't Make Me Think - Steve Krug](https://sensible.com/)
-- [Eye-Tracking Research - Nielsen Norman Group](https://www.nngroup.com/topic/eyetracking/)
-- [Gestalt Principles in UI Design](https://lawsofux.com/)
+```md
+## CTA Review
+- Primary action:
+- Current cue:
+- Friction:
+- Recommended placement:
+- Recommended copy:
+- Supporting proof:
+- Metric:
+```

@@ -1,104 +1,99 @@
 ---
 name: discuss-task
-description: Clarify ambiguous tasks before action. Use when goal, scope, success criteria, constraints, or risks are unclear.
+description: Clarify and stress-test ambiguous tasks before action. Use when goal, scope, success criteria, constraints, decisions, or risks are unclear.
 ---
 
-# Clarify Task
+# Discuss Task
 
-Discuss the task until clear enough to act.
+Clarify before acting. Walk decision branches one by one until next action is obvious.
 
-## Style
+## When to use
 
-- Caveman mode.
-- Minimal words. Preserve meaning.
-- Sentence fragments ok.
-- No filler, no long explanations.
-- One idea per line.
-- Prefer bullets over paragraphs.
-- Max 2 sections per reply while clarifying.
-- Max 6 bullets total while clarifying, unless user asks for detail.
-
-## Input
-
-- Task, idea, bug, feature, or request provided by the user.
+- Goal is unclear.
+- Scope is unclear.
+- Success criteria are missing.
+- Constraints or risks may change the answer.
+- Decisions depend on each other.
+- User asks for planning, requirements, or product thinking.
 
 ## Goal
 
-- Find unclear assumptions.
-- Define goal and outcome.
-- Identify scope, non-goals, constraints, and risks.
-- Ask until clear enough.
-- Avoid implementation details until requirements are clear.
+- Define outcome.
+- Expose assumptions.
+- Separate scope from non-goals.
+- Make success and failure testable.
+- Resolve decision branches in dependency order.
+- Recommend answers when asking.
+- Use existing code or docs instead of asking when answer is discoverable.
 
-## Subagents
+## Rules
 
-Subagents are optional. Use only when useful:
-
-- `requirements-analyzer`: missing requirements, acceptance criteria, or scope boundaries.
-- `deep-thinker`: ambiguity, tradeoffs, high-risk assumptions, or hidden risks.
-- Skip subagents for simple clarifications.
-
-## Process
-
-1. Restate task in 1 short line only if useful.
-2. State main gaps only.
-3. If clear, skip questions and output ready summary.
-4. Ask the smallest useful question set.
-5. After answers, refine understanding.
-6. Repeat only if important ambiguity remains.
-
-## Question Rules
-
-- Ask only questions that can change scope, direction, acceptance criteria, priority, or risk.
-- Ask max 3 questions at once. Prefer 1.
-- Prefer concrete choices over broad open questions when possible.
-- Use the `question` tool when choices are known or structured answers would reduce ambiguity.
-- If the answer needs free text, ask in markdown instead.
-- Do not ask the same question with both the `question` tool and markdown.
-- Do not implement, edit files, or run broad exploration unless needed for clarity.
+- Ask one question at a time by default.
+- Ask max 3 only when questions are independent.
+- Ask only questions that change scope, priority, risk, or acceptance.
+- Include recommended answer for each question.
+- Explain recommendation in one short reason.
+- Explore codebase when question can be answered from files.
+- Use `question` tool when structured choices help.
+- Do not ask same question in tool and markdown.
+- If clear enough, stop asking and summarize.
 
 ## Check
 
-- Who is the user?
-- What problem is solved?
-- When is this triggered?
-- What is success?
-- What is failure?
-- What is out of scope?
-- What must not change?
-- What data or state is involved?
-- What edge cases matter?
-- What needs a product decision?
+- User.
+- Problem.
+- Trigger.
+- Success.
+- Failure.
+- Scope.
+- Non-goals.
+- Constraints.
+- Data or state.
+- Edge cases.
+- Decision dependencies.
+- Recommended path.
 
-## Stopping Condition
+## Flow
 
-Stop asking when the goal is clear, success and failure are testable, scope and non-goals are explicit, key assumptions are confirmed or listed, and the next step is obvious.
+1. Restate task only if useful.
+2. List main gap or assumption.
+3. Identify next blocking decision.
+4. Answer from code or docs if possible.
+5. Ask one question with recommended answer.
+6. Refine after answer.
+7. Repeat until branches are resolved.
+8. Stop when next action is obvious.
 
-## Output While Clarifying
+## Output while clarifying
 
 ```md
 ## Gaps
+
 - [gap or assumption]
 
 ## Questions
-1. [high-value question]
+
+1. [blocking question]
+
+Recommended: [answer]
+Reason: [short reason]
 ```
 
-## Output When Ready
+## Output when ready
 
 ```md
 ## Summary
-- [concise final summary]
+
+- [task outcome]
 
 ## Requirements
-- Given [precondition], when [action], then [outcome]
+
+- Given [state], when [action], then [result]
 
 ## Notes
-- [case]
-- [assumption]
-- [question or `None`]
-- [item]
-- [smallest useful next action]
-```
 
-Keep the whole reply compact. Ask questions instead of guessing.
+- Scope: [in]
+- Non-goals: [out]
+- Assumptions: [known]
+- Next: [smallest useful action]
+```

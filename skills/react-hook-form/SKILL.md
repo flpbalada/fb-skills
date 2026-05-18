@@ -5,136 +5,85 @@ description: Guides React Hook Form usage for React forms. Use this skill when c
 
 # React Hook Form
 
-## Overview
+## When to use
 
-Build forms around React Hook Form's uncontrolled-first model. Prefer native inputs with `register`; use `Controller` only when a component cannot expose a normal input ref/value pair.
+- Creating or refactoring React forms.
+- Using `useForm`, `register`, `handleSubmit`, or `formState`.
+- Adding validation, schema resolvers, or typed form values.
+- Integrating UI-library inputs with `Controller`.
+- Building repeatable fields with `useFieldArray`.
 
-## Default Path
+## Goal
 
-1. Inspect existing form dependencies and conventions.
-2. Use `useForm<FormValues>()` near the form boundary.
-3. Set `defaultValues` for every editable field.
-4. Use `register` for native inputs.
-5. Read `formState.errors` for validation UI.
-6. Submit with `handleSubmit(onSubmit)`.
-
-## Choose Tool
-
-- `register`: native inputs and simple custom inputs that forward refs.
-- `Controller`: third-party controlled inputs such as selects, date pickers, masks, or UI-library fields.
-- `useController`: reusable field components that need field state without render props.
-- `FormProvider` and `useFormContext`: large forms split across nested components.
-- `useFieldArray`: repeatable rows or nested collections.
-- resolver: schema validation, shared validation, or complex cross-field rules.
-- `reset`: loaded data should become the new clean baseline.
-- `useWatch`: one component needs reactive access to another field value.
-
-## Core Pattern
-
-```tsx
-import { type SubmitHandler, useForm } from "react-hook-form";
-
-type FormValues = {
-  firstName: string;
-  lastName: string;
-  age: number;
-};
-
-export function ProfileForm() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-  } = useForm<FormValues>({
-    defaultValues: {
-      firstName: "",
-      lastName: "",
-      age: 18,
-    },
-  });
-
-  const onSubmit: SubmitHandler<FormValues> = async (values) => {
-    await saveProfile(values);
-  };
-
-  return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input
-        {...register("firstName", { required: "First name is required" })}
-      />
-      {errors.firstName?.message ? <p role="alert">{errors.firstName.message}</p> : null}
-
-      <input {...register("lastName", { maxLength: 40 })} />
-
-      <input
-        type="number"
-        {...register("age", {
-          valueAsNumber: true,
-          min: { value: 18, message: "Must be at least 18" },
-        })}
-      />
-      {errors.age?.message ? <p role="alert">{errors.age.message}</p> : null}
-
-      <button type="submit" disabled={isSubmitting}>
-        Save
-      </button>
-    </form>
-  );
-}
-```
+Use React Hook Form's uncontrolled-first model.
+Prefer native inputs with `register`.
+Use `Controller` only when a component cannot expose normal input props.
 
 ## Rules
 
-- Prefer `register` over local `useState` for form input state.
-- Keep field names typed from `useForm<FormValues>()`.
-- Put validation messages in rules or schema, then render `errors.field?.message`.
-- Use `valueAsNumber`, `valueAsDate`, or schema coercion for non-string values.
-- Do not pass both `register` and `Controller` to the same field.
-- Do not create controlled React state for every input unless another library requires it.
-- Call `reset(newValues)` when loaded data replaces the form's baseline values.
-- Use stable `field.id` as the React `key` for `useFieldArray` rows.
+- Use `useForm<FormValues>()` near the form boundary.
+- Set `defaultValues` for every editable field.
+- Use `register` for native inputs and ref-forwarding custom inputs.
+- Use `Controller` for controlled third-party inputs.
+- Use `useController` for reusable field components.
+- Use `FormProvider` and `useFormContext` for large nested forms.
+- Use `useFieldArray` for repeatable rows.
+- Use a resolver for shared schema validation.
+- Use `reset(newValues)` when loaded data becomes the clean baseline.
+- Use `useWatch` only when one component needs another field value.
+- Do not pass both `register` and `Controller` to one field.
+- Do not mirror every input with local `useState`.
 
-## Controlled Components
+## Flow
 
-Use `Controller` when integrating components such as MUI `TextField`, React Select, date pickers, masked inputs, or custom components that manage their own value.
+1. Inspect existing form conventions.
+2. Define or infer `FormValues`.
+3. Add `useForm<FormValues>()` with defaults.
+4. Register fields.
+5. Add validation rules or resolver.
+6. Render `formState.errors`.
+7. Submit with `handleSubmit(onSubmit)`.
+
+## Pattern
 
 ```tsx
-<Controller
-  name="role"
-  control={control}
-  rules={{ required: "Role is required" }}
-  render={({ field, fieldState }) => (
-    <Select
-      inputRef={field.ref}
-      value={field.value}
-      onChange={field.onChange}
-      onBlur={field.onBlur}
-      options={roleOptions}
-      aria-invalid={fieldState.invalid}
-    />
-  )}
-/>
+type FormValues = { email: string };
+
+const {
+  register,
+  handleSubmit,
+  formState: { errors },
+} = useForm<FormValues>({ defaultValues: { email: "" } });
+
+return (
+  <form onSubmit={handleSubmit(save)}>
+    <input {...register("email", { required: "Email is required" })} />
+    {errors.email?.message ? <p role="alert">{errors.email.message}</p> : null}
+    <button type="submit">Save</button>
+  </form>
+);
 ```
 
-Use `useController` inside reusable field components when render props would add noise.
+## Controlled Inputs
+
+Use `Controller` for MUI fields, React Select, date pickers, masked inputs, or custom controlled components.
+Pass `field.value`, `field.onChange`, `field.onBlur`, and `field.ref`.
+Use `fieldState` for field-level errors.
 
 ## Schema Validation
 
 Prefer Zod or existing project schema tooling for complex forms.
+Infer `FormValues` from the schema.
+Use schema coercion or `valueAsNumber` for non-string values.
 
-```tsx
-const schema = z.object({
-  email: z.string().email("Invalid email"),
-  age: z.coerce.number().min(18, "Must be at least 18"),
-});
+## Output
 
-type FormValues = z.infer<typeof schema>;
-
-const form = useForm<FormValues>({
-  resolver: zodResolver(schema),
-});
-```
+- Typed form values.
+- Default values for each field.
+- Field validation near rules or schema.
+- User-safe validation messages.
+- Clear submit path.
 
 ## Reference
 
-Read `references/patterns.md` when implementing controlled inputs, nested forms, repeatable fields, async defaults, schema resolvers, or typed reusable form components.
+Read `references/patterns.md` for controlled inputs, nested forms, repeatable fields, async defaults, resolvers, or typed reusable fields.

@@ -6,101 +6,80 @@ description:
   practices, or onboarding new product managers.
 ---
 
-# What Not to Do as a Product Manager - Leadership Anti-Patterns
+# What Not to Do as a Product Manager
 
-A comprehensive guide outlining common mistakes and counterproductive behaviors that product managers should avoid. Understanding these pitfalls helps PMs build better relationships with teams and create more effective working environments.
+## When to use
 
-## When to Use This Skill
+- Reviewing product leadership behavior.
+- Diagnosing team dysfunction.
+- Coaching or onboarding product managers.
+- Reflecting on decision quality, communication, or delivery problems.
 
-- Reflecting on your management practices
-- Onboarding new product managers
-- Evaluating team dynamics issues
-- Improving leadership behaviors
-- Coaching other product managers
-- Building healthier team culture
+## Goal
 
-## Anti-Pattern Categories
+Identify product management anti-patterns.
+Replace them with clearer ownership, decisions, and collaboration.
 
-```
-TRUST KILLERS                    AUTONOMY KILLERS
-├── Micromanagement              ├── Not trusting decisions
-├── Finding mistakes             ├── No tools/processes
-├── Mind-reading expectations    └── Keeping team dependent
-└── Siloed conversations
+## Rules
 
-MORALE KILLERS                   CULTURE KILLERS
-├── No recognition               ├── Fear-based environment
-├── Unequal treatment            ├── Toxic behavior tolerance
-├── Ridicule and belittling      └── Only few feel heard
-└── Extra hours expectations
-```
+- Focus on behavior and impact, not personality.
+- Tie each anti-pattern to a concrete consequence.
+- Recommend a better practice.
+- Avoid generic advice without evidence.
+- Separate product decisions from delivery management.
 
-## Quick Reference
+## Anti-Patterns
 
-```
-Stop if you're:
-□ Checking in multiple times per week "just to see"
-□ Hunting for mistakes instead of learning
-□ Expecting mind-reading
-□ Taking credit, deflecting blame
-□ Making everything urgent
-□ Ignoring wins, focusing on gaps
-□ Messaging after hours to check presence
-□ Running meetings only you talk in
-□ Supporting toxic high performers
-□ Making people feel small
-
-Start if you're not:
-□ Celebrating wins publicly
-□ Giving private constructive feedback
-□ Asking for feedback on yourself
-□ Creating psychological safety
-□ Providing tools and processes
-□ Protecting team's focus
-□ Developing team autonomy
-□ Addressing toxic behaviors
-□ Respecting work boundaries
-□ Listening genuinely
-```
-
----
-
-## Progressive Disclosure
-
-| Topic | File | When to Use |
-|-------|------|-------------|
-| Trust & autonomy issues | [context/trust-autonomy-issues.md](context/trust-autonomy-issues.md) | Micromanagement, finding faults, expectations |
-| Recognition & meetings | [context/recognition-meeting-issues.md](context/recognition-meeting-issues.md) | Ignoring wins, meeting overload, surveillance |
-| Culture & prioritization | [context/prioritization-culture-issues.md](context/prioritization-culture-issues.md) | Fear-based leadership, toxic behavior, self-audit |
+- Solution-first planning without problem clarity.
+- Treating stakeholder requests as strategy.
+- Changing priorities without trade-offs.
+- Avoiding hard decisions.
+- Writing vague requirements.
+- Skipping discovery and validation.
+- Ignoring engineering constraints.
+- Measuring output instead of outcomes.
+- Hoarding context.
+- Blaming teams for unclear direction.
 
 ## Warning Signs
 
+- Roadmap is a list of requests.
+- Every item is high priority.
+- Requirements change during implementation without reset.
+- Success metric is missing.
+- Team cannot explain why work matters.
+- Discovery findings do not affect decisions.
+- Engineers learn context too late.
+- Stakeholders hear different stories.
+
+## Better Practices
+
+- Start with user problem and business goal.
+- Define success metric and non-goals.
+- Make trade-offs explicit.
+- Share context early.
+- Validate risky assumptions.
+- Write testable requirements.
+- Keep roadmap tied to outcomes.
+- Review decisions after launch.
+
+## Flow
+
+1. Identify the product behavior.
+2. Name the anti-pattern.
+3. Describe team or user impact.
+4. Find root cause.
+5. Recommend replacement behavior.
+6. Define signal that behavior improved.
+
+## Output
+
+```md
+## PM Anti-Pattern Review
+- Situation:
+- Anti-pattern:
+- Impact:
+- Root cause:
+- Better practice:
+- Success signal:
 ```
-TEAM SIGNALS TO WATCH FOR:
-
-High Turnover:
-├── People leaving team/company
-├── Especially high performers
-└── Pattern, not one-offs
-
-Silence in Meetings:
-├── No one speaks up
-├── No pushback on ideas
-└── Only you talking
-
-Hidden Problems:
-├── Issues surface late
-├── Surprises at deadlines
-└── Bad news is avoided
-
-Disengagement:
-├── Minimal effort
-├── No discretionary work
-└── Clock-watching behavior
-```
-
-## Resources
-
-- [Radical Candor - Kim Scott](https://www.radicalcandor.com/)
-- [The Five Dysfunctions of a Team - Patrick Lencioni](https://www.tablegroup.com/books/dysfunctions)
-- [Turn the Ship Around - David Marquet](https://davidmarquet.com/turn-the-ship-around-book/)

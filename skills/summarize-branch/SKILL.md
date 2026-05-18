@@ -5,23 +5,27 @@ description: Generate a concise PR description from branch commits. Use when a b
 
 # Summarize Branch
 
-Create a clear, concise PR description by analyzing the branch commit history.
+## When to use
 
-## What You Get
+- Branch needs PR text.
+- Commit history should drive summary.
+- User wants a short review-ready description.
 
-A short, well-structured paragraph that describes the changes and determines whether they fix or implement something based on commit messages.
+## Goal
 
-## Optional Context
+Create one concise PR paragraph from branch commits.
+Use `fixes` when commits indicate a fix.
+Use `implements` otherwise.
 
-Use any extra user-provided context when:
+## Rules
 
-- Commits do not tell the full story.
-- Specific aspects should be highlighted.
-- Intent or scope needs clarification.
+- Use commit messages as source of truth.
+- Include user context only when it clarifies intent or scope.
+- Keep output short.
+- Do not invent changes not shown by commits or context.
+- Stop if branch has no commits over base.
 
-## Prerequisites
-
-Run these checks:
+## Commands
 
 ```bash
 git rev-parse --git-dir
@@ -29,21 +33,25 @@ git branch --show-current
 git log main..HEAD --pretty=format:"%s"
 ```
 
-## Process
+## Flow
 
-1. Verify the current directory is a git repository.
-2. Use `main` as the comparison point.
-3. Get all commit messages between `main` and `HEAD`.
-4. Exit if no branch commits exist.
-5. Detect change type by scanning for fix keywords such as `fix`, `fixup`, and `bugfix`.
-6. Use `fixes` when fix keywords are found; otherwise use `implements`.
-7. Generate a paragraph starting with `This PR ${TYPE}...`.
-8. Incorporate optional user context when provided.
+1. Verify current directory is a git repository.
+2. Use `main` as comparison point.
+3. Get commits between `main` and `HEAD`.
+4. Stop if no branch commits exist.
+5. Scan commit messages for `fix`, `fixup`, or `bugfix`.
+6. Use `fixes` when fix keywords are found.
+7. Otherwise use `implements`.
+8. Write one paragraph starting with `This PR ${TYPE}...`.
 
-## Error Handling
+## Errors
 
-| Error | What It Means |
-| ----- | ------------- |
-| Not in git repo | Run from within a git repository |
-| No commits on branch | Make at least one commit before summarizing |
-| Base branch not found | Ensure `main` branch exists or choose another base |
+- Not in git repo: report missing repository.
+- No branch commits: report nothing to summarize.
+- Base branch missing: ask for base branch or use known project default.
+
+## Output
+
+```md
+This PR fixes/implements [short summary from commits].
+```

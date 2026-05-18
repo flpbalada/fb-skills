@@ -5,28 +5,65 @@ description: Convert conversation context into concise PRD requirements. Use whe
 
 # Write PRD From Conversation
 
-Read the full conversation thread first.
+## When to use
 
-Understand:
+- Raw conversation needs product requirements.
+- User asks for a PRD, spec, or requirements doc.
+- Ideas need scope, goals, and acceptance criteria.
 
-- Raw requirements
-- Context
-- Constraints
-- Open questions
-- Implied user goals
+## Goal
 
-Then convert the requirements into a concise PRD.
+Convert discussion into concise, testable product requirements.
+Preserve intent.
+Do not invent missing decisions.
+
+## Rules
+
+- Read the full conversation first.
+- Use only conversation context unless asked to infer.
+- Mark unknowns as questions.
+- Keep requirements measurable.
+- Separate goals, non-goals, constraints, and acceptance criteria.
+- Prefer short bullets.
+
+## Flow
+
+1. Extract raw requirements.
+2. Identify context and constraints.
+3. Infer user goals only when strongly supported.
+4. List open questions.
+5. Write concise PRD.
 
 ## Input
 
-- User-provided topic, request, transcript, notes, or argument text.
+- Conversation context or raw notes.
 
 ## Output
 
-- Problem or goal
-- Users or actors
-- Requirements
-- Non-goals
-- Constraints
-- Open questions
-- Acceptance criteria
+```md
+# PRD: [Title]
+
+## Goal
+[One paragraph]
+
+## Users
+- [User group]
+
+## Problem
+- [Problem]
+
+## Requirements
+- [Requirement]
+
+## Non-goals
+- [Non-goal]
+
+## Constraints
+- [Constraint]
+
+## Acceptance Criteria
+- Given [context], when [action], then [outcome].
+
+## Open Questions
+- [Question]
+```

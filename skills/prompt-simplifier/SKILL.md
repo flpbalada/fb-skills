@@ -5,82 +5,86 @@ description: Review prompts and instructions for logic complexity. Use when simp
 
 # Prompt Simplifier
 
-Analyze prompt logic.
 Preserve intent.
-Reduce complexity.
+Reduce logic complexity.
+Make instructions easier to follow.
+
+## When to Use
+
+- Prompt has many rules or branches
+- Workflow feels hard to execute
+- Conditions conflict or overlap
+- Agent output is inconsistent
+- Instructions need shorter structure
+
+## Goal
+
+Keep behavior.
+Remove unnecessary complexity.
+Expose ambiguity.
 
 ## Rules
 
-- Parse before mapping.
-- Map before fixes.
+- Parse before changing.
+- Preserve core behavior.
+- Do not guess missing intent.
 - Flag ambiguity.
-- Do not guess.
-- Tie every issue to a location.
-- Prefer high-impact, low-effort fixes.
-- Do not change core behavior.
+- Prefer headings, bullets, and short paragraphs.
+- Flatten nested logic.
+- Remove redundant rules.
+- Tie issues to locations when reviewing.
 
 ## Flow
 
-1. Parse conditions, actions, states, dependencies, and assumptions.
-2. Map nodes as condition, action, state, or decision.
-3. Map edges as then, else, depends on, or leads to.
-4. Find dead paths, missing branches, contradictions, impossible transitions, and redundant logic.
-5. Check edge cases.
-6. Propose simpler alternatives.
+1. Parse conditions, actions, states, dependencies, assumptions.
+2. Map key logic.
+3. Find contradictions, dead paths, missing branches, repetition.
+4. Check edge cases.
+5. Rewrite with simpler sections.
+6. Verify behavior is preserved.
 
-## Map Format
-
-```text
-A: If X
--> B: Do Y
--> else C: Error
-```
-
-## Issue Checks
+## Complexity Checks
 
 - Dead paths.
 - Missing branches.
-- Unhandled edge cases.
 - Contradictions.
 - Impossible transitions.
-- Redundant logic.
+- Redundant rules.
 - Nesting over 3 levels.
-- Logic that can be inverted or flattened.
-
-## Edge Cases
-
-- Empty or null input.
-- Boundary input.
-- State combinations.
 - Order dependence.
-- Failure paths.
+- Unclear failure path.
+
+## Rewrite Pattern
+
+Prefer:
+
+- When to use
+- Goal
+- Rules
+- Flow
+- Output
+- Checks
+
+Avoid deep tables, large diagrams, repeated examples, mixed policy/examples, and long paragraphs.
 
 ## Output
 
 ```md
-## Prompt Analysis: [name]
+## Prompt Simplification
 
-## Map Summary
-- Nodes: [count]
-- Edges: [count]
-- Max depth: [depth]
-- Decisions: [count]
+Target: [prompt/section]
+Preserved intent:
+- [intent]
 
-## Complexity
-- Score: [1-10]
-- Summary: [one line]
+Problems:
+- [location]: [issue]
 
-## Issues
-- [type] [location] - [problem]
+Changes:
+- [simplification]
 
-## Fixes
-- Type: [structural/logical/quality]
-- Location: [reference]
-- Current: [current logic]
-- Proposed: [simpler logic]
-- Benefit: [why]
-- Confidence: [high/medium/low]
+Open questions:
+- [ambiguity or none]
 
-## Questions
-- [question or none]
+Risk:
+- [behavior that may need review]
 ```

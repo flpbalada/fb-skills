@@ -5,71 +5,72 @@ description: Extract reusable patterns from the current session. Use when errors
 
 # Learn Session Patterns
 
-Analyze the current session and extract any patterns worth saving as skills.
+Extract reusable patterns from current session.
+Turn repeated value into a skill only when it will help future work.
 
-## What To Extract
+## When to Use
 
-Look for:
+- Error fix should be reused
+- Debugging technique worked well
+- Tool combination saved time
+- Library quirk needs remembering
+- Project convention became clear
+- Workflow should become a skill
 
-1. **Error Resolution Patterns**
-- What error occurred?
-- What was the root cause?
-- What fixed it?
-- Is this reusable for similar errors?
+## Goal
 
-2. **Debugging Techniques**
-- Non-obvious debugging steps
-- Tool combinations that worked
-- Diagnostic patterns
+Capture one reusable pattern.
+Avoid saving one-off fixes or noise.
 
-3. **Workarounds**
-- Library quirks
-- API limitations
-- Version-specific fixes
+## Rules
 
-4. **Project-Specific Patterns**
-- Codebase conventions discovered
-- Architecture decisions made
-- Integration patterns
+- One pattern per skill.
+- Prefer recurring problems.
+- Keep pattern portable.
+- Do not save trivial typos.
+- Do not save outage-specific workarounds.
+- Ask before writing new skill file.
 
-## Output Format
+## Flow
 
-Present findings in this structure:
+1. Review session.
+2. List candidate patterns.
+3. Keep only patterns likely to recur.
+4. Identify trigger: when future agent should use it.
+5. Draft short skill.
+6. Ask user to confirm before saving.
+7. Save under `skills/learned/` only after approval.
 
-```markdown
-## Skill Name
+## Output
 
-**What**: Brief description of the pattern/problem being solved
+```md
+## Skill Candidate: [name]
 
-**Why**: Why this pattern is valuable (when to use it)
+What:
+- [pattern or problem]
 
-**How**: Step-by-step explanation of the technique
+When to use:
+- [trigger]
 
-**Examples**:
-1. Example scenario where this applies
-2. Another concrete example
+Why:
+- [future value]
+
+How:
+1. [step]
+2. [step]
+3. [step]
+
+Examples:
+- [scenario]
+
+Keep?
+- [yes/no recommendation]
 ```
 
-## Verification Checklist
+## Checks
 
-Before proposing a skill, confirm:
-
-- [ ] Solves a real, recurring problem
-- [ ] Not a one-time fix or typo
-- [ ] Saves time in future sessions
-- [ ] Can be applied to new contexts
-
-## Process
-
-1. Review the session for extractable patterns
-2. Identify the most valuable reusable insight
-3. Draft the skill file
-4. Ask user to confirm before saving
-5. Save to `skills/learned/`
-
-## Notes
-
-- Don't extract trivial fixes, such as typos or simple syntax errors.
-- Don't extract one-time issues, such as specific API outages.
-- Focus on patterns that will save time in future sessions.
-- Keep skills focused: one pattern per skill.
+- Real problem occurred.
+- Fix is not obvious or trivial.
+- Pattern can apply in new contexts.
+- Future trigger is clear.
+- Skill would save time.

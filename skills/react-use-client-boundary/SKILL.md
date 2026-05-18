@@ -6,251 +6,83 @@ description:
   deciding where to place the client boundary.
 ---
 
-# React "use client" Directive & Client Boundaries
+# React "use client" Boundary
 
-Understanding when to use (and when NOT to use) the "use client" directive in React Server Components architecture.
+## When to use
 
-## Core Concept: The Boundary
+- Adding a client component in Next.js or React Server Components.
+- Fixing hook, event handler, browser API, or async component errors.
+- Deciding where a client boundary belongs.
+- Removing redundant `"use client"` directives.
 
-`"use client"` marks a **boundary** between server and client components - not a label for individual components.
+## Goal
 
-**Critical Rule:** Once inside a client boundary, ALL imported components are automatically client components. You should NOT add `"use client"` to child components that are already imported by a parent client component.
+Place the smallest useful client boundary.
+Keep server components as server components.
 
-## Mental Model: The Fence
+## Rules
 
-Think of `"use client"` as a **fence** or **gate**:
+- `"use client"` marks an import boundary.
+- All components imported below that boundary become client components.
+- Add it only to files imported by a server component and needing client features.
+- Do not add it to child components already inside a client boundary.
+- Do not add it to pure presentational components.
+- Keep data fetching in server components when possible.
+- Do not pass server functions as client event handlers.
 
-```
-┌─────────────────────────────────────────────────────┐
-│  SERVER TERRITORY                                   │
-│  ┌─────────────┐                                    │
-│  │ page.tsx    │  (Server Component - default)      │
-│  │             │                                    │
-│  │  <Header /> │───────────────────────┐            │
-│  └─────────────┘                       │            │
-│                                        ▼            │
-│  ════════════════ "use client" FENCE ════════════   │
-│                                        │            │
-│  ┌─────────────────────────────────────┼──────────┐ │
-│  │ CLIENT TERRITORY                    ▼          │ │
-│  │  ┌─────────────┐    ┌─────────────┐            │ │
-│  │  │ Header.tsx  │───▶│ NavMenu.tsx │            │ │
-│  │  │"use client" │    │ (no directive│            │ │
-│  │  │             │    │  needed!)    │            │ │
-│  │  └─────────────┘    └─────────────┘            │ │
-│  │                                                 │ │
-│  │  You're already inside - no more fences needed │ │
-│  └─────────────────────────────────────────────────┘ │
-└─────────────────────────────────────────────────────┘
-```
-
-## When to Use "use client"
+## Add It When
 
 Add the directive when ALL of these are true:
 
-1. **The component is imported by a Server Component** (directly or as a page entry)
-2. **AND** the component needs client-side features:
-   - React hooks (`useState`, `useEffect`, `useContext`, etc.)
-   - Event handlers (`onClick`, `onChange`, `onSubmit`, etc.)
-   - Browser APIs (`window`, `document`, `localStorage`, etc.)
-   - Third-party libraries that use any of the above
+1. Component is imported by a server component.
+2. Component needs hooks, event handlers, browser APIs, or client-only libraries.
 
-## When NOT to Use "use client"
+## Do Not Add It When
 
-1. **Already inside a client boundary** - parent component has `"use client"`
-2. **Component is pure presentation** - just renders props, no interactivity
-3. **"Just to be safe"** - this creates confusion and unnecessary boundaries
-4. **Every component that uses props** - props work fine in server components
+- Parent/importer is already a client component.
+- Component only renders props.
+- Component only uses `children`.
+- Component can stay shared between server and client.
+- The reason is "just in case".
 
-## Common Mistake: Redundant Directives
+## Flow
 
-```tsx
-// ❌ WRONG: Unnecessary "use client" in child
+1. Trace the import chain upward.
+2. Find first server-to-client crossing.
+3. Check whether that component needs client features.
+4. Put `"use client"` there.
+5. Remove redundant directives below it.
+6. Move async data fetching above the boundary when possible.
 
-// components/form.tsx
-"use client"
-import { Input } from "./input"
-import { Button } from "./button"
-
-export function Form() {
-  const [value, setValue] = useState("")
-  return (
-    <form>
-      <Input value={value} onChange={setValue} />
-      <Button type="submit">Send</Button>
-    </form>
-  )
-}
-
-// components/input.tsx
-"use client"  // ❌ WRONG - already a client component!
-export function Input({ value, onChange }) {
-  return <input value={value} onChange={e => onChange(e.target.value)} />
-}
-
-// components/button.tsx
-"use client"  // ❌ WRONG - already a client component!
-export function Button({ children, type }) {
-  return <button type={type}>{children}</button>
-}
-```
-
-## Correct Approach: Single Boundary
+## Pattern
 
 ```tsx
-// ✅ CORRECT: Only the entry point has "use client"
+"use client";
 
-// components/form.tsx
-"use client"
-import { Input } from "./input"
-import { Button } from "./button"
-
-export function Form() {
-  const [value, setValue] = useState("")
-  return (
-    <form>
-      <Input value={value} onChange={setValue} />
-      <Button type="submit">Send</Button>
-    </form>
-  )
-}
-
-// components/input.tsx
-// ✅ No directive - imported by client component
-export function Input({ value, onChange }) {
-  return <input value={value} onChange={e => onChange(e.target.value)} />
-}
-
-// components/button.tsx
-// ✅ No directive - imported by client component
-export function Button({ children, type }) {
-  return <button type={type}>{children}</button>
-}
-```
-
-## Decision Flowchart
-
-```
-Is this component imported by a Server Component?
-│
-├─ NO ──▶ Is its parent/importer a Client Component?
-│         │
-│         ├─ YES ──▶ ❌ Don't add "use client" (already in boundary)
-│         │
-│         └─ NO ───▶ Check the import chain upward
-│
-└─ YES ─▶ Does this component need client features?
-          │
-          ├─ NO ──▶ ❌ Don't add "use client" (keep it server)
-          │
-          └─ YES ─▶ ✅ Add "use client" (create boundary here)
-```
-
-## Real-World Example: Page with Interactive Section
-
-```tsx
-// app/products/page.tsx (Server Component - no directive)
-import { ProductList } from "@/components/product-list"
-import { SearchFilters } from "@/components/search-filters"
-import { getProducts } from "@/lib/api"
-
-export default async function ProductsPage() {
-  const products = await getProducts()  // Server-side data fetching
-  
-  return (
-    <main>
-      <h1>Products</h1>
-      <SearchFilters />           {/* Client boundary starts here */}
-      <ProductList data={products} />  {/* Server component */}
-    </main>
-  )
-}
-
-// components/search-filters.tsx
-"use client"  // ✅ Boundary: imported by server, needs state
-import { FilterDropdown } from "./filter-dropdown"
-import { PriceSlider } from "./price-slider"
+import { FilterDropdown } from "./filter-dropdown";
 
 export function SearchFilters() {
-  const [filters, setFilters] = useState({})
-  
+  const [filters, setFilters] = useState({});
   return (
-    <div>
-      <FilterDropdown onSelect={...} />  {/* No directive needed */}
-      <PriceSlider onChange={...} />      {/* No directive needed */}
-    </div>
-  )
+    <FilterDropdown value={filters.category} onChange={setFilters} />
+  );
 }
 
-// components/filter-dropdown.tsx
-// ✅ No "use client" - already inside client boundary
-export function FilterDropdown({ onSelect }) {
-  return <select onChange={e => onSelect(e.target.value)}>...</select>
-}
-
-// components/price-slider.tsx
-// ✅ No "use client" - already inside client boundary
-export function PriceSlider({ onChange }) {
-  return <input type="range" onChange={e => onChange(e.target.value)} />
+// No directive needed.
+export function FilterDropdown({ value, onChange }) {
+  return <select value={value} onChange={(e) => onChange(e.target.value)} />;
 }
 ```
 
-## Edge Case: Shared Components
+## Common Errors
 
-When a component is used by BOTH server and client components:
+- Hook only works in Client Components: add boundary at the hook owner or move hook lower.
+- Event handlers cannot be passed from server to client: move handler into client component.
+- Async not supported in Client Components: keep async data component on server and pass data down.
 
-```tsx
-// components/card.tsx
-// No directive - works in both contexts if it's pure presentation
-export function Card({ title, children }) {
-  return (
-    <div className="card">
-      <h2>{title}</h2>
-      {children}
-    </div>
-  )
-}
+## Output
 
-// app/page.tsx (Server Component)
-import { Card } from "@/components/card"
-// Card renders as server component here
-
-// components/modal.tsx
-"use client"
-import { Card } from "@/components/card"
-// Card renders as client component here (inside boundary)
-```
-
-## Troubleshooting Common Errors
-
-### Error: "useState only works in Client Components"
-
-**Cause:** Using hooks in a component without `"use client"` that's imported by a server component.
-
-**Fix:** Add `"use client"` to the component using the hook, OR move the hook usage to a parent client component.
-
-### Error: "Event handlers cannot be passed to Client Components from Server Components"
-
-**Cause:** Trying to pass a function from server to client component.
-
-**Fix:** Move the event handler logic to the client component, or restructure the boundary.
-
-### Error: "async/await is not yet supported in Client Components"
-
-**Cause:** Using async component syntax inside a client boundary.
-
-**Fix:** Keep data fetching in server components, pass data as props to client components.
-
-## Best Practices Summary
-
-| Do | Don't |
-|---|---|
-| Place `"use client"` at the highest necessary point | Sprinkle `"use client"` on every component |
-| Keep the client boundary as small as possible | Make entire pages client components |
-| Let child components inherit client context | Add redundant `"use client"` to children |
-| Use server components for data fetching | Fetch data in client components when avoidable |
-
-## References
-
-- [React Docs: "use client"](https://react.dev/reference/rsc/use-client)
-- [Next.js Discussion: Client Component Boundaries](https://github.com/vercel/next.js/discussions/46795)
+- Boundary location.
+- Directives to add or remove.
+- Data-fetching placement.
+- Any server/client prop issues.

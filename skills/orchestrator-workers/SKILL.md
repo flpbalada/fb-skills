@@ -5,85 +5,81 @@ description: Use a central planner to break dynamic tasks into worker jobs and c
 
 # Orchestrator-Workers
 
-Anthropic canonical agent pattern.
-Planner in middle.
-Workers do pieces.
-Orchestrator decides next jobs.
-
-## What It Is
-
-One orchestrator decomposes task at runtime.
-It assigns jobs to workers.
-Workers return outputs.
-Orchestrator reviews, adds jobs, then combines result.
+Central planner.
+Specialized workers.
+Dynamic task assignment.
 
 ## When to Use
 
-- Task shape not known upfront
-- Need dynamic decomposition
-- Different workers have different tools or skills
-- Need iterative task assignment
-- Work is too big for one fixed chain
+- Task shape is unknown upfront
+- Work needs runtime decomposition
+- Workers need different tools or skills
+- Results reveal more work
+- One fixed chain is too rigid
 
-## When Not to Use
+## Goal
 
-- Flow is fixed and simple
-- Workers do not add real specialization
-- Planner overhead bigger than work
-- Need strict predictability over flexible search
-- Shared state design is weak
+Let orchestrator plan, assign, inspect, replan, and synthesize.
+Keep workers narrow and outputs easy to merge.
 
-## Core Flow
+## Rules
 
-```text
-input
-  → orchestrator plans
-  → assign worker jobs
-  → workers execute
-  → orchestrator reviews gaps
-  → assign more jobs or finish
-  → synthesize output
-```
+- Use only when dynamic planning adds value.
+- Give each worker one clear job.
+- Define worker output schema.
+- Store shared state outside prompts.
+- Cap replan rounds.
+- Keep trace of jobs and results.
+- Ground final synthesis in worker outputs.
 
-## Simple Implementation Outline
+## Flow
 
-1. Define orchestrator role.
-2. Define worker types and contracts.
-3. Store shared task state outside prompts.
-4. Give workers narrow jobs.
-5. Make orchestrator inspect worker outputs.
-6. Allow replan, but cap loops.
-7. Synthesize with citations to worker results.
+1. Orchestrator reads task.
+2. Orchestrator creates first worker jobs.
+3. Workers execute independently.
+4. Orchestrator reviews outputs.
+5. Orchestrator assigns follow-up jobs if needed.
+6. Orchestrator synthesizes final answer.
 
 ## Good Worker Types
 
 - Research worker
+- Retrieval worker
 - Code worker
 - Test worker
-- Retrieval worker
 - Critique worker
+- Summarizer worker
 
-## Failure Modes
+## Avoid
 
-- Orchestrator micromanages every detail
-- Workers overlap and duplicate effort
-- No shared state contract
-- Replan loop never ends
-- Worker outputs too verbose to combine
-- Orchestrator hides uncertainty
+- Workers with overlapping scope.
+- Infinite replanning.
+- Vague shared state.
+- Verbose outputs.
+- Hidden uncertainty.
+- Orchestrator doing all worker work.
 
-## Practical Checklist
+## Output
 
-- Dynamic planning actually needed
-- Worker roles distinct
-- Input/output contract per worker
-- Shared state store defined
-- Max rounds set
-- Escalation rule for stuck state
-- Synthesis step grounded in worker outputs
-- Trace of plan, tasks, results kept
+```md
+## Orchestrator Plan
+
+Task: [goal]
+Shared state: [source of truth]
+Max rounds: [n]
+
+Workers:
+- [worker]: [job], output [schema]
+
+Review:
+- Gaps: [missing info]
+- Follow-up jobs: [if needed]
+
+Final synthesis:
+- [combined result grounded in worker outputs]
+```
 
 ## Decision Rule
 
-Use orchestrator-workers when task decomposition must happen during execution.
-If job graph is known upfront, prefer chaining or parallelization.
+Use orchestrator-workers when decomposition must happen during execution.
+If job graph is known upfront, use prompt chaining or parallelization.

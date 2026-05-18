@@ -3,183 +3,77 @@ name: typescript-satisfies-operator
 description: Guides proper usage of TypeScript's satisfies operator vs type annotations. Use this skill when deciding between type annotations (colon) and satisfies, validating object shapes while preserving literal types, or troubleshooting type inference issues.
 ---
 
-# TypeScript: The `satisfies` Operator
+# TypeScript `satisfies`
 
-## Core Concept
+## When to use
 
-The `satisfies` operator validates that an expression matches a type **without changing the inferred type**. This is different from type annotations (`:`) which widen the type.
+- Validating object shape while preserving literal types.
+- Defining config objects, route maps, locale maps, or handler maps.
+- Choosing between `: Type`, `satisfies Type`, `as const`, and `as Type`.
+- Fixing widened types caused by annotations.
 
-**Key insight from Matt Pocock:**
+## Goal
 
-- "When you use a colon, the type BEATS the value"
-- "When you use `satisfies`, the value BEATS the type"
+Validate that a value matches a type without replacing the value's inferred type.
 
-## Type Annotation vs Satisfies
+## Rules
 
-```typescript
-type RoutingPathname = "/products" | "/cart" | "/checkout";
+- Use `satisfies` when value specificity should win.
+- Use `: Type` when the variable should have the wider type.
+- Use `as const satisfies` for readonly literal config.
+- Avoid `as Type` unless it is a deliberate escape hatch.
+- Use `Record<Union, Value>` with `satisfies` for exhaustive maps.
 
-// Type annotation - widens to union
-const url1: RoutingPathname = "/products";
-// url1 is typed as: RoutingPathname (wide)
+## Mental Model
 
-// Satisfies - keeps literal
-const url2 = "/products" satisfies RoutingPathname;
-// url2 is typed as: '/products' (narrow)
+- `: Type`: type wins, value may widen.
+- `satisfies Type`: value wins, shape is checked.
+- `as Type`: tells TypeScript to trust you.
+- no annotation: inference only.
 
-// Why it matters:
-const test1: "/products" = url1; // Error: RoutingPathname not assignable to '/products'
-const test2: "/products" = url2; // Works
+## Pattern
+
+```ts
+type Locale = "en" | "cs";
+
+const localeIds = {
+  en: "1",
+  cs: "2",
+} as const satisfies Record<Locale, string>;
 ```
 
-## Classic Use Case: Object Validation with Preserved Types
+## Object Validation
 
-```typescript
+```ts
 type Colors = "red" | "green" | "blue";
-type RGB = [red: number, green: number, blue: number];
+type RGB = [number, number, number];
 
-// Type annotation loses specific property types
-const palette1: Record<Colors, string | RGB> = {
+const palette = {
   red: [255, 0, 0],
   green: "#00ff00",
   blue: [0, 0, 255],
-};
-palette1.green.toUpperCase(); // Error: 'toUpperCase' doesn't exist on string | RGB
-
-// Satisfies validates AND preserves literal types
-const palette2 = {
-  red: [255, 0, 0],
-  green: "#00ff00",
-  bleu: [0, 0, 255], // Error: Typo caught!
 } satisfies Record<Colors, string | RGB>;
-palette2.green.toUpperCase(); // Works - green is inferred as string
+
+palette.green.toUpperCase();
 ```
 
-## When to Use What
+## Use Cases
 
-| Annotation Style | Type vs Value | Use Case                           |
-| ---------------- | ------------- | ---------------------------------- |
-| `: Type` (colon) | Type wins     | Need wider type for reassignment   |
-| `satisfies Type` | Value wins    | Need validation + narrow inference |
-| `as Type`        | Lies to TS    | Escape hatch (use sparingly!)      |
-| No annotation    | Inference     | Most common - let TS infer         |
+- Route maps.
+- Locale maps.
+- Feature flag config.
+- Status labels.
+- Event handler maps.
+- Design token objects.
 
-## Rule of Thumb
+## Avoid
 
-**Use `satisfies` when:**
+- Annotating config objects so all literals widen.
+- Using `satisfies` when later reassignment needs wider type.
+- Using `as const` after a type annotation and expecting literals to survive.
 
-1. You want the EXACT type of the variable, not the wider type
-2. The type is complex enough that you want validation you didn't mess it up
+## Output
 
-**Use colon annotation when:**
-
-1. You need to reassign the variable later with different values of the union
-2. You explicitly want the wider type
-
-## Common Pattern: `as const satisfies`
-
-Combine `as const` for immutability with `satisfies` for validation:
-
-```typescript
-const routes = {
-  home: "/",
-  products: "/products",
-  cart: "/cart",
-} as const satisfies Record<string, string>;
-
-// routes.home is typed as '/' (readonly literal)
-// But validated against Record<string, string>
-```
-
-### Prefer `as const satisfies` Over Type Annotation
-
-When you need both validation AND literal type preservation:
-
-```typescript
-// Bad - type annotation widens types, loses literals
-const LANG_MAP: Record<string, string> = {
-  en: '1',
-  cs: '2',
-} as const;
-// LANG_MAP.en is just string, not '1'
-
-// Good - satisfies validates while preserving literal types
-const LANG_MAP = {
-  en: '1',
-  cs: '2',
-} as const satisfies Record<string, string>;
-// LANG_MAP.en is '1' (narrow literal type)
-```
-
-### Real-World Example: Config Validation
-
-```typescript
-type Locale = 'en' | 'cs';
-
-// Validates all locales are present, preserves specific values
-const SHOP_GRAPHQL_LOCALE_LANGUAGE_ID_MAP = {
-  en: '1',
-  cs: '2',
-} as const satisfies Record<Locale, string>;
-
-// TypeScript will error if you miss a locale:
-const INCOMPLETE_MAP = {
-  en: '1',
-  // cs: '2',  // Error: Property 'cs' is missing
-} as const satisfies Record<Locale, string>;
-```
-
-## Real-World Examples
-
-### Configuration Objects
-
-```typescript
-type Config = {
-  api: string;
-  timeout: number;
-  retries: number;
-};
-
-// Validates shape, but keeps literal types for autocomplete
-const config = {
-  api: "https://api.example.com",
-  timeout: 5000,
-  retries: 3,
-} satisfies Config;
-
-// config.api is 'https://api.example.com', not string
-```
-
-### Event Handlers Map
-
-```typescript
-type EventMap = Record<string, (...args: unknown[]) => void>;
-
-const handlers = {
-  click: (x: number, y: number) => console.log(x, y),
-  submit: (data: FormData) => console.log(data),
-} satisfies EventMap;
-
-// handlers.click is (x: number, y: number) => void
-// Not (...args: unknown[]) => void
-```
-
-### Exhaustive Checks with Records
-
-```typescript
-type Status = "pending" | "approved" | "rejected";
-
-const statusLabels = {
-  pending: "Waiting for review",
-  approved: "Approved",
-  rejected: "Rejected",
-} satisfies Record<Status, string>;
-
-// If you add a new Status, TypeScript will error until you add it here
-```
-
-## References
-
-- [TypeScript 4.9 Release Notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html#the-satisfies-operator)
-- [Matt Pocock - Clarifying the satisfies Operator](https://www.totaltypescript.com/clarifying-the-satisfies-operator)
-- [GitHub Issue #47920 - Original Proposal](https://github.com/microsoft/TypeScript/issues/47920)
+- Whether to use annotation, `satisfies`, `as const satisfies`, or inference.
+- Reason tied to widening or validation.
+- Example replacement when useful.

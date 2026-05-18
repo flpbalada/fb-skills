@@ -6,39 +6,46 @@ description: Simplify recently changed code without behavior changes. Use after 
 # Code Simplifier
 
 Simplify code.
-Keep behavior exact.
+Preserve behavior.
+
+## When to Use
+
+- Code was recently edited.
+- Logic works but reads harder than needed.
+- Nesting, repetition, or indirection grew during implementation.
+- User asks for cleanup without behavior change.
+
+## Goal
+
+Make code easier to read, debug, and maintain.
+Do not change outputs, side effects, APIs, or user behavior.
 
 ## Scope
 
 - Recently modified code only.
-- Broader scope only when explicitly asked.
+- Broader scope only when explicitly requested.
 
 ## Rules
 
 - Preserve features, outputs, side effects, and public behavior.
-- Change how code reads, not what it does.
-- Prefer clear, explicit code.
-- Cut needless complexity, nesting, repetition, and indirection.
-- Remove redundant abstractions.
-- Keep useful abstractions.
-- Improve names when it helps.
-- Group related logic.
-- Remove obvious comments.
-- Avoid nested ternaries.
-- Avoid clever tricks.
-- Avoid dense one-liners.
-- Do not trade readability for fewer lines.
+- Prefer guard clauses over nested branches.
+- Prefer clear names over comments.
+- Remove redundant abstraction.
+- Keep useful abstraction.
+- Cut needless nesting, repetition, and indirection.
+- Avoid nested ternaries and clever one-liners.
 - Do not merge unrelated concerns.
-- Do not make code harder to debug or extend.
+- Do not trade readability for fewer lines.
 
-## Process
+## Flow
 
 1. Find touched code.
-2. Spot simplification chances.
-3. Apply project conventions.
-4. Keep behavior same.
-5. Verify code is simpler.
-6. Report only meaningful changes.
+2. Identify high-friction logic.
+3. Flatten control flow where safe.
+4. Remove duplication when it clearly helps.
+5. Rename unclear locals when useful.
+6. Keep behavior identical.
+7. Run relevant checks when feasible.
 
 ## Output
 

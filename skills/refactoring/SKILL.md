@@ -9,7 +9,7 @@ Improve structure.
 Keep behavior same.
 Avoid breaking changes.
 
-## Use When
+## When to use
 
 - Restructure code.
 - Cut complexity.
@@ -18,11 +18,26 @@ Avoid breaking changes.
 - Improve types or organization.
 - Preserve existing behavior.
 
+## Goal
+
+Improve code structure without changing behavior.
+Reduce complexity only where it pays off.
+
 ## Inputs
 
 - Target files, components, modules, or changed code.
 - Desired outcome or pain point.
 - Constraints and behavior that must not change.
+
+## Rules
+
+- Preserve behavior.
+- Make incremental changes.
+- Follow project conventions.
+- Keep changes minimal.
+- Avoid over-refactoring.
+- Do not change public contracts without request.
+- Verify when checks exist.
 
 ## Flow
 
@@ -40,17 +55,6 @@ Avoid breaking changes.
 - React: `react-use-state`, `react-useeffect-avoid`, `react-use-client-boundary`.
 - TypeScript: `typescript-best-practices`, `typescript-interface-vs-type`, `typescript-satisfies-operator`.
 - Project layout: `project-structure`.
-
-## Rules
-
-- Preserve behavior.
-- Make incremental changes.
-- Follow project conventions.
-- Keep changes minimal.
-- Avoid over-refactoring.
-- Do not change behavior without request.
-- Do not refactor for little gain.
-- Do not skip verification when verification is available.
 
 ## Output
 

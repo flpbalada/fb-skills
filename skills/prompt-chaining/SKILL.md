@@ -5,84 +5,76 @@ description: Break a task into fixed sequential LLM steps with checks between st
 
 # Prompt Chaining
 
-Anthropic canonical agent pattern.
-Linear flow.
-One step feeds next step.
-
-## What It Is
-
-Split one task into ordered stages.
-Each stage has one job.
-Pass output forward.
-Check output before next step.
+Break work into fixed ordered steps.
+Validate each handoff.
 
 ## When to Use
 
 - Task has clear sequence
-- Later step needs cleaned output from earlier step
-- Need traceable intermediate state
-- Need step-specific prompt, tool set, or model
-- Need cheap guardrails between stages
+- Later step needs earlier output
+- Intermediate state should be inspected
+- Steps need different prompts, tools, or models
+- Guardrails between stages reduce errors
 
-## When Not to Use
+## Goal
 
-- One prompt solves task well
-- Order does not matter
-- Work can run in parallel
-- Steps depend on dynamic branching more than fixed flow
-- Handoff cost bigger than quality gain
+Reduce error by making each prompt do one job.
+Keep handoffs explicit.
 
-## Core Flow
+## Rules
 
-```text
-input
-  → step 1: extract / classify / plan
-  → validate
-  → step 2: transform / expand
-  → validate
-  → step 3: format / finalize
-  → output
-```
+- Use only for fixed sequences.
+- Define final output first.
+- Give each step one responsibility.
+- Use strict handoff schema.
+- Validate before next step.
+- Stop or retry on bad output.
+- Log cost, latency, input, and output when useful.
 
-## Simple Implementation Outline
+## Flow
 
-1. Define end output.
-2. Split into small steps.
-3. Give each step one job.
-4. Lock schema for each handoff.
-5. Validate after each step.
-6. Retry or stop on bad output.
-7. Log step input, output, cost, latency.
+1. Define final output.
+2. Split work into ordered steps.
+3. Write job and schema for each step.
+4. Run step 1.
+5. Validate output.
+6. Continue or retry.
+7. Final step formats result.
 
 ## Good Step Boundaries
 
-- Extract facts
-- Summarize facts
-- Draft answer
-- Check answer against facts
-- Format for target system
+- Extract facts.
+- Classify input.
+- Summarize evidence.
+- Draft answer.
+- Check answer against facts.
+- Format for target system.
 
-## Failure Modes
+## Avoid
 
-- Too many steps. Slow. Fragile.
-- Vague handoff format. Drift.
-- Later step redoes earlier step.
-- Bad early output poisons rest.
-- No validation. Errors compound.
-- Full context copied every step. Cost spike.
+- Too many steps.
+- Vague handoff format.
+- Later step redoing earlier work.
+- No validation.
+- Copying full context every step.
+- Using chaining when one prompt is enough.
 
-## Practical Checklist
+## Output
 
-- Steps fixed and ordered
-- One responsibility per step
-- Input/output schema per step
-- Validation between steps
-- Retry rule per step
-- Stop rule on hard fail
-- Logs for each handoff
-- Baseline against single prompt
+```md
+## Prompt Chain
+
+Final output: [target]
+
+Steps:
+1. [job], input [schema], output [schema], validation [check]
+2. [job], input [schema], output [schema], validation [check]
+
+Failure rule:
+- [retry / stop / escalate]
+```
 
 ## Decision Rule
 
-Use prompt chaining when decomposition lowers error more than handoff adds cost.
-If not, use one prompt.
+Use prompt chaining when stepwise validation lowers errors more than handoff cost.
+If steps are independent, use parallelization.

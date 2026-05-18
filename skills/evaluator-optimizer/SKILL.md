@@ -5,84 +5,81 @@ description: Generate outputs, score them, and iterate until quality passes a ba
 
 # Evaluator-Optimizer
 
-Anthropic canonical agent pattern.
 Generate.
 Judge.
 Revise.
-Repeat until good enough.
+Stop when good enough.
 
-## What It Is
+## When to use
 
-One component makes candidate output.
-Another component evaluates it.
-Feedback drives revision.
-Loop ends on pass, budget, or max rounds.
+- Quality bar is clear.
+- Output can improve from feedback.
+- Evaluation criteria can be written or coded.
+- Failure is costly.
+- Extra loop cost is acceptable.
 
-## When to Use
+## Do not use
 
-- Quality bar is clear
-- Output can improve with feedback
-- Eval criteria can be written or coded
-- Failure is costly
-- Extra loop cost is acceptable
+- No reliable eval signal.
+- Feedback would be vague or subjective.
+- Fast answer matters more than polished answer.
+- Output is high-risk and needs human review.
+- Revision loops may drift from user intent.
 
-## When Not to Use
+## Goal
 
-- No reliable eval signal
-- Feedback vague or subjective
-- Fast answer matters more than polished answer
-- Output space huge and revisions drift
-- Humans should review instead of model judge
+- Produce stronger output through controlled iteration.
+- Keep evaluator strict.
+- Stop before cost or drift grows.
 
-## Core Flow
+## Rules
 
-```text
-candidate
-  → evaluator scores against rubric
-  → pass ? return
-  → optimizer revises using feedback
-  → re-evaluate
-```
+- Define rubric before generating.
+- Separate generator and evaluator roles.
+- Evaluator returns score, reasons, and fix hints.
+- Set max rounds.
+- Stop on pass, budget, or plateau.
+- Save failing examples for rubric tuning.
 
-## Simple Implementation Outline
+## Good eval signals
+
+- Schema validity.
+- Test pass rate.
+- Grounding to source facts.
+- Style compliance.
+- Policy compliance.
+- Ranking score.
+
+## Flow
 
 1. Define pass/fail rubric.
-2. Separate generator and evaluator prompts.
-3. Keep evaluator stricter than generator.
-4. Return score + reasons + fix hints.
-5. Limit revision rounds.
-6. Stop on plateau.
-7. Save failing examples for rubric tuning.
+2. Generate candidate.
+3. Evaluate against rubric.
+4. If pass, return candidate.
+5. If fail, revise using feedback.
+6. Repeat until stop condition.
 
-## Good Eval Signals
+## Failure modes
 
-- Schema validity
-- Test pass rate
-- Grounding to source facts
-- Style or policy compliance
-- Ranking score
+- Evaluator too soft.
+- Evaluator and generator share blind spots.
+- Feedback not actionable.
+- Loop overfits rubric.
+- No stop rule.
+- No human review path for high-risk output.
 
-## Failure Modes
+## Output
 
-- Evaluator too soft. Bad outputs pass.
-- Evaluator and optimizer share same blind spots.
-- Feedback vague. Revisions random.
-- Loop overfits rubric, hurts real quality.
-- No stop rule. Cost climbs.
-- Generator never sees concrete failure examples.
+```md
+## Result
+- Status: pass | fail | stopped
+- Rounds: [n]
+- Score: [score]
 
-## Practical Checklist
+## Final Output
+[candidate]
 
-- Rubric explicit
-- Pass threshold set
-- Generator and evaluator separated
-- Feedback actionable
-- Max rounds set
-- Plateau stop rule set
-- Offline eval set exists
-- Human review path for high-risk cases
-
-## Decision Rule
-
-Use evaluator-optimizer when you can state quality bar clearly and iterate cheaply.
-If you cannot judge quality well, do not build this loop.
+## Evaluation Notes
+- [reason]
+- [remaining risk]
+```

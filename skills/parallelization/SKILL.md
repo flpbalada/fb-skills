@@ -5,87 +5,75 @@ description: Run independent LLM subtasks at same time, then combine results. Us
 
 # Parallelization
 
-Anthropic canonical agent pattern.
-Split work.
+Split independent work.
 Run branches at same time.
-Join later.
-
-## What It Is
-
-Break a task into independent units.
-Run units concurrently.
-Aggregate outputs into one result.
-
-Two common forms:
-
-- Sectioning: each branch handles different slice
-- Voting: multiple branches score same thing
+Merge results.
 
 ## When to Use
 
-- Subtasks independent
+- Subtasks are independent
 - Latency matters
-- Task naturally splits by item or section
-- Need ensemble scoring or ranking
-- Join step is simple and deterministic
+- Work splits by item, source, section, or test
+- Need multiple judges or rankings
+- Merge step is simple
 
-## When Not to Use
+## Goal
 
-- Branches need shared evolving context
-- One branch output changes another
-- Coordination cost high
-- Model rate limits kill concurrency gains
-- Merge logic too complex
+Reduce wall-clock time or improve judgment quality without adding merge risk.
 
-## Core Flow
+## Rules
 
-```text
-input
-  → split
-  → run branch A || branch B || branch C
-  → collect outputs
-  → merge / vote / rank
-  → output
-```
+- Only parallelize independent work.
+- Give each branch stable input.
+- Use same output schema for branches.
+- Set timeout and retry rules.
+- Allow partial-failure policy.
+- Merge with deterministic code when possible.
+- Cap branch count and cost.
 
-## Simple Implementation Outline
+## Patterns
 
-1. Find independent units.
-2. Define stable input per unit.
+- Sectioning: each branch handles different slice.
+- Voting: branches judge same item independently.
+- Retrieval: branches query different sources.
+- Testing: branches run separate checks.
+
+## Flow
+
+1. Identify independent units.
+2. Define branch input and schema.
 3. Run branches concurrently.
-4. Set timeout and retry rules.
-5. Normalize branch outputs.
-6. Merge with deterministic code when possible.
-7. Log per-branch failures.
+4. Collect outputs.
+5. Normalize results.
+6. Merge, vote, or rank.
+7. Report branch failures.
 
-## Good Split Patterns
+## Avoid
 
-- One document chunk per branch
-- One candidate answer per judge
-- One tool query per source
-- One test case per worker
+- Hidden dependencies between branches.
+- Branch output needed by another branch.
+- Vague merge logic.
+- Duplicate work.
+- Ignored partial failures.
+- Branch count larger than value.
 
-## Failure Modes
+## Output
 
-- Hidden dependency between branches
-- Merge step uses brittle prompt
-- Duplicate work across branches
-- Long-tail branch dominates latency
-- Partial failures ignored
-- Cost balloons with branch count
+```md
+## Parallel Plan
 
-## Practical Checklist
+Task: [goal]
+Split: [sectioning / voting / retrieval / testing]
+Branches:
+- [branch]: [input], output [schema]
 
-- Work units truly independent
-- Shared schema across branches
-- Timeout per branch
-- Retry and partial-fail policy
-- Merge logic clear
-- Concurrency fits rate limits
-- Cost cap set
-- Baseline against serial run
+Merge:
+- Method: [merge / vote / rank]
+- Failure policy: [retry / skip / stop]
+- Cost cap: [limit]
+```
 
 ## Decision Rule
 
-Use parallelization when independence is real and join logic is cheap.
-If branches talk to each other, use another pattern.
+Use parallelization when independence is real and merge is cheap.
+If steps depend on each other, use prompt chaining.

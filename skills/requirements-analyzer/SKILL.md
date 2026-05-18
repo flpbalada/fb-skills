@@ -5,19 +5,27 @@ description: Analyze feature requirements for clarity, scope, risk, and testabil
 
 # Requirements Analyzer
 
+## When to use
+
+- Before building features.
+- Before splitting ambiguous work.
+- When scope, success criteria, or risks are unclear.
+- When requirements need to become testable tasks.
+
+## Goal
+
 Check clarity, scope, feasibility, and risk before implementation.
+Turn vague asks into testable requirements.
 
-## Depth
+## Rules
 
-- Quick: bug fix or small change.
-- Standard: feature or medium change.
-- Deep: large feature or architecture change.
-
-## Scope Rules
-
-- Target `50-200 LOC` per PR.
+- Match depth to change size.
+- Keep requirements specific and testable.
+- Separate user need from solution.
+- Mark assumptions.
+- Identify out-of-scope items.
 - Split work over `400 LOC`.
-- Common splits: foundation, API/data, UI, integration.
+- Prefer `50-200 LOC` per PR.
 
 ## Discovery
 
@@ -33,49 +41,23 @@ Check clarity, scope, feasibility, and risk before implementation.
 - What assumptions exist?
 - What needs product answer?
 
-## Validation
+## Flow
 
-- Requirements must be specific.
-- Requirements must be testable.
-- Requirements must be independent where possible.
-- Requirements must be measurable where useful.
+1. Identify user, goal, and trigger.
+2. Define success and failure.
+3. List requirements as testable statements.
+4. Check edge cases.
+5. Check technical impact.
+6. Identify risks and unknowns.
+7. Split scope if needed.
 
-## Edge Cases
+## Checks
 
-- Empty input.
-- Null or missing data.
-- Boundary values.
-- Invalid input.
-- Concurrent actions.
-- Expected errors.
-- Unexpected user actions.
-
-## Tech Check
-
-- Change type: `feat`, `fix`, `refactor`, `chore`, `docs`, `test`, or `perf`.
-- Data source, transform, state, and destination.
-- Existing patterns to reuse.
-- New code paths.
-- Refactor needed before feature work.
+- Edge cases: empty, null, boundary, invalid, concurrent, expected error.
+- Tech impact: data source, transform, state, destination, patterns, new paths.
 - Non-functional needs: accessibility, performance, security, reliability, i18n.
-
-## Risk Check
-
-- Technical risk.
-- Scope risk.
-- Schedule risk.
-- Quality risk.
-- Scope creep signs: `while we're at it`, `nice to have`, blurry boundaries.
-
-## Skill Hints
-
-- Requirements: `user-story-fundamentals`, `jobs-to-be-done`, `theme-epic-story`.
-- Analysis: `five-whys`, `hypothesis-tree`, `graph-thinking`.
-- Product: `making-product-decisions`.
-- UX: `cognitive-load`, `hicks-law`, `progressive-disclosure`.
-- React: `react-use-state`, `react-key-prop`, `react-use-client-boundary`.
-- TypeScript: `typescript-interface-vs-type`, `typescript-advanced-types`, `typescript-satisfies-operator`.
-- Structure: `project-structure`, `naming-cheatsheet`.
+- Risks: technical, scope, schedule, quality.
+- Scope creep: "while we're at it", "nice to have", blurry boundaries.
 
 ## Output
 

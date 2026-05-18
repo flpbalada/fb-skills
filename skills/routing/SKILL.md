@@ -5,84 +5,62 @@ description: Send inputs to specialized prompts, tools, or models based on input
 
 # Routing
 
-Anthropic canonical agent pattern.
+## When to use
+
+- Inputs fall into clear request categories.
+- Categories need different prompts, tools, models, or agents.
+- Classification is cheaper than using one large path.
+- Cost, latency, safety, or quality differs by route.
+
+## Goal
+
 Classify first.
-Then send work to best path.
+Send work to the best specialist path.
 
-## What It Is
+## Rules
 
-Use a router to choose among specialists.
-Specialist can be prompt, model, tool chain, or agent.
-Goal: better fit per request.
+- Start with few routes.
+- Make route definitions low-overlap.
+- Return route label and confidence.
+- Add fallback for low confidence.
+- Track misroutes.
+- Review route quality, cost, and latency.
+- Do not route when categories are fuzzy.
+- Do not make router logic harder than the task.
 
-## When to Use
-
-- Requests fall into clear categories
-- Different categories need different prompts or tools
-- Cheap classifier can pick path well
-- Specialist path beats one general path
-- Need cost or latency control by request type
-
-## When Not to Use
-
-- Categories fuzzy or overlapping
-- Generalist path already works
-- Misroute cost high
-- Too few examples to define routes
-- Router logic harder than task
-
-## Core Flow
-
-```text
-input
-  → classify
-  → pick route
-    → specialist A
-    → specialist B
-    → specialist C
-  → return result
-```
-
-## Simple Implementation Outline
+## Flow
 
 1. Define route set.
 2. Write route criteria.
-3. Start with few routes.
-4. Make router output label + confidence.
-5. Add fallback path.
-6. Track route accuracy.
-7. Review misroutes. Refine criteria.
+3. Classify input.
+4. Pick route by label and confidence.
+5. Use fallback when confidence is low.
+6. Send input to specialist.
+7. Return result.
+8. Save misroute examples.
 
-## Good Routing Axes
+## Routing Axes
 
-- Intent type
-- Task complexity
-- Safety level
-- Domain
-- Required tool access
-- Response format
+- Intent type.
+- Task complexity.
+- Safety level.
+- Domain.
+- Required tool access.
+- Response format.
 
 ## Failure Modes
 
-- Too many routes. Hard to maintain.
-- Route definitions overlap.
-- No fallback for low confidence.
-- Router prompt leaks to specialists.
-- Uneven traffic. Some routes rot.
-- No eval set. Misroutes stay hidden.
+- Too many routes.
+- Overlapping route definitions.
+- No low-confidence fallback.
+- Router prompt leaking to specialists.
+- Uneven traffic leaving routes untested.
+- No eval set.
 
-## Practical Checklist
+## Output
 
-- Clear route taxonomy
-- Low-overlap route definitions
-- Confidence or abstain option
-- Fallback path exists
-- Per-route prompts tested
-- Misroute examples saved
-- Metrics by route: quality, cost, latency
-- Periodic route review
-
-## Decision Rule
-
-Use routing when specialization wins and classification is cheap enough.
-If cases blur together, keep one path.
+- Route taxonomy.
+- Criteria for each route.
+- Fallback route.
+- Classification format.
+- Misroute review plan.

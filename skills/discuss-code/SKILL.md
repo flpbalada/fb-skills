@@ -5,53 +5,74 @@ description: Critically discuss code issues with compact findings. Use when code
 
 # Discuss Code
 
-Discuss code critically, clearly, and compactly.
+Review code critically.
+Focus on real issues.
+Keep output compact.
 
-## Input
+## When to use
 
-- Target file, diff, snippet, or code area provided by the user.
+- User asks to review code, diff, snippet, or design.
+- Code may have logic, naming, structure, or maintainability issues.
+- User wants discussion before or instead of edits.
 
 ## Goal
 
-- Find real issues in logic, simplicity, structure, and naming.
-- Explain each issue in plain language.
-- Suggest the smallest useful improvement.
+- Find concrete problems.
+- Explain impact plainly.
+- Suggest smallest useful fix.
 - Avoid praise unless there are no findings.
+
+## Rules
+
+- Findings first.
+- Highest impact first.
+- Max 5 findings.
+- No speculative issues without evidence.
+- Reference file and line when possible.
+- Show code only when it clarifies fix.
 
 ## Check
 
-- Correctness
-- Unnecessary logic
-- Duplication
-- Abstraction quality
-- Complexity and nesting
-- Naming
-- Dead code
-- Missed simpler patterns
+- Correctness.
+- Unneeded logic.
+- Duplication.
+- Weak abstraction.
+- Nesting and complexity.
+- Naming.
+- Dead code.
+- Missed simple pattern.
 
-## Skill Hints
+## Flow
 
-- Refactor or abstraction: `code-architecture-wrong-abstraction`
-- TypeScript: `typescript-best-practices`, `typescript-interface-vs-type`, `typescript-advanced-types`, `typescript-satisfies-operator`
-- React: `react-useeffect-avoid`, `react-use-state`, `react-use-client-boundary`, `react-key-prop`
-- Naming: `naming-cheatsheet`
+1. Read user-provided code or target.
+2. Identify behavior and intent.
+3. Check for bugs and maintainability risks.
+4. Rank findings by impact.
+5. Suggest minimal fixes.
 
 ## Output
 
-- Start with `Verdict: good | mixed | bad`.
-- Then list findings, highest impact first.
-- Max 5 findings.
-- Use this format for each finding:
-
 ```md
+Verdict: good | mixed | bad
+
 ## Finding N: short title
-What: concrete issue in code
-Why: impact or risk in one short line
+What: concrete issue
+Why: impact or risk
 Suggestion: smallest useful fix
-Reference: `file:line` or quoted snippet
+Reference: `file:line` or snippet
 ```
 
-- If no findings, say `No findings.` then mention residual risk or missing context.
-- Show code only when it makes the suggestion much clearer.
-- List only relevant skills at the end.
-- Keep the whole reply compact and easy to scan.
+If no findings:
+
+```md
+Verdict: good
+No findings.
+Residual risk: [missing context or test gap]
+```
+
+## Related skills
+
+- `code-architecture-wrong-abstraction`
+- `typescript-best-practices`
+- `react-useeffect-avoid`
+- `naming-cheatsheet`

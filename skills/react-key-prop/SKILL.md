@@ -3,106 +3,67 @@ name: react-key-prop
 description: Guides proper usage of the key prop in React lists. Use this skill when rendering lists, mapping arrays to components, or troubleshooting list-related state bugs.
 ---
 
-# React: Key Prop Best Practices
+# React Key Prop
 
-## Core Principle
+## When to use
 
-**Use stable, unique IDs from your data. Never use array index for dynamic lists.**
+- Rendering arrays with `.map`.
+- Debugging list state bugs.
+- Adding, removing, sorting, or filtering list items.
+- Rendering form rows or stateful child components.
 
-The `key` prop provides stable identity to list elements during React's reconciliation process.
+## Goal
 
-## When to Use What
+Give React stable item identity.
+Use keys tied to data, not render position.
 
-### Use Data IDs (Preferred)
+## Rules
 
-Always use unique, stable identifiers directly from your data:
+- Always add `key` to rendered list items.
+- Prefer unique, stable IDs from data.
+- Generate missing IDs once when data is created or loaded.
+- Use the same key while the same item exists.
+- Do not generate keys during render.
+- Do not use `Math.random()` or `Date.now()`.
+- Do not use `useId()` for list keys.
+- Avoid array index keys for dynamic lists.
+
+## Good Pattern
 
 ```jsx
-// ✅ Correct
 {todos.map((todo) => (
   <li key={todo.id}>{todo.text}</li>
 ))}
 ```
 
-Ideal keys are:
-- **Unique** - No two items share the same key
-- **Stable** - Never changes during component lifetime
-- **Predictable** - Directly tied to the data item
+## Missing IDs
 
-### Generate IDs on Data Load
-
-When data lacks IDs, create them **once** when receiving data:
+Create IDs once, before render:
 
 ```jsx
-import { nanoid } from 'nanoid';
-
-useEffect(() => {
-  fetch('/api/items')
-    .then(res => res.json())
-    .then(data => {
-      const itemsWithIds = data.map(item => ({
-        ...item,
-        _tempId: nanoid() // Stable ID generated once
-      }));
-      setItems(itemsWithIds);
-    });
-}, []);
+const itemsWithIds = data.map((item) => ({
+  ...item,
+  id: crypto.randomUUID(),
+}));
 ```
 
-### When Index Is Acceptable (Rare)
+## Index Exception
 
-Index as key is acceptable ONLY when ALL conditions are met:
-- List is absolutely static
-- Items never added/removed (except at the end)
-- Order never changes
-- Items have no internal state
+Index key is acceptable only when all are true:
 
-## Anti-Patterns to Avoid
+- List is static.
+- Items are never inserted or removed from the middle.
+- Order never changes.
+- Items have no internal state.
 
-### Never Generate Keys During Render
+## Failure Mode
 
-```jsx
-// ❌ WRONG: Creates new key every render
-{items.map(item => (
-  <li key={Math.random()}>{item.name}</li>
-))}
-```
+Index represents position.
+When order changes, React reuses the wrong component.
+Result: stale state, wrong input values, broken animations, or unexpected focus.
 
-This forces React to destroy and recreate all components on every render.
+## Output
 
-### Don't Use Index for Dynamic Lists
-
-```jsx
-// ❌ WRONG for dynamic lists
-{items.map((item, index) => (
-  <li key={index}>{item.name}</li>
-))}
-```
-
-Index fails when:
-- Items are added/removed from beginning or middle
-- List order changes (sorting, filtering)
-- Items have internal state (like form inputs)
-
-**The bug:** Index represents position, not data identity. When positions change but indexes stay the same, React incorrectly "mutates" existing components instead of creating new ones, causing state mismatch.
-
-### Don't Use `useId()` for List Keys
-
-React's `useId()` hook is for accessibility (linking labels to inputs), not for generating list keys.
-
-## Quick Reference
-
-### DO
-- Always use `key` when rendering lists
-- Prefer unique, stable `id` from your data
-- Generate IDs once at data load time (`nanoid`/`uuid`)
-
-### DON'T
-- Never generate `key` during render (`Math.random()`, `Date.now()`)
-- Avoid `index` as `key` for dynamic lists
-- Don't use `useId()` for list keys
-
-## References
-
-- [React Docs - Rendering Lists](https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key)
-- [nanoid - Tiny ID generator](https://github.com/ai-cookie/nanoid)
+- Stable key choice.
+- Note when data lacks IDs.
+- Fix for any index, random, date, or `useId` key.

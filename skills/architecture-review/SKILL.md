@@ -5,73 +5,74 @@ description: Review architecture and refactor only after approval. Use when code
 
 # Architecture Review
 
-Review codebase architecture. Refactor only after explicit approval.
+Review architecture.
+Refactor only after explicit approval.
 
-## Input
+## When to Use
 
-- Target path or file set provided by the user.
-- If target is empty, review code changes from the thread.
+- User asks for architecture review.
+- Code structure, module boundaries, or interfaces feel wrong.
+- Refactor candidates need ranking.
+- Existing changes need architectural review.
+
+## Goal
+
+Find structural friction.
+Explain impact.
+Offer small refactor candidates.
+Wait for approval before edits.
+
+## Rules
+
+- Review only the requested path or file set.
+- If no target is provided, review thread changes.
 - If thread changes are unclear, use current git diff.
 - If scope is still unclear, ask.
-
-## Hard Constraints
-
-- If target is provided, review only that path or file set.
 - Do not broaden scope without asking.
-- Preserve behavior unless the user explicitly approves a behavior change.
-- Approval to refactor one candidate does not approve unrelated edits.
+- Preserve behavior unless user approves behavior change.
+- Approval for one candidate does not approve other edits.
+- Respect ADRs in `docs/adr/` when present.
 
-## Context
+## Concepts
 
-- Use Matt Pocock-style architecture review concepts: Module, Interface, Implementation, Depth, Seam, Adapter, Leverage, Locality.
-- Prefer project terms from `CONTEXT.md` if present.
-- Read relevant ADRs in `docs/adr/` if present.
-- Respect ADRs. If an ADR appears harmful, flag it as a risk instead of changing against it.
+Use these terms when useful:
 
-## Review
+- Module.
+- Interface.
+- Implementation.
+- Depth.
+- Seam.
+- Adapter.
+- Leverage.
+- Locality.
 
-1. Inspect scope.
-2. Find architectural friction.
-3. Apply the deletion test to shallow modules.
-4. Identify deepening opportunities:
-- Better locality
-- Higher leverage
-- Smaller interfaces
-- Clearer seams
-- Easier tests
-5. Use subagents only when useful:
-- `explore`: codebase walking or friction discovery
-- `refactoring`: approved refactor work only
-- `code-reviewer`: after non-trivial edits
+Prefer project terms from `CONTEXT.md` when present.
 
-## Before Edits
+## Flow
 
-- Present up to 5 candidates.
-- Keep solutions plain English.
-- Avoid detailed interfaces unless needed to explain risk.
-- Ask which candidate to refactor.
-- Wait for explicit approval.
+1. Inspect target scope.
+2. Read relevant context and ADRs.
+3. Find architectural friction.
+4. Apply deletion test to shallow modules.
+5. Look for deeper modules, smaller interfaces, clearer seams, and better locality.
+6. Present up to 5 candidates.
+7. Wait for explicit approval.
+8. Refactor only approved candidate.
+9. Verify when feasible.
+10. Report changes, checks, and risks.
 
 ## Candidate Format
 
 ```md
-## Candidate N: short title
-Files: `path`
+## Candidate N: [short title]
+Files: `[path]`
 Problem: [friction]
 Solution: [plain English change]
 Benefits: [locality, leverage, testability]
-Risk: [behavior, churn, ADR conflict, or `None`]
+Risk: [behavior, churn, ADR conflict, or None]
 ```
 
-## After Approval
-
-- Refactor only the approved candidate.
-- Use the smallest correct change.
-- Run relevant verification when feasible.
-- If verification is unavailable or fails for unrelated reasons, report clearly.
-- Use `code-reviewer` after non-trivial edits.
-
-## Final Report
+## Output After Edits
 
 ```md
 ## Changes
@@ -81,5 +82,5 @@ Risk: [behavior, churn, ADR conflict, or `None`]
 - [command]: [result]
 
 ## Notes
-- [risk, assumption, follow-up, or `None`]
+- [risk, assumption, follow-up, or None]
 ```

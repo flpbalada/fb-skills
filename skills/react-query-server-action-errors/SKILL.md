@@ -5,11 +5,31 @@ description: Guides handling expected Next.js Server Action errors with TanStack
 
 # React Query Server Action Errors
 
-## Core Rule
+## When to use
 
-Do not throw expected user-facing errors from Next.js Server Actions.
+- Next.js Server Actions feed TanStack Query mutations.
+- Expected action failures need toast or inline UI.
+- Production error messages are sanitized.
+- `throwOnError`, `QueryBoundary`, or error codes are involved.
 
-Return a typed result:
+## Goal
+
+Do not throw expected user-facing errors from Server Actions.
+Return typed failure data.
+Throw only inside the client mutation when React Query needs an error.
+
+## Rules
+
+- Return `ActionResult<T, E>` from Server Actions.
+- Map raw server or API failures to safe error codes.
+- Keep raw backend errors server-side.
+- Translate error codes on the client.
+- Throw a normal client-side `Error` from `mutationFn` for expected failures.
+- Handle mutation errors close to the mutation or workflow.
+- Do not set global mutation `throwOnError: true`.
+- Use mutation-level `throwOnError: true` only for boundary fallback UI.
+
+## Result Type
 
 ```ts
 export type ActionResult<T, E> =
@@ -17,79 +37,30 @@ export type ActionResult<T, E> =
   | { success: false; error: E };
 ```
 
-React sanitizes thrown Server Action error messages in production. Return expected errors as data, then unwrap them in the client mutation.
-
-## Default Flow
+## Flow
 
 1. Server Action returns `ActionResult<T, ErrorCode>`.
-2. Server maps raw API/domain failures to typed error codes.
-3. `mutationFn` calls action and checks `result.success`.
-4. On `success: false`, `mutationFn` throws a normal client-side `Error`.
-5. `useMutation({ onError })` shows toast or updates UI.
-6. Use mutation-level `throwOnError: true` only when the error should reach a client `QueryBoundary`.
+2. Server maps raw failures to typed error codes.
+3. `mutationFn` calls action.
+4. If `success`, return `data`.
+5. If failure, throw client-side translated `Error`.
+6. `onError` shows toast or updates UI.
+7. Use `throwOnError: true` only for boundary fallback.
 
-## Server Pattern
-
-```ts
-"use server";
-
-export enum CartErrorCode {
-  OutOfStock = "out_of_stock",
-  InvalidCoupon = "invalid_coupon",
-  Unknown = "unknown",
-}
-
-export async function updateCartAction(
-  input: UpdateCartInput,
-): Promise<ActionResult<Cart, CartErrorCode>> {
-  const [error, cart] = await safeAwait(updateCart(input));
-
-  if (!error) {
-    return { success: true, data: cart };
-  }
-
-  return {
-    success: false,
-    error: getCartErrorCode(error),
-  };
-}
-```
-
-## Client Pattern
+## Pattern
 
 ```tsx
-const updateCartMutation = useMutation({
-  mutationFn: async (input: UpdateCartInput) => {
-    const result = await updateCartAction(input);
+const mutation = useMutation({
+  mutationFn: async (input: Input) => {
+    const result = await action(input);
 
-    if (result.success) {
-      return result.data;
-    }
+    if (result.success) return result.data;
 
-    throw new Error(t(`cart.errors.${result.error}`));
+    throw new Error(t(`errors.${result.error}`));
   },
-  onError: (error) => {
-    toast.error(error.message);
-  },
+  onError: (error) => toast.error(error.message),
 });
 ```
-
-## Error Codes
-
-Prefer stable error codes over raw messages.
-
-- Define domain-specific enums, such as `CartErrorCode`.
-- Translate codes in all supported locales.
-- Keep raw API errors server-side.
-- Map unknown raw failures to a generic safe code.
-- Use exhaustive mapping when possible.
-
-## React Query Config
-
-- Do not set global mutation `throwOnError: true`.
-- Do not rely on global React Query error toasts for mutations.
-- Keep mutation error UX close to the mutation hook or UI workflow.
-- Set `throwOnError: true` only on a specific mutation when a `QueryBoundary` should render fallback UI.
 
 ## Avoid
 
@@ -97,7 +68,14 @@ Prefer stable error codes over raw messages.
 - Reading production Server Action `Error.message` on the client.
 - Returning raw backend errors to the browser.
 - Catching and exposing all thrown server errors.
-- Duplicating message strings in actions and client UI.
+- Duplicating message strings across action and client.
+
+## Output
+
+- Typed action result.
+- Safe error code enum or union.
+- Client-side unwrap in `mutationFn`.
+- Local `onError` handling.
 
 ## References
 

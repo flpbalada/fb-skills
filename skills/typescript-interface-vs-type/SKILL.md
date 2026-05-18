@@ -5,35 +5,30 @@ description: Guides when to use interface vs type in TypeScript. Use this skill 
 
 # TypeScript: Interface vs Type
 
-## Core Principle
+## When to use
 
-**Use `interface` until you need features from `type`.**
+- Defining object shapes.
+- Extending or composing types.
+- Choosing between `interface`, `type`, and intersections.
+- Reviewing TypeScript type style.
 
-This is the official TypeScript recommendation from the [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html).
+## Goal
 
-## When to Use Interface
+Use `interface` until `type` features are needed.
+Prefer readable errors and compiler performance.
 
-Use `interface` for:
-- Object type definitions
-- Extending other object types
-- Class implementations
-- Declaration merging (augmenting existing types)
+## Rules
 
-## When to Use Type
+- Use `interface` for object type definitions.
+- Use `interface extends` for extending object shapes.
+- Use `interface` for class contracts.
+- Use `type` for unions, tuples, primitives, mapped types, conditional types, and function aliases.
+- Prefer `interface extends` over object intersections.
+- Avoid intersections when properties may conflict.
 
-Use `type` only when you need:
-- Union types: `type Status = 'pending' | 'approved' | 'rejected'`
-- Mapped types: `type Readonly<T> = { readonly [K in keyof T]: T[K] }`
-- Conditional types: `type NonNullable<T> = T extends null | undefined ? never : T`
-- Tuple types: `type Point = [number, number]`
-- Function types (though interface can also work): `type Handler = (event: Event) => void`
+## Examples
 
-## Prefer `interface extends` Over Intersection (`&`)
-
-When extending object types, always prefer `interface extends` over type intersections.
-
-```typescript
-// Preferred
+```ts
 interface User {
   name: string;
 }
@@ -41,58 +36,33 @@ interface User {
 interface Admin extends User {
   permissions: string[];
 }
+```
 
-// Avoid
-type User = {
-  name: string;
-};
+```ts
+type Status = "pending" | "approved" | "rejected";
+type Point = [number, number];
+type Handler = (event: Event) => void;
+```
 
+## Why Prefer Extends
+
+- Conflicting properties fail at the definition.
+- Error messages are clearer.
+- Named interfaces are cached by TypeScript.
+- Intersections can be recomputed and harder to debug.
+
+## Avoid
+
+```ts
 type Admin = User & {
   permissions: string[];
 };
 ```
 
-### Reason 1: Better Error Messages
+Use this only when intersection semantics are intentional.
 
-With `interface extends`, TypeScript raises errors at the definition when extending with incompatible properties:
+## Output
 
-```typescript
-interface Base {
-  id: number;
-}
-
-// Error immediately at definition
-interface Extended extends Base {
-  id: string; // Error: Type 'string' is not assignable to type 'number'
-}
-```
-
-With intersections, errors only appear when accessing the incompatible property, making bugs harder to catch:
-
-```typescript
-type Base = {
-  id: number;
-};
-
-// No error at definition
-type Extended = Base & {
-  id: string;
-};
-
-// Error only when used
-const item: Extended = { id: 'abc' }; // Error appears here, not at type definition
-```
-
-### Reason 2: Better TypeScript Performance
-
-`interface extends` provides better TypeScript performance:
-- Interfaces are cached by name - TypeScript computes the type once and reuses it
-- Intersections are recomputed every time they're used, which slows down type checking with complex types
-
-See [TypeScript Performance Wiki](https://github.com/microsoft/TypeScript/wiki/Performance#preferring-interfaces-over-intersections) for details.
-
-## References
-
-- [TypeScript Handbook - Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
-- [TypeScript Performance Wiki](https://github.com/microsoft/TypeScript/wiki/Performance#preferring-interfaces-over-intersections)
-- [Total TypeScript - Intersections vs Interface Extends](https://www.totaltypescript.com/books/total-typescript-essentials/objects#intersections-vs-interface-extends)
+- Recommended declaration form.
+- Reason: object shape, union, tuple, conditional, mapped type, or extension.
+- Any intersection risk.

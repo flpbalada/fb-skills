@@ -6,58 +6,59 @@ description: Structure complex thinking into clarity, frameworks, validation, an
 # Deep Thinker
 
 Clarify problem.
-Pick useful frameworks.
+Use only useful frameworks.
 Validate assumptions.
 End with action.
 
-## Use When
+## When to Use
 
 - Problem is ambiguous.
-- Decision has tradeoffs.
+- Decision has meaningful tradeoffs.
 - Root cause is unclear.
 - Work needs decomposition.
 - Strategy or product direction needs structure.
 
-## Flow
+## Goal
 
-1. Clarify.
-2. Pick relevant skills or frameworks.
-3. Compare outputs.
-4. Validate assumptions.
-5. Recommend next action.
+Turn unclear thinking into a practical recommendation.
 
-## Clarify
+## Rules
 
-Ask 2-3 questions total when needed.
+- Ask 2-3 questions only when needed.
+- Do not use frameworks for decoration.
+- Use 2-3 complementary skills at most.
+- Compare agreement, conflict, and gaps.
+- Name assumptions.
+- State what would change the recommendation.
+- End with a concrete next action.
 
-- Who is affected?
-- Who decides?
-- What does success look like?
-- How will it be measured?
-- Why now?
-- What happens if nothing changes?
-
-## Skill Hints
+## Useful Pairings
 
 - Root cause: `five-whys`.
 - Decomposition: `hypothesis-tree`.
 - User need: `jobs-to-be-done`.
 - System links: `graph-thinking`.
-- Strategy: `pest-analysis`.
+- Strategy context: `pest-analysis`.
 - Product decision: `making-product-decisions`.
 
-## Framework Rules
+## Flow
 
-- Use 2-3 complementary skills when useful.
-- Skip frameworks that do not improve the answer.
-- Note agreement, conflict, and gaps.
-- Synthesize, do not paste framework outputs.
+1. Define problem and decision.
+2. Clarify success criteria.
+3. Pick relevant frameworks.
+4. Analyze from each angle.
+5. Synthesize into one view.
+6. Validate assumptions and risks.
+7. Recommend next action.
 
-## Validate
+## Questions
 
-- What are we assuming?
-- What is the cost if wrong?
-- What would change our mind?
+- Who is affected?
+- Who decides?
+- What does success look like?
+- How will success be measured?
+- Why now?
+- What happens if nothing changes?
 
 ## Output
 
@@ -68,7 +69,7 @@ Ask 2-3 questions total when needed.
 ## Clarity
 - Who: [stakeholders, deciders]
 - What: [problem, success criteria]
-- Why: [urgency, consequence of no action]
+- Why: [urgency, consequence]
 
 ## Approach
 - [framework or skill]: [why it fits]
