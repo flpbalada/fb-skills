@@ -1,0 +1,4 @@
+interface:
+  display_name: "Follow Goals"
+  short_description: "Run long goals with checkpoints"
+  default_prompt: "Use $follow-goals to turn this long-running task into a durable objective with checkpoints and a clear stop condition."

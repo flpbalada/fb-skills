@@ -1,0 +1,4 @@
+interface:
+  display_name: "Letter From Future"
+  short_description: "Plan product work from a desired future"
+  default_prompt: "Use $letter-from-future to turn this startup idea into a future letter, backcast roadmap, and risk plan."
