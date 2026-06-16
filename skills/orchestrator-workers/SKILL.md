@@ -1,6 +1,6 @@
 ---
 name: orchestrator-workers
-description: Use a central planner to break dynamic tasks into worker jobs and combine results. Use when task shape is unknown upfront and subtasks must be assigned at runtime.
+description: Plan and run dynamic worker decomposition with a central orchestrator, narrow worker jobs, output schemas, replanning rounds, and synthesized results. Use when task shape is unknown upfront and subtasks must be assigned at runtime. Do not use for fixed sequences; use prompt-chaining. Do not use for independent known branches; use parallelization.
 ---
 
 # Orchestrator-Workers

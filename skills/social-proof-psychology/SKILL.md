@@ -1,9 +1,6 @@
 ---
 name: social-proof-psychology
-description:
-  Leverage social proof principles to build trust and influence user behavior.
-  Use when designing landing pages, adding testimonials, displaying user stats,
-  or optimizing conversion elements with social validation.
+description: Use credible evidence from relevant others to reduce uncertainty. Use when selecting testimonials, reviews, customer logos, usage stats, expert endorsements, or peer proof near decisions; avoid generic trust work, fake popularity, or halo effects from brand polish alone.
 ---
 
 # Social Proof Psychology

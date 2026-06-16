@@ -1,9 +1,6 @@
 ---
 name: hypothesis-tree
-description:
-  Structure complex questions into testable hypotheses. Use when validating
-  product ideas, debugging problems, planning experiments, or breaking down
-  ambiguous challenges into actionable research.
+description: Break ambiguous questions into mutually useful hypotheses and tests. Use when validating product ideas, debugging uncertain causes, planning research, prioritizing experiments, or turning strategy questions into evidence plans; avoid for root-cause chains needing Five Whys.
 ---
 
 # Hypothesis Tree

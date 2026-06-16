@@ -1,9 +1,6 @@
 ---
 name: what-not-to-do-as-product-manager
-description:
-  Anti-patterns and mistakes to avoid as a product manager. Use when evaluating
-  leadership behaviors, improving team dynamics, reflecting on management
-  practices, or onboarding new product managers.
+description: Identify product-management anti-patterns and replace them with better practices. Use when reviewing PM behavior, stakeholder chaos, vague requirements, output-focused roadmaps, weak discovery, team dysfunction, or PM onboarding; avoid personal critique without concrete behavior and impact.
 ---
 
 # What Not to Do as a Product Manager

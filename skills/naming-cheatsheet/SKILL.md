@@ -1,6 +1,6 @@
 ---
 name: naming-cheatsheet
-description: Apply language-agnostic naming conventions using the A/HC/LC pattern. Use when naming variables, functions, or reviewing code for naming consistency.
+description: Name code identifiers clearly and consistently. Use when naming or reviewing variables, functions, booleans, classes, files, modules, React hooks, event handlers, props callbacks, error values, and domain concepts; reducing ambiguity, duplicated context, contractions, or misleading singular/plural names. For larger code-quality review use discuss-code or code-reviewer.
 ---
 
 # Naming Cheatsheet

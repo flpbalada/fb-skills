@@ -1,7 +1,6 @@
 ---
 name: value-realization
-description:
-  Analyze if end users discover clear value. Use when evaluating product concepts, analyzing adoption, or uncertain about direction.
+description: Check whether users can discover, understand, believe, and experience product value. Use when evaluating concepts, activation, onboarding, adoption, messaging, time-to-value, or unclear product direction; avoid for business-model economics, JTBD motivation research, or CTA-level optimization.
 ---
 
 # Value Realization

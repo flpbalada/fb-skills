@@ -1,9 +1,6 @@
 ---
 name: jobs-to-be-done
-description:
-  Understand customer motivations through job theory. Use when defining product
-  strategy, conducting user research, identifying competitors, writing user
-  stories, or reframing features around customer progress.
+description: Reframe product strategy around customer progress with Jobs to Be Done. Use when researching motivations, switching behavior, competitive alternatives, unmet needs, feature framing, or value propositions; avoid for backlog story syntax, delivery hierarchy, or business-model economics.
 ---
 
 # Jobs-to-be-Done

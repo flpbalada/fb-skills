@@ -1,9 +1,6 @@
 ---
 name: deliberate-practice
-description:
-  Apply deliberate practice principles for rapid skill acquisition and expert-level
-  performance. Use when learning new skills, plateauing in development, designing
-  training routines, or seeking to accelerate expertise acquisition.
+description: Design focused practice loops for skill improvement. Use when learning a skill, breaking a plateau, creating training routines, onboarding practitioners, or choosing feedback and challenge levels; avoid for generic productivity, knowledge organization, or project delivery planning.
 ---
 
 # Deliberate Practice

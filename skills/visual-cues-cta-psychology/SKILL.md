@@ -1,9 +1,6 @@
 ---
 name: visual-cues-cta-psychology
-description:
-  Design effective CTAs using visual attention and gaze psychology principles.
-  Use when designing landing pages, button hierarchies, conversion elements, or
-  optimizing user attention flow through interfaces.
+description: Guide attention toward the next valuable action with CTA hierarchy, visual cues, and gaze patterns. Use when improving button placement, copy, contrast, page scanning, attention flow, or conversion areas; avoid for broad trust, proof selection, or behavior-change diagnosis.
 ---
 
 # Visual Cues and CTA Psychology

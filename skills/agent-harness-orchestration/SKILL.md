@@ -1,6 +1,6 @@
 ---
 name: agent-harness-orchestration
-description: Coordinate coding agents with harness-engineering practices. Use when supervising multi-agent implementation, ticket-driven work, verification loops, or conflict-safe execution.
+description: Coordinate multiple coding agents in shared repos with task packets, worktree or branch isolation, path ownership, verification loops, and PR or CI follow-through. Use when supervising ticket-driven multi-agent implementation or conflict-safe execution. Do not use for abstract LLM task splitting without repo state; use orchestrator-workers instead.
 ---
 
 # Agent Harness Orchestration

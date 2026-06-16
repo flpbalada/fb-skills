@@ -1,9 +1,6 @@
 ---
 name: para-method
-description:
-  Organize digital life using PARA framework (Projects, Areas, Resources, Archives).
-  Use when setting up note systems, categorizing information, or migrating from other
-  organizational systems.
+description: Organize information into Projects, Areas, Resources, and Archives. Use when setting up notes, files, knowledge bases, personal systems, or migrations from messy folders; avoid for product backlog hierarchy, workflow Kanban, or strategic portfolio planning.
 ---
 
 # PARA Method

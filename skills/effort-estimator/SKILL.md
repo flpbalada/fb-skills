@@ -1,6 +1,6 @@
 ---
 name: effort-estimator
-description: Estimate development effort for tasks and features. Use when sizing work, planning sprints, or comparing approaches.
+description: Estimate engineering effort from scope, risk, unknowns, and verification cost. Use when sizing features, splitting work, planning sprints, comparing implementation options, or deciding whether a task is XS through XL; avoid for product value, requirements quality, or business-case analysis.
 ---
 
 # Effort Estimator

@@ -1,6 +1,6 @@
 ---
 name: deep-thinker
-description: Structure complex thinking into clarity, frameworks, validation, and action. Use for ambiguous problems or hard decisions.
+description: Analyze ambiguous problems, hard decisions, root causes, product strategy, or tradeoffs with useful frameworks, assumptions, validation, and next actions. Use when user needs structured thinking before choosing a path. Do not use when task is requirements capture; use discuss-task or to-prd.
 ---
 
 # Deep Thinker

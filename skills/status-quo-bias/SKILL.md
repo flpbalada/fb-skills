@@ -1,9 +1,6 @@
 ---
 name: status-quo-bias
-description:
-  Understand and design for users' preference for current state over change. Use
-  when planning migrations, introducing new features, designing defaults, or
-  overcoming resistance to product adoption.
+description: Design for user resistance to change and preference for the current state. Use when planning migrations, defaults, switching paths, feature adoption, workflow replacement, or rollout risk; distinguish from loss aversion by focusing on change friction, reversibility, and transition design.
 ---
 
 # Status Quo Bias

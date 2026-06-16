@@ -1,6 +1,6 @@
 ---
 name: follow-goals
-description: Shape long-running work into a durable objective with a clear stop condition, validation loop, checkpoints, and compact progress reporting. Use when a task is bigger than one prompt but smaller than an open-ended backlog, especially migrations, large refactors, experiments, prototypes, retry loops, prompt optimization, or other work where an autonomous assistant should keep making scoped progress until a verifiable end state is reached.
+description: Shape long-running autonomous work into one durable goal with stop condition, validation loop, checkpoints, progress format, and pause rules. Use when user wants an agent to keep making scoped progress across migrations, refactors, prototypes, evals, retry loops, or prompt optimization until verifiably done. Do not use for loose backlog lists or one-shot answers.
 ---
 
 # Follow Goals

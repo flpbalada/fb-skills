@@ -1,6 +1,6 @@
 ---
 name: typescript-best-practices
-description: Guides TypeScript best practices for type safety, code organization, and maintainability. Use this skill when configuring TypeScript projects, deciding on typing strategies, writing async code, or reviewing TypeScript code quality.
+description: Improve TypeScript safety, readability, and maintainability. Use when reviewing TypeScript code, choosing typing strategy, configuring strictness, handling async errors, replacing any with unknown, narrowing external data, modeling state with unions, placing runtime validation, or organizing types. For complex reusable type utilities use typescript-advanced-types; for interface vs type decisions use typescript-interface-vs-type.
 ---
 
 # TypeScript Best Practices

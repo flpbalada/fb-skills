@@ -1,6 +1,6 @@
 ---
 name: playwright-accessibility-testing
-description: Guides Playwright accessibility tests with axe scans and WCAG checks. Use when writing, reviewing, or fixing automated a11y tests, ARIA tests, or page accessibility audits.
+description: Write, review, or fix Playwright accessibility tests with @axe-core/playwright. Use for axe scans, WCAG A/AA tags, ARIA names, roles, labels, keyboard/focus checks, accessibility audit failures, exclusions, and critical page or flow a11y coverage. For general Playwright locator, assertion, fixture, or flake guidance use playwright-best-practices.
 dependencies:
   - "@axe-core/playwright"
 ---

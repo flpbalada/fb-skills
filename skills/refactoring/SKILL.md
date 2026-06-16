@@ -1,6 +1,6 @@
 ---
 name: refactoring
-description: Plan and apply behavior-preserving code refactors. Use when restructuring code or improving maintainability without changing behavior.
+description: Plan and apply behavior-preserving code refactors. Use when restructuring target files, reducing complexity, improving maintainability, applying framework or language best practices, improving type models, or reorganizing code while preserving public behavior and contracts. For quick cleanup of recent edits use code-simplifier; for review-only architecture candidates use architecture-review.
 ---
 
 # Refactoring

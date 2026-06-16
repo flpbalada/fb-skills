@@ -1,6 +1,6 @@
 ---
 name: react-key-prop
-description: Guides proper usage of the key prop in React lists. Use this skill when rendering lists, mapping arrays to components, or troubleshooting list-related state bugs.
+description: Choose correct React key props for lists and remounts. Use when mapping arrays, rendering dynamic lists, sorting/filtering/reordering items, debugging list state bugs, avoiding index keys, or intentionally resetting component state with a key. For general local state updates use react-use-state; for effect-based resets use react-useeffect-avoid.
 ---
 
 # React Key Prop

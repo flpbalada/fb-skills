@@ -1,9 +1,6 @@
 ---
 name: game-theory-tit-for-tat
-description:
-  Apply Tit for Tat strategy for negotiations, relationships, and repeated
-  interactions. Use when navigating workplace dynamics, building partnerships,
-  handling conflicts, or designing systems with reciprocal interactions.
+description: Use Tit for Tat to manage repeated interactions with reciprocity, cooperation, and boundaries. Use when navigating workplace dynamics, partnerships, negotiations, conflicts, vendor relationships, or product systems with reciprocal behavior; avoid for one-shot decisions or zero-sum framing.
 ---
 
 # Tit for Tat

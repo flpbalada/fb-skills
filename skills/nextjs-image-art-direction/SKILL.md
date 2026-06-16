@@ -1,10 +1,6 @@
 ---
 name: nextjs-image-art-direction
-description:
-  Implement art direction for Next.js images using getImageProps(). Use when
-  showing different images for different viewport sizes, such as homepage carousels
-  with mobile vs desktop assets, different cropping/composition, or when mobile
-  and desktop images differ completely.
+description: Implement Next.js image art direction with getImageProps(), picture, source, and img. Use when mobile, tablet, or desktop need different image assets, crops, focal points, compositions, or carousel media while keeping Next.js image optimization. Do not use for simple responsive sizing of the same image; use normal next/image sizes for that.
 ---
 
 # Next.js Image Art Direction

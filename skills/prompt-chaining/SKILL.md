@@ -1,6 +1,6 @@
 ---
 name: prompt-chaining
-description: Break a task into fixed sequential LLM steps with checks between steps. Use when work has clear stages, intermediate outputs, or step-specific prompts.
+description: Break known LLM work into fixed sequential steps with handoff schemas, validation checks, retries, and final formatting. Use when later steps depend on earlier outputs or staged review reduces errors. Do not use for independent branches; use parallelization. Do not use when tasks must be discovered at runtime; use orchestrator-workers.
 ---
 
 # Prompt Chaining

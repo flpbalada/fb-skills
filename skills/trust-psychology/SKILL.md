@@ -1,9 +1,6 @@
 ---
 name: trust-psychology
-description:
-  Build trust signals that reduce perceived risk and enable user action. Use
-  when designing landing pages, checkout flows, onboarding experiences, or any
-  conversion point where user hesitation is a barrier.
+description: Add trust signals that reduce perceived risk before important user actions. Use for signup, checkout, onboarding, landing pages, pricing, guarantees, security, support, and cancellation reassurance; distinguish from social proof, halo effect, and cognitive fluency by focusing on risk.
 ---
 
 # Trust Psychology

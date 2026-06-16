@@ -1,9 +1,6 @@
 ---
 name: making-product-decisions
-description:
-  Framework for structured product decision-making. Use when facing complex
-  tradeoffs, aligning stakeholders, documenting decisions, or choosing between
-  multiple valid approaches.
+description: Make structured product decisions with explicit goals, options, tradeoffs, evidence, and decision records. Use when stakeholders disagree, multiple valid paths exist, scope is contested, or choices need rationale; avoid for requirements cleanup, roadmap hierarchy, or effort sizing alone.
 ---
 
 # Making Product Decisions

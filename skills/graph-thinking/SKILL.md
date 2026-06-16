@@ -1,9 +1,6 @@
 ---
 name: graph-thinking
-description:
-  Apply graph-based thinking to visualize complex relationships and solve
-  problems non-linearly. Use when mapping dependencies, analyzing systems,
-  exploring interconnected concepts, or designing architectures.
+description: Model complex systems as nodes, edges, flows, and dependencies. Use when mapping stakeholder networks, causal loops, product ecosystems, architecture dependencies, knowledge graphs, or non-linear strategy problems; avoid when a simple hierarchy, roadmap, or checklist is enough.
 ---
 
 # Graph Thinking

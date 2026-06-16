@@ -1,9 +1,6 @@
 ---
 name: cognitive-biases
-description:
-  Apply cognitive bias knowledge to product design and decision-making. Use when
-  designing user experiences, analyzing user behavior, improving conversions, or
-  ensuring ethical design practices.
+description: Identify cognitive biases shaping product decisions and user behavior. Use when auditing decision points, conversion flows, pricing, framing, defaults, or research interpretation; avoid when a narrower bias skill such as loss aversion, status quo bias, halo effect, social proof, or Hick's Law directly fits.
 ---
 
 # Cognitive Biases

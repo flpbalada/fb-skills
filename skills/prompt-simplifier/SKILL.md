@@ -1,6 +1,6 @@
 ---
 name: prompt-simplifier
-description: Review prompts and instructions for logic complexity. Use when simplifying workflows, rules, conditions, or agent prompts.
+description: Simplify prompts, system instructions, workflows, rules, and agent playbooks while preserving behavior. Use when logic has too many branches, nested conditions, contradictions, repeated rules, vague failure paths, or inconsistent outputs. Do not rewrite product requirements; use to-prd for PRD conversion.
 ---
 
 # Prompt Simplifier

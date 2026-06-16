@@ -1,6 +1,6 @@
 ---
 name: code-architecture-tailwind-v4-best-practices
-description: Guides Tailwind CSS v4 patterns for buttons and components. Use this skill when creating components with variants, choosing between CVA/tailwind-variants, or configuring Tailwind v4's CSS-first approach.
+description: Choose Tailwind CSS v4 component styling patterns. Use when building Tailwind components, buttons, cards, variants, slots, state styles, or design tokens; choosing utilities vs CVA vs tailwind-variants; avoiding @apply; or migrating v3 component patterns. For project-level Tailwind installation, PostCSS/Vite setup, @source, plugins, or browser support, use tailwind-v4-configuration instead.
 ---
 
 # Tailwind CSS v4 Best Practices

@@ -1,6 +1,6 @@
 ---
 name: conventional-commit
-description: Structure commit messages following the Conventional Commits specification. Use when drafting commit messages before coding or reviewing commit message quality.
+description: Draft or review Conventional Commits messages with type, optional scope, imperative summary, body, footer, and breaking-change notes. Use when user asks for a commit message, commit title and body, changelog-safe wording, or commit-format review. Do not use for PR descriptions; use summarize-branch.
 ---
 
 # Conventional Commits

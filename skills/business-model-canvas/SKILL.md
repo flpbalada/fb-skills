@@ -1,9 +1,6 @@
 ---
 name: business-model-canvas
-description:
-  Design and analyze business models using the Business Model Canvas framework.
-  Use when evaluating startups, planning new products, pivoting existing
-  businesses, or understanding how companies create and capture value.
+description: Map value creation, delivery, and capture with the Business Model Canvas. Use when evaluating startups, pivots, product strategy, revenue streams, cost structure, partners, channels, or business-model coherence; avoid for deep customer-job research, roadmap breakdowns, or macro-environment scans.
 ---
 
 # Business Model Canvas

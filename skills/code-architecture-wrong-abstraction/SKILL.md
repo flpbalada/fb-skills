@@ -1,6 +1,6 @@
 ---
 name: code-architecture-wrong-abstraction
-description: Guides when to abstract vs duplicate code. Use this skill when creating shared utilities, deciding between DRY/WET approaches, or refactoring existing abstractions.
+description: Decide whether to abstract, duplicate, inline, or split code. Use when creating shared utilities, components, facades, hooks, service wrappers, or DRY/WET refactors; reviewing parameter-heavy helpers, option flags, shallow facades, or premature abstractions. For broad behavior-preserving restructuring use refactoring; for component extraction use decompose.
 ---
 
 # Avoid Wrong Abstractions

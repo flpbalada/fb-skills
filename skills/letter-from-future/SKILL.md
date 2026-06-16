@@ -1,6 +1,6 @@
 ---
 name: letter-from-future
-description: Create a future-state planning artifact for startups, product management, strategy, roadmap planning, project kickoffs, pivots, and founder or stakeholder alignment. Use when a team needs to describe a desired future, work backward into projects, connect vision to customer value, or turn an uncertain product idea into milestones, risks, metrics, and next actions.
+description: Create a letter-from-future planning artifact for startup, product, roadmap, pivot, project kickoff, quarterly planning, or stakeholder alignment. Use when user needs to describe a desired future, backcast milestones, connect vision to customer value, and surface risks, metrics, and next actions. Do not use for formal PRDs; use to-prd.
 ---
 
 # Letter From Future

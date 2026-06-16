@@ -1,6 +1,6 @@
 ---
 name: decompose
-description: Split a component into focused units. Use when a component mixes responsibilities and needs smaller utilities, hooks, or sub-components.
+description: Split an oversized component into focused helpers, hooks, and sub-components. Use when React/UI code mixes rendering, state, effects, handlers, data shaping, and repeated sections, or when a file is hard to scan. Preserve behavior and avoid generic abstractions. For general code restructuring use refactoring; for abstraction decisions beyond one component use code-architecture-wrong-abstraction.
 ---
 
 # Decompose Component

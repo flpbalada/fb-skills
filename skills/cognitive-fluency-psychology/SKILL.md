@@ -1,9 +1,6 @@
 ---
 name: cognitive-fluency-psychology
-description:
-  Apply cognitive fluency principles to improve clarity, trust, and conversion.
-  Use when designing landing pages, writing copy, creating interfaces, or
-  optimizing any content for better user comprehension and engagement.
+description: Improve clarity by making content and interfaces easier to process. Use when auditing readability, hierarchy, labels, landing-page copy, onboarding text, or trust created by simplicity; avoid when the main issue is task complexity, choice overload, or staged information reveal.
 ---
 
 # Cognitive Fluency

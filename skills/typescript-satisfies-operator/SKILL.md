@@ -1,6 +1,6 @@
 ---
 name: typescript-satisfies-operator
-description: Guides proper usage of TypeScript's satisfies operator vs type annotations. Use this skill when deciding between type annotations (colon) and satisfies, validating object shapes while preserving literal types, or troubleshooting type inference issues.
+description: Choose TypeScript satisfies, type annotations, as const, or assertions. Use when validating config objects, route maps, locale maps, feature flags, status labels, design tokens, or handler maps while preserving literal types; fixing widened types; or requiring exhaustive Record keys. For general interface/type choice use typescript-interface-vs-type; for broader typing strategy use typescript-best-practices.
 ---
 
 # TypeScript `satisfies`

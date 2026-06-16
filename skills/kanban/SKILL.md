@@ -1,9 +1,6 @@
 ---
 name: kanban
-description:
-  Visualize and optimize workflow with Kanban boards. Use when managing team
-  work, identifying bottlenecks, improving delivery flow, or implementing
-  continuous improvement in product development.
+description: Visualize and improve delivery flow with Kanban. Use when managing work-in-progress, bottlenecks, queues, service classes, cycle time, or team workflow policies; avoid for broader continuous-improvement culture, root-cause analysis, or product hierarchy planning.
 ---
 
 # Kanban

@@ -1,9 +1,6 @@
 ---
 name: progressive-disclosure
-description:
-  Reduce complexity by revealing information progressively. Use when designing
-  onboarding, complex forms, feature-rich interfaces, or any experience where
-  showing everything at once would overwhelm users.
+description: Reveal complexity in stages so users see what they need when they need it. Use for onboarding, forms, settings, advanced options, dashboards, or dense interfaces; avoid when problem is simply too many choices, weak copy clarity, or overall task complexity.
 ---
 
 # Progressive Disclosure

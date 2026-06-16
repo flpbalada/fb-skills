@@ -1,6 +1,6 @@
 ---
 name: architecture-review
-description: Review architecture and refactor only after approval. Use when code structure, module boundaries, seams, or leverage need assessment.
+description: Review software architecture before editing. Use when asked to assess module boundaries, interfaces, layering, ownership, seams, adapters, locality, coupling, shallow modules, or refactor candidates. Produces ranked architecture candidates and waits for explicit approval before changing code. For normal code review use code-reviewer; for approved behavior-preserving edits use refactoring.
 ---
 
 # Architecture Review

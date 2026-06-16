@@ -1,6 +1,6 @@
 ---
 name: dogfood
-description: Systematically explore and test a web application to find bugs, UX issues, and other problems. Use when asked to "dogfood", "QA", "exploratory test", "find issues", "bug hunt", "test this app/site/platform", or review the quality of a web application. Produces a structured report with full reproduction evidence -- step-by-step screenshots, repro videos, and detailed repro steps for every issue -- so findings can be handed directly to the responsible teams.
+description: Dogfood a web app or local URL with exploratory QA, bug hunt, UX review, console checks, screenshots, videos, repro steps, and severity report. Use when user asks to test, QA, find issues, review quality, or explore site/app behavior. Do not inspect source code during testing.
 allowed-tools: Bash(agent-browser:*), Bash(npx agent-browser:*)
 ---
 

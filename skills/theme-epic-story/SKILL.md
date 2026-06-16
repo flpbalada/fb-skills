@@ -1,9 +1,6 @@
 ---
 name: theme-epic-story
-description:
-  Structure product work hierarchically using themes, epics, and stories. Use
-  when organizing backlogs, planning releases, communicating with stakeholders,
-  or breaking down large initiatives into manageable work.
+description: Structure product work from strategic themes to epics, stories, and tasks. Use when organizing backlogs, roadmaps, releases, stakeholder communication, or large initiatives into outcome-linked delivery units; avoid for writing one story only, requirements analysis, or effort estimates.
 ---
 
 # Theme, Epic, Story

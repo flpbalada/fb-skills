@@ -1,9 +1,6 @@
 ---
 name: self-initiated-triggers
-description:
-  Design internal triggers for sustained user engagement. Use when building
-  habit-forming features, improving retention without notifications, or
-  transitioning users from external prompts to self-motivated engagement.
+description: Build internal triggers that make users return from their own needs, emotions, or routines. Use when reducing notification dependence, strengthening retention, mapping return moments, or moving from external prompts to self-initiated use; avoid for full habit-loop design or one-time CTA conversion.
 ---
 
 # Self-Initiated Triggers

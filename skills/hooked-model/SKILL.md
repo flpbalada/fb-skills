@@ -1,9 +1,6 @@
 ---
 name: hooked-model
-description:
-  Design habit-forming products using the Hook cycle. Use when building
-  engagement loops, improving retention, designing notifications, or creating
-  products users return to without external prompting.
+description: Design habit-forming product loops with trigger, action, variable reward, and investment. Use when improving retention, engagement loops, repeat use, notifications, or products meant to become routines; avoid for single-action conversion diagnosis better handled by Fogg B=MAP.
 ---
 
 # Hooked Model

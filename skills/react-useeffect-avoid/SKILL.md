@@ -1,7 +1,6 @@
 ---
 name: react-useeffect-avoid
-description:
-  Guides when NOT to use useEffect and suggests better alternatives. Use when reviewing React code, troubleshooting performance, or considering useEffect for derived state or form resets.
+description: Avoid unnecessary React useEffect and choose better alternatives. Use when reviewing effects, derived state, prop-to-state copies, event handling, form resets, extra renders, stale synchronization, or async/server data patterns. Keep useEffect for external systems like subscriptions, timers, browser APIs, third-party widgets, analytics, or document title. For callback identity use react-use-callback.
 ---
 
 # React: Avoid useEffect

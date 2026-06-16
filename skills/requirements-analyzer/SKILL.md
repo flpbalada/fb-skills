@@ -1,6 +1,6 @@
 ---
 name: requirements-analyzer
-description: Analyze feature requirements for clarity, scope, risk, and testability. Use before building features or splitting ambiguous work.
+description: Analyze feature requirements for clarity, scope, risk, assumptions, and testability before implementation. Use when specs are vague, acceptance criteria are missing, edge cases are unclear, or work needs splitting; avoid for writing full user stories or estimating effort only.
 ---
 
 # Requirements Analyzer

@@ -1,6 +1,6 @@
 ---
 name: to-prd
-description: Convert conversation context into concise PRD requirements. Use when raw ideas, requests, or discussions need product requirements.
+description: Convert conversation notes, raw ideas, feature requests, or planning discussion into concise PRD requirements with goals, users, problem, requirements, non-goals, constraints, acceptance criteria, and open questions. Use when user asks for PRD, spec, requirements doc, or product brief. Do not interview first unless key decisions are missing; use discuss-task for clarification.
 ---
 
 # Write PRD From Conversation

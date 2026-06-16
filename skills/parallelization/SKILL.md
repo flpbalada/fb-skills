@@ -1,6 +1,6 @@
 ---
 name: parallelization
-description: Run independent LLM subtasks at same time, then combine results. Use when work can split into isolated parts or multiple judges can score in parallel.
+description: Split independent LLM work into concurrent branches, then merge, vote, rank, or compare outputs with a simple schema. Use when subtasks are isolated by item, source, section, test, or judge and latency or judgment quality matters. Do not use when one branch depends on another; use prompt-chaining.
 ---
 
 # Parallelization

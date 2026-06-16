@@ -1,6 +1,6 @@
 ---
 name: summarize-branch
-description: Generate a concise PR description from branch commits. Use when a branch needs a clear summary for review or pull request text.
+description: Write a concise PR description from branch commit messages, using `fixes` for fix commits and `implements` otherwise. Use when user needs pull request text, branch summary, or review-ready description from git history. Do not draft commit messages; use conventional-commit.
 ---
 
 # Summarize Branch

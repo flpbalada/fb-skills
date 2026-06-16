@@ -1,9 +1,6 @@
 ---
 name: fogg-behavior-model
-description:
-  Design behavior change using the B=MAP framework. Use when designing
-  onboarding flows, improving conversion, building habits, increasing feature
-  adoption, or understanding why users don't take desired actions.
+description: Diagnose behavior change with B=MAP motivation, ability, and prompt. Use when users do not take a target action, onboarding stalls, conversion drops, feature adoption lags, or prompts fire at the wrong moment; avoid for full habit-loop design better handled by Hooked.
 ---
 
 # Fogg Behavior Model

@@ -1,6 +1,6 @@
 ---
 name: project-structure
-description: Guides React, Next.js, and TypeScript project organization using feature-based architecture inspired by Bulletproof React. Use when structuring new projects, reorganizing codebases, deciding where new code belongs, preventing cross-feature imports, or enforcing shared -> features -> app dependency flow.
+description: Organize React, Next.js, or TypeScript projects with feature-based architecture. Use when starting or reorganizing an app, deciding where files belong, separating app/features/shared layers, preventing cross-feature imports, designing module boundaries, or applying Bulletproof React-style structure. For high-level architecture tradeoffs use architecture-review; for single-component splitting use decompose.
 ---
 
 # Project Structure

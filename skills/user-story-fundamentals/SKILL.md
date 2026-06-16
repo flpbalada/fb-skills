@@ -1,9 +1,6 @@
 ---
 name: user-story-fundamentals
-description:
-  Capture requirements from user perspective with structured user stories. Use
-  when writing backlog items, defining acceptance criteria, prioritizing
-  features, or communicating requirements between product and development.
+description: Write clear user stories with user, capability, benefit, and testable acceptance criteria. Use when creating or improving backlog items, Given/When/Then criteria, INVEST checks, and user-centered requirements; avoid for roadmap hierarchy, broad requirement audits, or effort sizing.
 ---
 
 # User Story Fundamentals

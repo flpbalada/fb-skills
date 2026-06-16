@@ -1,6 +1,6 @@
 ---
 name: discuss-code
-description: Critically discuss code issues with compact findings. Use when code needs review for logic, simplicity, structure, naming, or maintainability.
+description: Discuss code critically before or instead of editing. Use when user asks for a compact opinion on code, a diff, snippet, design, naming, logic, simplicity, structure, or maintainability, and wants findings plus smallest useful fixes. For formal risk-ranked pull request review use code-reviewer; for architecture candidates use architecture-review; for actual cleanup edits use code-simplifier or refactoring.
 ---
 
 # Discuss Code

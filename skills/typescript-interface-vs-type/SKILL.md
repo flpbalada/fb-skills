@@ -1,6 +1,6 @@
 ---
 name: typescript-interface-vs-type
-description: Guides when to use interface vs type in TypeScript. Use this skill when defining object types, extending types, or choosing between interface and type aliases.
+description: Choose TypeScript interface vs type aliases. Use when defining object shapes, class contracts, unions, tuples, function aliases, mapped or conditional types, extension patterns, intersections, declaration merging, or reviewing type style. Prefer interface for object shapes and extends; prefer type for unions and advanced aliases. For broad typing strategy use typescript-best-practices.
 ---
 
 # TypeScript: Interface vs Type

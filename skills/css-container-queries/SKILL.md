@@ -1,6 +1,6 @@
 ---
 name: css-container-queries
-description: Apply CSS container queries for component-based responsive design. Use when implementing responsive components that adapt to their container size rather than viewport size.
+description: Apply CSS container queries for parent-size responsive components. Use when cards, widgets, panels, sidebars, forms, or component-library elements must adapt to their container width with @container, container-type, container-name, or Tailwind @container variants. Use media queries instead for page-level viewport layout, global breakpoints, or full-page composition.
 ---
 
 # CSS Container Queries

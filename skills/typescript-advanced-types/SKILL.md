@@ -1,6 +1,6 @@
 ---
 name: typescript-advanced-types
-description: Master TypeScript's advanced type system including generics, conditional types, mapped types, template literals, and utility types for building type-safe applications. Use when implementing complex type logic, creating reusable type utilities, or ensuring compile-time type safety in TypeScript projects.
+description: Design readable advanced TypeScript types. Use when creating reusable type utilities, generics, conditional types, mapped types, template literal types, infer helpers, branded types, type guards, assertion functions, typed libraries, API clients, configs, or state helpers. Prefer simple types until complexity pays off. For broad code-quality typing guidance use typescript-best-practices.
 ---
 
 # TypeScript Advanced Types

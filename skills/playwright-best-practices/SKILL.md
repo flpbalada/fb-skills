@@ -1,6 +1,6 @@
 ---
 name: playwright-best-practices
-description: Guides resilient Playwright test design and review. Use when writing, reviewing, or fixing Playwright tests for reliable user-focused coverage.
+description: Write, review, or fix resilient Playwright tests around user-visible behavior. Use for locators, web-first assertions, auto-waiting, fixtures, isolation, test data, mocks, projects, trace debugging, and flaky browser tests. For axe, WCAG, ARIA, keyboard, or accessibility-specific scans use playwright-accessibility-testing.
 ---
 
 # Playwright Best Practices

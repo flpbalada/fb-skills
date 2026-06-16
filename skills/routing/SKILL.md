@@ -1,6 +1,6 @@
 ---
 name: routing
-description: Send inputs to specialized prompts, tools, or models based on input type. Use when different request classes need different handling paths.
+description: Classify inputs into specialized prompts, tools, models, agents, or workflows using route labels, confidence, fallback, and misroute review. Use when clear request categories need different handling for cost, latency, safety, quality, or domain. Do not use for sequential steps; use prompt-chaining. Do not use for dynamic decomposition; use orchestrator-workers.
 ---
 
 # Routing

@@ -1,9 +1,6 @@
 ---
 name: cognitive-load
-description:
-  Design experiences that optimize mental resources using Cognitive Load Theory.
-  Use when designing interfaces, creating onboarding flows, planning information
-  architecture, or improving task completion rates.
+description: Reduce unnecessary mental effort with Cognitive Load Theory. Use when complex workflows, onboarding, forms, information architecture, or feature-rich interfaces overwhelm users; separate intrinsic task difficulty from extraneous UI friction and avoid using this only for copy clarity or choice-count problems.
 ---
 
 # Cognitive Load

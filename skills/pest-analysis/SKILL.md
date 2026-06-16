@@ -1,8 +1,6 @@
 ---
 name: pest-analysis
-description:
-  Guides PEST (Political, Economic, Social, Technological) analysis for strategic planning.
-  Use when analyzing external macro-environmental factors or evaluating business decisions.
+description: Analyze macro-environment forces with PEST political, economic, social, and technological factors. Use when assessing markets, expansion, regulation, industry change, strategic risks, or external business context; avoid for internal business-model design or user motivation research.
 ---
 
 # PEST Analysis

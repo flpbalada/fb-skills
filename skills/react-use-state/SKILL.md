@@ -1,6 +1,6 @@
 ---
 name: react-use-state
-description: Guides proper usage of React useState hook. Use this skill when adding state to components, deciding between useState vs alternatives, or troubleshooting state update issues.
+description: Use React useState for simple local component state. Use when adding UI state, inputs, counters, selected IDs, active tabs, local arrays or objects, updater functions, initializer functions, or debugging stale reads and mutation bugs. Prefer derived values, useRef, useReducer, context, or server-state libraries when state should not live in useState.
 ---
 
 # React useState

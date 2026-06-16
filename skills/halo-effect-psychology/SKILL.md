@@ -1,9 +1,6 @@
 ---
 name: halo-effect-psychology
-description:
-  Apply the halo effect in product design and UX. Use when designing first
-  impressions, brand perception, feature presentation, or understanding how one
-  positive attribute influences perception of others.
+description: Use halo-effect analysis for first impressions and perception spillover. Use when brand polish, visual quality, flagship features, reviews, or spokesperson credibility may shape trust in unrelated product areas; avoid for general trust, social proof, or readability problems.
 ---
 
 # Halo Effect

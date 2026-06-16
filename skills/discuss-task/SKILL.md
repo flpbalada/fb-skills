@@ -1,6 +1,6 @@
 ---
 name: discuss-task
-description: Clarify and stress-test ambiguous tasks before action. Use when goal, scope, success criteria, constraints, decisions, or risks are unclear.
+description: Clarify ambiguous implementation, product, or planning requests before action by interviewing for goal, scope, constraints, risks, success criteria, and done state. Use when user wants a thinking partner or handoff-ready task prompt. Do not write PRDs; use to-prd for product requirements.
 ---
 
 # Discuss Task

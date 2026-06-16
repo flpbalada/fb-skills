@@ -1,9 +1,6 @@
 ---
 name: hicks-law
-description:
-  Optimize decision-making speed by managing choice quantity. Use when designing
-  navigation, menus, feature sets, onboarding flows, or any interface where
-  users must choose between options.
+description: Reduce decision time by managing choice count and choice structure with Hick's Law. Use when designing menus, navigation, plans, filters, onboarding paths, settings, or feature sets with too many options; avoid for complex-task load, staged disclosure, or CTA visibility issues.
 ---
 
 # Hick's Law

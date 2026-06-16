@@ -1,9 +1,6 @@
 ---
 name: kaizen
-description:
-  Apply Kaizen continuous improvement methodology. Use when optimizing
-  processes, eliminating waste, conducting improvement workshops, applying PDCA
-  cycles, or building a culture of incremental improvement.
+description: Improve processes through small continuous changes, waste reduction, and PDCA cycles. Use when optimizing workflows, retrospectives, team operations, quality problems, or incremental product-delivery improvements; avoid for visualizing flow only, root-cause analysis only, or large strategic redesign.
 ---
 
 # Kaizen

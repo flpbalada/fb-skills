@@ -1,6 +1,6 @@
 ---
 name: code-simplifier
-description: Simplify recently changed code without behavior changes. Use after edits when code can be clearer, flatter, or easier to maintain.
+description: Simplify recently changed code without changing behavior. Use after implementation when working code has excess nesting, repetition, indirection, unclear names, redundant branches, or needless abstraction. Scope stays near touched code and favors guard clauses and readability. For larger planned restructuring use refactoring; for extracting component pieces use decompose.
 ---
 
 # Code Simplifier

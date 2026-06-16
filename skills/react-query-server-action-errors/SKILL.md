@@ -1,6 +1,6 @@
 ---
 name: react-query-server-action-errors
-description: Guides handling expected Next.js Server Action errors with TanStack React Query useMutation. Use when server actions, mutationFn, onError toasts, throwOnError, QueryBoundary, ActionResult discriminated unions, translated error codes, or production-safe client error messages are involved.
+description: Handle expected Next.js Server Action errors with TanStack React Query mutations. Use when server actions, mutationFn, useMutation, onError toasts, throwOnError, QueryBoundary, ActionResult discriminated unions, translated error codes, or production-safe client error messages are involved. Do not use for generic React Query data fetching or unrelated form validation.
 ---
 
 # React Query Server Action Errors

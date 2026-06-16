@@ -1,6 +1,6 @@
 ---
 name: learn
-description: Extract reusable patterns from the current session. Use when errors, debugging techniques, workarounds, or project conventions should become skills.
+description: Extract one reusable skill pattern from current session, such as a recurring error fix, debugging tactic, tool combo, project convention, or workflow worth saving. Use when user asks to learn, remember, capture, or turn session knowledge into a skill. Ask before writing new skill files; skip one-off fixes.
 ---
 
 # Learn Session Patterns

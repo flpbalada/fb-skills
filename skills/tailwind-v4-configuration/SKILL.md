@@ -1,6 +1,6 @@
 ---
 name: tailwind-v4-configuration
-description: Configure Tailwind CSS v4 with CSS-first approach. Use when installing, migrating from v3, setting up build tools (Vite/PostCSS/CLI), customizing themes with @theme, or configuring plugins.
+description: Configure Tailwind CSS v4 with the CSS-first setup. Use when installing Tailwind v4, migrating from v3, setting up Vite, PostCSS, CLI, or framework integration, defining @theme tokens, using @source, configuring plugins, debugging content detection, or checking browser support. For component-level utilities, variants, CVA, or tailwind-variants use code-architecture-tailwind-v4-best-practices.
 ---
 
 # Tailwind CSS v4 Configuration

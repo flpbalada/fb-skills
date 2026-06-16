@@ -1,6 +1,6 @@
 ---
 name: evaluator-optimizer
-description: Generate outputs, score them, and iterate until quality passes a bar. Use when clear evaluation criteria exist and refinement is cheaper than failure.
+description: Run an evaluator-optimizer loop by generating candidate outputs, scoring against a rubric or tests, revising, and stopping on pass, budget, or plateau. Use when quality criteria are explicit and iterative refinement is cheaper than failure. Do not use when no reliable eval signal exists.
 ---
 
 # Evaluator-Optimizer

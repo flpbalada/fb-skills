@@ -1,6 +1,6 @@
 ---
 name: react-hook-form
-description: Guides React Hook Form usage for React forms. Use this skill when creating or refactoring forms with useForm, register, handleSubmit, formState errors, validation rules, defaultValues, Controller, useController, FormProvider, useFieldArray, resolvers such as Zod, or TypeScript form types.
+description: Build or refactor React forms with React Hook Form. Use when working with useForm, register, handleSubmit, formState errors, defaultValues, validation rules, Controller, useController, FormProvider, useFieldArray, Zod or other resolvers, server submissions, and TypeScript form values. For simple local input state without React Hook Form use react-use-state.
 ---
 
 # React Hook Form

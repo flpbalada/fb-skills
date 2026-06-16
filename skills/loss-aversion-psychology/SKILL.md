@@ -1,9 +1,6 @@
 ---
 name: loss-aversion-psychology
-description:
-  Leverage loss aversion in product design and messaging. Use when designing
-  retention features, pricing strategies, onboarding flows, or any experience
-  where framing around potential loss can drive behavior.
+description: Use loss-aversion analysis when perceived losses outweigh equivalent gains. Use for pricing, trials, cancellations, migration risk, retention, warnings, plan limits, or messaging about what users may lose; avoid fake fear tactics and prefer status-quo-bias skill for resistance to change itself.
 ---
 
 # Loss Aversion Psychology
