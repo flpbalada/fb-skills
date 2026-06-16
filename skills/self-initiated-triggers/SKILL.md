@@ -70,6 +70,12 @@ The user thinks of the product without needing an external reminder.
 - Make opt-out easy.
 - Do not hide costs or consequences.
 
+## Resources
+
+- [Hooked - Nir Eyal](https://www.nirandfar.com/hooked/)
+- [The Power of Habit - Charles Duhigg](https://www.amazon.com/Power-Habit-What-Life-Business/dp/081298160X)
+- [Atomic Habits - James Clear](https://jamesclear.com/atomic-habits)
+
 ## Output
 
 ```md

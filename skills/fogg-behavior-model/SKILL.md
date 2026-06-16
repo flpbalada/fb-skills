@@ -62,6 +62,13 @@ Ability is limited by hardest factor.
 5. Choose intervention.
 6. Define success metric.
 
+## Resources
+
+- [BJ Fogg's Behavior Model](https://behaviormodel.org/)
+- [Tiny Habits - BJ Fogg](https://tinyhabits.com/)
+- [Hooked - Nir Eyal](https://www.nirandfar.com/hooked/)
+- [Atomic Habits - James Clear](https://jamesclear.com/atomic-habits)
+
 ## Output
 
 ```md

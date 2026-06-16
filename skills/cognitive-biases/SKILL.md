@@ -62,6 +62,21 @@ Avoid manipulation.
 - Does the intervention help the user?
 - Would the user accept it if explained plainly?
 
+## Progressive Disclosure
+
+| Topic | File | When to Use |
+|-------|------|-------------|
+| All 9 core biases | [context/core-biases.md](context/core-biases.md) | Deep dive into each bias with examples |
+| Analysis framework | [context/analysis-framework.md](context/analysis-framework.md) | Systematic analysis of user decisions |
+| Ethics & examples | [context/examples-ethics.md](context/examples-ethics.md) | Real-world examples and dark patterns |
+
+## References
+
+- [Thinking, Fast and Slow - Daniel Kahneman](https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow)
+- [Predictably Irrational - Dan Ariely](https://danariely.com/books/predictably-irrational/)
+- [Hooked - Nir Eyal](https://www.nirandfar.com/hooked/)
+- [Dark Patterns Hall of Shame](https://darkpatterns.org/)
+
 ## Output
 
 ```md

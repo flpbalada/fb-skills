@@ -61,6 +61,12 @@ Reduce, group, default, or reveal later.
 5. Check if expert users need escape hatches.
 6. Define expected impact.
 
+## Resources
+
+- [On the Rate of Gain of Information - Hick (1952)](https://psycnet.apa.org/record/1953-03853-001)
+- [The Paradox of Choice - Barry Schwartz](https://www.amazon.com/Paradox-Choice-Why-More-Less/dp/0060005696)
+- [Don't Make Me Think - Steve Krug](https://sensible.com/dont-make-me-think/)
+
 ## Output
 
 ```md

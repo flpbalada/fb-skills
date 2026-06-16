@@ -65,6 +65,11 @@ const results = await new AxeBuilder({ page })
 6. Rerun test.
 7. Report automated limits.
 
+## References
+
+- [Playwright Accessibility Testing](https://playwright.dev/docs/accessibility-testing)
+- [axe-core rules](https://github.com/dequelabs/axe-core/blob/master/doc/rule-descriptions.md)
+
 ## Output
 
 ```md

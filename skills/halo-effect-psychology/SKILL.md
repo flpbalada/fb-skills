@@ -62,6 +62,12 @@ Negative halo creates horn effect.
 4. Identify horn effect risks.
 5. Prioritize fixes by exposure and impact.
 
+## Resources
+
+- [The Halo Effect - Edward Thorndike (1920)](https://psycnet.apa.org/record/1920-10067-001)
+- [Thinking, Fast and Slow - Daniel Kahneman](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555)
+- [Don't Make Me Think - Steve Krug](https://sensible.com/dont-make-me-think/)
+
 ## Output
 
 ```md

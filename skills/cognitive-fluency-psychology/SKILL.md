@@ -66,6 +66,13 @@ Help users understand what to do next.
 - Too many competing elements.
 - Buried value proposition.
 
+## Resources
+
+- [Thinking, Fast and Slow - Daniel Kahneman](https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow)
+- [Don't Make Me Think - Steve Krug](https://sensible.com/dont-make-me-think/)
+- [Hemingway Editor](https://hemingwayapp.com/) - Readability checker
+- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
+
 ## Output
 
 ```md

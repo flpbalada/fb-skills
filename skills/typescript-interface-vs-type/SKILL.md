@@ -61,6 +61,12 @@ type Admin = User & {
 
 Use this only when intersection semantics are intentional.
 
+## References
+
+- [TypeScript Handbook - Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
+- [TypeScript Performance Wiki](https://github.com/microsoft/TypeScript/wiki/Performance#preferring-interfaces-over-intersections)
+- [Total TypeScript - Intersections vs Interface Extends](https://www.totaltypescript.com/books/total-typescript-essentials/objects#intersections-vs-interface-extends)
+
 ## Output
 
 - Recommended declaration form.

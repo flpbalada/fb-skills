@@ -73,6 +73,12 @@ export function HeroImage() {
 6. Test desktop, tablet, and mobile.
 7. Confirm only matching image loads.
 
+## References
+
+- [Next.js Image Component Docs - Art Direction](https://nextjs.org/docs/pages/api-reference/components/image#art-direction)
+- [MDN - Responsive Images: Art Direction](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#art_direction)
+- [Next.js getImageProps() API](https://nextjs.org/docs/app/api-reference/components/image#getimageprops)
+
 ## Output
 
 ```md

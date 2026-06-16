@@ -59,6 +59,20 @@ Make the next valuable action easy to notice, understand, and take.
 6. Reduce competing actions.
 7. Define conversion metric.
 
+## Progressive Disclosure
+
+| Topic | File | When to Use |
+|-------|------|-------------|
+| Eye patterns & gaze | [context/gaze-patterns.md](context/gaze-patterns.md) | F-pattern, Z-pattern, thumb zones |
+| Visual cue types | [context/visual-cue-types.md](context/visual-cue-types.md) | Arrows, gaze direction, encapsulation |
+| CTA design | [context/cta-design.md](context/cta-design.md) | Button color, copy, placement |
+
+## Resources
+
+- [Don't Make Me Think - Steve Krug](https://sensible.com/)
+- [Eye-Tracking Research - Nielsen Norman Group](https://www.nngroup.com/topic/eyetracking/)
+- [Gestalt Principles in UI Design](https://lawsofux.com/)
+
 ## Output
 
 ```md

@@ -72,6 +72,23 @@ type User = z.infer<typeof userSchema>;
 - Duplicating types already available from schema or API definitions.
 - Recursive types that slow the compiler.
 
+## Progressive Disclosure
+
+This skill provides detailed examples through context files. Load them when needed:
+
+| Context File                      | When to Load                                    |
+| --------------------------------- | ----------------------------------------------- |
+| `context/core-examples.md`       | Need generics, conditionals, mapped types examples |
+| `context/patterns.md`            | Implementing real-world patterns like EventEmitter, API client, or Builder |
+| `context/techniques.md`          | Type inference, guards, assertions, and testing |
+
+## References
+
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/)
+- [Type Challenges](https://github.com/type-challenges/type-challenges)
+- [TypeScript Deep Dive](https://basarat.gitbook.io/typescript/)
+- [Effective TypeScript](https://effectivetypescript.com/2020/08/12/generics-golden-rule/)
+
 ## Output
 
 - Type approach.

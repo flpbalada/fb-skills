@@ -63,6 +63,11 @@ Start simple:
 - `Doing`: team size minus 1
 - `Review` / `Test`: available reviewers or testers
 
+## Resources
+
+- [Kanban - David J. Anderson](https://www.amazon.com/Kanban-Successful-Evolutionary-Technology-Business/dp/0984521402)
+- [Making Work Visible - Dominica DeGrandis](https://www.amazon.com/Making-Work-Visible-Exposing-Optimize/dp/1942788150)
+
 ## Output
 
 ```md

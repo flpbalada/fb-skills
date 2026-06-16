@@ -74,6 +74,13 @@ Support useful learning.
 - Put most important information first.
 - Let users recover from mistakes.
 
+## Resources
+
+- [Cognitive Load Theory - John Sweller](https://www.instructionaldesign.org/theories/cognitive-load/)
+- [Don't Make Me Think - Steve Krug](https://sensible.com/dont-make-me-think/)
+- [Laws of UX](https://lawsofux.com/)
+- [Nielsen Norman Group - Cognitive Load](https://www.nngroup.com/articles/minimize-cognitive-load/)
+
 ## Output
 
 ```md

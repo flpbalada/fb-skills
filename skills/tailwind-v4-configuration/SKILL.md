@@ -79,6 +79,9 @@ Keep JavaScript config only when project tooling requires it.
 - `context/migration-guide.md`: v3 to v4 migration.
 - `context/framework-examples.md`: framework setup.
 - `context/advanced-config.md`: advanced config.
+- [Tailwind CSS v4 Documentation](https://tailwindcss.com/docs)
+- [Tailwind CSS v4 Upgrade Guide](https://tailwindcss.com/docs/upgrade-guide)
+- [Automatic Upgrade Tool](https://github.com/tailwindlabs/upgrade)
 
 ## Output
 

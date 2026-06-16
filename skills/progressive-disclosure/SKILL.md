@@ -59,6 +59,11 @@ Reduce visible complexity without hiding essential work.
 6. Add clear trigger labels or icons.
 7. Test task completion and findability.
 
+## Resources
+
+- [Progressive Disclosure - Nielsen Norman Group](https://www.nngroup.com/articles/progressive-disclosure/)
+- [Designing Web Interfaces - Bill Scott](https://www.amazon.com/Designing-Web-Interfaces-Principles-Interactions/dp/0596516258)
+
 ## Output
 
 ```md

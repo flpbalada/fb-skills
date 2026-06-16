@@ -63,6 +63,8 @@ useEffect(() => {
 - `context/anti-patterns.md`: detailed effect mistakes.
 - `context/patterns-to-avoid.md`: common patterns to replace.
 - `context/decision-tree.md`: expanded decision guide.
+- [React Docs: You Might Not Need an Effect](https://react.dev/learn/you-might-not-need-an-effect)
+- [React Docs: Synchronizing with Effects](https://react.dev/learn/synchronizing-with-effects)
 
 ## Output
 

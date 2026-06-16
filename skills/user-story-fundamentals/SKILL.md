@@ -75,6 +75,12 @@ Cover:
 - Permission level.
 - Release slice.
 
+## Resources
+
+- [User Stories Applied - Mike Cohn](https://www.mountaingoatsoftware.com/books/user-stories-applied)
+- [User Story Mapping - Jeff Patton](https://www.jpattonassociates.com/user-story-mapping/)
+- [Writing Effective User Stories - Scrum Alliance](https://www.scrumalliance.org/)
+
 ## Output
 
 ```md

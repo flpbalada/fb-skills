@@ -62,6 +62,11 @@ Index represents position.
 When order changes, React reuses the wrong component.
 Result: stale state, wrong input values, broken animations, or unexpected focus.
 
+## References
+
+- [React Docs - Rendering Lists](https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key)
+- [nanoid - Tiny ID generator](https://github.com/ai-cookie/nanoid)
+
 ## Output
 
 - Stable key choice.

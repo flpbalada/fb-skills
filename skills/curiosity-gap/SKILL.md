@@ -68,6 +68,13 @@ Increase engagement without misleading users.
 
 If any answer is no, revise or stop.
 
+## Resources
+
+- [Information Gap Theory - Loewenstein (1994)](https://www.cmu.edu/dietrich/sds/docs/loewenstein/PsychofCuriosity.pdf)
+- [Made to Stick - Chip & Dan Heath](https://heathbrothers.com/books/made-to-stick/)
+- [Hooked - Nir Eyal](https://www.nirandfar.com/hooked/)
+- [Growth.Design Case Studies](https://growth.design/)
+
 ## Output
 
 ```md

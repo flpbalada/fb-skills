@@ -72,6 +72,12 @@ palette.green.toUpperCase();
 - Using `satisfies` when later reassignment needs wider type.
 - Using `as const` after a type annotation and expecting literals to survive.
 
+## References
+
+- [TypeScript 4.9 Release Notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html#the-satisfies-operator)
+- [Matt Pocock - Clarifying the satisfies Operator](https://www.totaltypescript.com/clarifying-the-satisfies-operator)
+- [GitHub Issue #47920 - Original Proposal](https://github.com/microsoft/TypeScript/issues/47920)
+
 ## Output
 
 - Whether to use annotation, `satisfies`, `as const satisfies`, or inference.

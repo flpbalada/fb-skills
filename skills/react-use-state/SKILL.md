@@ -76,6 +76,12 @@ const [fn, setFn] = useState(() => someFunction);
 setFn(() => newFunction);
 ```
 
+## References
+
+- [React Docs - useState](https://react.dev/reference/react/useState)
+- [React Docs - State as a Snapshot](https://react.dev/learn/state-as-a-snapshot)
+- [React Docs - Choosing the State Structure](https://react.dev/learn/choosing-the-state-structure)
+
 ## Output
 
 - State choice.

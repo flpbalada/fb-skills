@@ -65,6 +65,14 @@ Forgive when cooperation returns.
 - Generous TFT: forgive occasional defection in noisy environments.
 - Tit for Two Tats: retaliate after two defections.
 - Gradual TFT: escalate response for repeat offenders.
+
+## Resources
+
+- [The Evolution of Cooperation - Robert Axelrod](https://www.goodreads.com/book/show/366821.The_Evolution_of_Cooperation)
+- [Veritasium: The Prisoner's Dilemma](https://www.youtube.com/watch?v=mScpHTIi-kM)
+- [Game Theory 101](https://www.gametheory101.com/)
+- [Behavioral Game Theory - Colin Camerer](https://www.goodreads.com/book/show/469689.Behavioral_Game_Theory)
+
 ## Output
 
 ```md

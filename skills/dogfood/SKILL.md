@@ -107,6 +107,13 @@ For static issues:
 agent-browser --session {SESSION} screenshot --annotate {OUTPUT_DIR}/screenshots/issue-{NNN}.png
 ```
 
+## References
+
+| Reference | When to Read |
+|-----------|--------------|
+| [references/issue-taxonomy.md](references/issue-taxonomy.md) | Start of session -- calibrate severity levels, issue types, and exploration checklist |
+| [templates/dogfood-report-template.md](templates/dogfood-report-template.md) | Copy into output directory as the report file |
+
 ## Output
 
 - Report path.

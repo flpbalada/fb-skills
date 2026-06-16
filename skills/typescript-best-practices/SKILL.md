@@ -49,9 +49,12 @@ Use TypeScript to model real constraints without adding noise.
 
 ## References
 
-- `context/async-error-handling.md`: async and error patterns.
-- `context/strict-config.md`: strict compiler options.
-- `context/review-checklist.md`: review checklist.
+- `context/code-patterns.md`: type system, functions, async patterns, and guard clauses.
+- `context/organization.md`: file naming, barrel files, and project configuration.
+- `context/testing-performance.md`: DI, type guards, null handling, and performance.
+- [W3Schools TypeScript Best Practices](https://www.w3schools.com/typescript/typescript_best_practices.php)
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/)
+- [TypeScript Performance Wiki](https://github.com/microsoft/TypeScript/wiki/Performance)
 
 ## Output
 

@@ -76,6 +76,15 @@ When unsure, choose where you will look first.
 - Merge duplicate resources.
 - Delete useless items.
 
+## Resources
+
+For detailed implementation guides, platform-specific setups, and advanced techniques, see [REFERENCE.md](./REFERENCE.md).
+
+- [Building a Second Brain - Tiago Forte](https://www.buildingasecondbrain.com/)
+- [The PARA Method - Tiago Forte](https://fortelabs.com/)
+- Official PARA Method Book (2023)
+- BASB Course by Tiago Forte
+
 ## Output
 
 ```md

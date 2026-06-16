@@ -63,6 +63,12 @@ Use it when linear lists hide dependencies.
 6. Trace key paths.
 7. Recommend actions.
 
+## Resources
+
+- [Graph of Thoughts: ArXiv Paper](https://arxiv.org/abs/2308.09687)
+- [Neo4j Graph Database Use Cases](https://neo4j.com/use-cases/)
+- [Network Science by Albert-László Barabási](http://networksciencebook.com/)
+
 ## Output
 
 ```md

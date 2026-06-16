@@ -60,6 +60,11 @@ Switching happens when push plus pull beats anxiety plus habit.
 6. List true competitors.
 7. Turn insights into positioning or requirements.
 
+## Resources
+
+- [Competing Against Luck - Clayton Christensen](https://www.amazon.com/Competing-Against-Luck-Innovation-Customer/dp/0062435612)
+- [The Jobs to be Done Playbook - Jim Kalbach](https://www.amazon.com/Jobs-Be-Done-Playbook-Organization/dp/1933820683)
+
 ## Output
 
 ```md

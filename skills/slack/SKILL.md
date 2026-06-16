@@ -73,10 +73,21 @@ agent-browser screenshot
 - Workspace permissions may hide channels or history.
 - Browser session may be logged out.
 
+## References
+
+| Reference                                                                | When to Use                                                                   |
+| ------------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| [references/slack-tasks.md](references/slack-tasks.md)                   | Detailed task patterns for unreads, search, channel inventory, and monitoring |
+| [templates/slack-report-template.md](templates/slack-report-template.md) | Structured report template for Slack analysis output                          |
+| [Slack docs](https://slack.com/help)                                     | Slack product behavior and help docs                                          |
+| [Slack web app](https://app.slack.com)                                   | Browser automation target                                                     |
+| Keyboard shortcuts                                                       | Type `?` in Slack for shortcut list                                           |
+
 ## Output
 
 ```md
 ## Slack Result
+
 - Target:
 - Action taken:
 - Key findings:

@@ -73,6 +73,12 @@ Skip facades for simple HTML or one-off styling.
 - Would duplication be clearer?
 - Can we delete the abstraction and make code easier?
 
+## References
+
+- [The Wrong Abstraction - Sandi Metz](https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction)
+- [The Wet Codebase - Dan Abramov](https://www.deconstructconf.com/2019/dan-abramov-the-wet-codebase)
+- [AHA Programming - Kent C. Dodds](https://kentcdodds.com/blog/aha-programming)
+
 ## Output
 
 ```md

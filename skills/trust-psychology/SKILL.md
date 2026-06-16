@@ -68,6 +68,13 @@ Address competence, benevolence, integrity, and predictability.
 - Support questions.
 - Time to conversion.
 
+## Resources
+
+- [Don't Make Me Think - Steve Krug](https://sensible.com/dont-make-me-think/)
+- [Influence: The Psychology of Persuasion - Robert Cialdini](https://www.influenceatwork.com/)
+- [Neuromarketing - Roger Dooley](https://www.rogerdooley.com/)
+- [Baymard Institute - E-commerce UX Research](https://baymard.com/)
+
 ## Output
 
 ```md

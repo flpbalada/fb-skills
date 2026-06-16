@@ -51,6 +51,11 @@ Choose option with rationale, owner, success criteria, and review date.
 8. Record rationale, risks, dissent, metrics.
 9. Set review date.
 
+## Resources
+
+- [Thinking in Bets - Annie Duke](https://www.amazon.com/Thinking-Bets-Making-Smarter-Decisions/dp/0735216355)
+- [Decisive - Chip & Dan Heath](https://www.amazon.com/Decisive-Make-Better-Choices-Life/dp/0307956393)
+
 ## Output
 
 ```md

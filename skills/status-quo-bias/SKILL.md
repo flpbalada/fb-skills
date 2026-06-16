@@ -67,6 +67,12 @@ Reduce effort, uncertainty, and perceived loss.
 - Support tickets.
 - Feature retention after first use.
 
+## Resources
+
+- [Nudge - Richard Thaler & Cass Sunstein](https://www.amazon.com/Nudge-Improving-Decisions-Health-Happiness/dp/014311526X)
+- [Thinking, Fast and Slow - Daniel Kahneman](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555)
+- [Status Quo Bias in Decision Making - Samuelson & Zeckhauser](https://scholar.harvard.edu/rzeckhauser/publications/status-quo-bias-decision-making)
+
 ## Output
 
 ```md

@@ -75,6 +75,12 @@ Create only folders used by that feature.
 5. Compose cross-feature screens in app layer.
 6. Add lint rules for import boundaries.
 
+## References
+
+- [Bulletproof React](https://github.com/alan2207/bulletproof-react)
+- [Feature-Sliced Design](https://feature-sliced.design/)
+- [Next.js Project Organization](https://nextjs.org/docs/app/getting-started/project-structure)
+
 ## Output
 
 ```md

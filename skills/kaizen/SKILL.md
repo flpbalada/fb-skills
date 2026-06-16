@@ -58,6 +58,13 @@ Use `TIMWOOD`:
 6. Run PDCA: Plan, Do, Check, Act.
 7. Document new baseline.
 
+## Resources
+
+- [Lean Production: Kaizen](https://www.leanproduction.com/kaizen/)
+- [Toyota Production System](https://global.toyota/en/company/vision-and-philosophy/production-system/)
+- Masaaki Imai — *Gemba Kaizen* (book)
+- [Kaizen Institute](https://www.kaizen.com/)
+
 ## Output
 
 ```md

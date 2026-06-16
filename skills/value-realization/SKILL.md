@@ -62,6 +62,17 @@ Determine whether users can discover, understand, believe, and experience produc
 - Qualitative value recall.
 - Conversion from onboarding step to core action.
 
+## Progressive Disclosure
+
+This skill provides detailed examples through context files. Load them when needed:
+
+| Context File                    | When to Load                                    |
+| ------------------------------- | ----------------------------------------------- |
+| `context/decision-flow.md`      | Scoring trade-offs, journey stage analysis, ready-to-ship criteria |
+| `context/enterprise-guide.md`   | B2B/B2E products with separate buyer/end-user analysis |
+| `context/examples.md`           | Real-world success/failure case studies |
+| `references/real-cases.md`      | Optional deeper product case studies |
+
 ## Output
 
 ```md

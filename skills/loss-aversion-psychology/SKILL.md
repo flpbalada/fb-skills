@@ -58,6 +58,12 @@ Proceed only when:
 - User has control.
 - Message would feel fair if psychology were explained.
 
+## Resources
+
+- [Thinking, Fast and Slow - Daniel Kahneman](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555)
+- [Predictably Irrational - Dan Ariely](https://www.amazon.com/Predictably-Irrational-Hidden-Forces-Decisions/dp/0061353248)
+- [Prospect Theory Original Paper - Kahneman & Tversky](https://www.jstor.org/stable/1914185)
+
 ## Output
 
 ```md

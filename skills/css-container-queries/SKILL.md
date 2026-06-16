@@ -70,6 +70,13 @@ Reduce coupling between component internals and page layout.
 - Component works inside grid cells.
 - Content does not overflow.
 
+## Resources
+
+- [MDN: CSS Container Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Container_Queries)
+- [Tailwind: Container Queries](https://tailwindcss.com/docs/hover-focus-and-other-states#container-queries)
+- [CSS Tricks: Container Queries Guide](https://css-tricks.com/a-primer-on-css-container-queries/)
+- [Can I Use: Container Queries](https://caniuse.com/css-container-queries)
+
 ## Output
 
 ```md

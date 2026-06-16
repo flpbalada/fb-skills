@@ -65,6 +65,12 @@ so that [benefit].
 - Small.
 - Testable.
 
+## Resources
+
+- [User Story Mapping - Jeff Patton](https://www.jpattonassociates.com/user-story-mapping/)
+- [Agile Estimating and Planning - Mike Cohn](https://www.mountaingoatsoftware.com/books/agile-estimating-and-planning)
+- [Essential Scrum - Kenneth Rubin](https://www.innolution.com/essential-scrum)
+
 ## Output
 
 ```md

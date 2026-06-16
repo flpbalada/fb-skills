@@ -55,6 +55,12 @@ Focus on systems, not blame.
 6. Verify fixing root cause would prevent recurrence.
 7. Propose fixes and success metrics.
 
+## Resources
+
+- [Toyota Production System](https://en.wikipedia.org/wiki/Toyota_Production_System)
+- [Taiichi Ohno's Workplace Management](https://www.goodreads.com/book/show/843519.Workplace_Management)
+- [The Lean Startup - Eric Ries](https://theleanstartup.com/)
+
 ## Output
 
 ```md

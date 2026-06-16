@@ -65,6 +65,11 @@ Question: Why is signup conversion below 30%?
 - Technical: bugs block completion.
 ```
 
+## Resources
+
+- [The Pyramid Principle - Barbara Minto](https://www.amazon.com/Pyramid-Principle-Logic-Writing-Thinking/dp/0273710516)
+- [Bulletproof Problem Solving - Charles Conn](https://www.amazon.com/Bulletproof-Problem-Solving-Changes-Everything/dp/1119553024)
+
 ## Output
 
 ```md

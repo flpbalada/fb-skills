@@ -68,6 +68,12 @@ const handleAddTodo = useCallback((text) => {
 - Check unstable object or array dependencies.
 - Remove unnecessary lifted state before adding memoization.
 
+## References
+
+- [React Docs - useCallback](https://react.dev/reference/react/useCallback)
+- [React Docs - memo](https://react.dev/reference/react/memo)
+- [React Docs - useMemo](https://react.dev/reference/react/useMemo)
+
 ## Output
 
 - Keep, add, or remove `useCallback`.

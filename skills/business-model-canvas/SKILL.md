@@ -57,6 +57,12 @@ List assumptions, risks, and next validation steps.
 9. Check coherence across all blocks.
 10. Recommend validation tests and strategy changes.
 
+## Resources
+
+- [Strategyzer - Business Model Canvas](https://www.strategyzer.com/canvas)
+- [Business Model Generation - Osterwalder & Pigneur](https://www.strategyzer.com/books/business-model-generation)
+- [Value Proposition Design](https://www.strategyzer.com/books/value-proposition-design)
+
 ## Output
 
 ```md

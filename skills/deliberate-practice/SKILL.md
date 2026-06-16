@@ -77,6 +77,14 @@ After practice:
 - What failed?
 - What is next session's focus?
 
+## Resources
+
+- **K. Anders Ericsson** — *Peak: Secrets from the New Science of Expertise*
+- **Anders Ericsson** — *The Role of Deliberate Practice in the Acquisition of Expert
+  Performance* (academic paper)
+- **Josh Waitzkin** — *The Art of Learning* (an athlete's journey applying deliberate
+  practice principles)
+
 ## Output
 
 ```md

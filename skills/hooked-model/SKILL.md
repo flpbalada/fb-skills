@@ -62,6 +62,12 @@ Use ethically.
 7. Improve weakest phase.
 8. Run ethical check.
 
+## Resources
+
+- [Hooked - Nir Eyal](https://www.nirandfar.com/hooked/)
+- [Indistractable - Nir Eyal](https://www.nirandfar.com/indistractable/)
+- [Atomic Habits - James Clear](https://jamesclear.com/atomic-habits)
+
 ## Output
 
 ```md

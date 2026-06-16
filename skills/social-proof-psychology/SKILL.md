@@ -64,6 +64,12 @@ Use proof to reduce uncertainty, not to manipulate.
 - Proof aimed at wrong segment.
 - Proof hidden below the decision point.
 
+## Resources
+
+- [Influence: The Psychology of Persuasion - Robert Cialdini](https://www.influenceatwork.com/)
+- [Social Proof in Web Design - Nielsen Norman Group](https://www.nngroup.com/)
+- [ConversionXL - Social Proof Research](https://cxl.com/)
+
 ## Output
 
 ```md

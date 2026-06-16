@@ -78,6 +78,13 @@ Keep styling local, explicit, accessible, and easy to change.
 5. Model state with attributes.
 6. Verify responsive behavior and accessibility.
 
+## References
+
+- [Tailwind CSS v4 Docs](https://tailwindcss.com/docs)
+- [CVA (class-variance-authority)](https://cva.style/docs)
+- [Tailwind Variants](https://www.tailwind-variants.org/)
+- [shadcn/ui](https://ui.shadcn.com/)
+
 ## Output
 
 ```md

@@ -67,6 +67,10 @@ expect(await page.getByText('Saved').isVisible()).toBe(true)
 6. Debug with trace, screenshot, video, or UI mode.
 7. Fix root cause.
 
+## References
+
+- [Playwright Best Practices](https://playwright.dev/docs/best-practices)
+
 ## Output
 
 ```md

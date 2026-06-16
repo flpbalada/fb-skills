@@ -80,6 +80,11 @@ export function FilterDropdown({ value, onChange }) {
 - Event handlers cannot be passed from server to client: move handler into client component.
 - Async not supported in Client Components: keep async data component on server and pass data down.
 
+## References
+
+- [React Docs: "use client"](https://react.dev/reference/rsc/use-client)
+- [Next.js Discussion: Client Component Boundaries](https://github.com/vercel/next.js/discussions/46795)
+
 ## Output
 
 - Boundary location.

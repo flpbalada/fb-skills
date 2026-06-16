@@ -72,6 +72,20 @@ Replace them with clearer ownership, decisions, and collaboration.
 5. Recommend replacement behavior.
 6. Define signal that behavior improved.
 
+## Progressive Disclosure
+
+| Topic | File | When to Use |
+|-------|------|-------------|
+| Trust & autonomy issues | [context/trust-autonomy-issues.md](context/trust-autonomy-issues.md) | Micromanagement, finding faults, expectations |
+| Recognition & meetings | [context/recognition-meeting-issues.md](context/recognition-meeting-issues.md) | Ignoring wins, meeting overload, surveillance |
+| Culture & prioritization | [context/prioritization-culture-issues.md](context/prioritization-culture-issues.md) | Fear-based leadership, toxic behavior, self-audit |
+
+## Resources
+
+- [Radical Candor - Kim Scott](https://www.radicalcandor.com/)
+- [The Five Dysfunctions of a Team - Patrick Lencioni](https://www.tablegroup.com/books/dysfunctions)
+- [Turn the Ship Around - David Marquet](https://davidmarquet.com/turn-the-ship-around-book/)
+
 ## Output
 
 ```md
