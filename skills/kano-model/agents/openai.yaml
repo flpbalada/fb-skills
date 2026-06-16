@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kano Model"
+  short_description: "Classify features by customer satisfaction impact"
+  default_prompt: "Use $kano-model to classify these product features and recommend priorities."
