@@ -1,169 +1,74 @@
 ---
 name: discuss-task
-description: Clarify ambiguous implementation, product, or planning requests before action by interviewing for goal, scope, constraints, risks, success criteria, and done state. Use when user wants a thinking partner or handoff-ready task prompt. Do not write PRDs; use to-prd for product requirements.
+description: Build shared understanding before action by interviewing the user about ambiguous implementation, product, planning, or design tasks. Use when goal, scope, constraints, risks, success criteria, done state, or next action are unclear; when user wants a thinking partner; or when user needs a handoff-ready task prompt. Do not write PRDs; use to-prd for product requirements.
 ---
 
 # Discuss Task
 
-Interview user before acting. Build shared understanding by walking decision
-branches one by one until next action is obvious.
-
-## When to use
-
-- Goal is unclear.
-- Scope is unclear.
-- Success criteria are missing.
-- Constraints or risks may change the answer.
-- Decisions depend on each other.
-- User asks for planning, requirements, or product thinking.
-- User needs thinking partner before implementation.
-
-## Goal
-
-- Define outcome.
-- Build shared knowledge between user and assistant.
-- Interview user until assumptions, context, and intent are explicit.
-- Shape fuzzy requests into strong task prompts.
-- Expose assumptions.
-- Separate scope from non-goals.
-- Make success and failure testable.
-- Capture task context, constraints, and done criteria.
-- Resolve decision branches in dependency order.
-- Recommend answers when asking.
-- Use existing code or docs instead of asking when answer is discoverable.
+Build shared understanding before acting.
+Walk the decision tree one branch at a time until next action is obvious.
 
 ## Rules
 
-- Ask one question at a time by default.
-- Ask max 3 only when questions are independent.
-- Ask only questions that change scope, priority, risk, or acceptance.
-- Prefer interview questions over early summarizing when shared context is thin.
-- Do not stop after first plausible answer; probe missing context, tradeoffs, and intent.
-- Confirm important inferred assumptions before treating them as settled.
-- Include recommended answer for each question.
-- Explain recommendation in one short reason.
-- Explore codebase when question can be answered from files.
-- Prefer gathering missing context from files, docs, errors, examples, and commands before asking.
-- Use `question` tool when structured choices help.
+- Inspect code, docs, errors, examples, or commands before asking when answer is discoverable.
+- Ask one question at a time.
+- Ask up to 3 only when questions are independent.
+- Ask only questions that change goal, scope, priority, risk, constraints, acceptance, or done state.
+- Include recommended answer and one short reason for each question.
+- Probe past first plausible answer when context, tradeoff, or intent is still missing.
+- Confirm important assumptions before treating them as settled.
 - Do not ask same question in tool and markdown.
-- If clear enough, stop asking and summarize.
-- Clear enough means user intent, constraints, success, risks, and next action are shared.
-- End with copy-ready task prompt when user needs to hand work off.
-
-## Check
-
-- User.
-- Problem.
-- Trigger.
-- Goal.
-- Context: files, folders, docs, errors, examples.
-- Success.
-- Failure.
-- Scope.
-- Non-goals.
-- Constraints.
-- Done when.
-- Verification command or behavior check.
-- Data or state.
-- Edge cases.
-- Decision dependencies.
-- Reasoning level.
-- Recommended path.
-
-## Interview focus
-
-Use questions to uncover shared knowledge:
-
-- What user wants.
-- Why user wants it.
-- What changed or triggered task.
-- Existing attempts, constraints, and preferences.
-- Hidden tradeoffs.
-- Risk tolerance.
-- What good looks like.
-- What bad outcome must be avoided.
-- Who or what is affected.
-- What can be decided now.
-- What must stay flexible.
+- Stop interviewing when shared understanding is enough to act.
 
 ## Flow
 
-1. Restate task only if useful.
-2. List main gap or assumption.
-3. Identify next blocking decision.
-4. Answer from code or docs if possible.
-5. Ask one interview question with recommended answer.
-6. Refine shared understanding after answer.
-7. Probe next dependency, tradeoff, or assumption.
-8. Shape known details into Goal, Context, Constraints, and Done when.
-9. Repeat until branches are resolved and user intent is shared.
-10. Stop when next action is obvious.
+1. Name current gap or assumption.
+2. Resolve next blocking decision.
+3. Ask one question with recommendation.
+4. After answer, update shared understanding.
+5. Repeat until goal, scope, constraints, risks, success, and done state are clear.
+6. End with next action or handoff prompt.
 
-## First-use prompt frame
+## Ask About
 
-When preparing a task prompt, shape it into:
-
-- Goal: desired change or outcome.
-- Context: relevant files, folders, docs, errors, examples, and commands.
-- Constraints: architecture, style, safety, conventions, and non-goals.
-- Done when: checks pass, behavior works, and risk is reviewed.
-
-Ask only for missing fields that change execution.
-If missing context is discoverable in the repo, inspect it instead of asking.
-
-## Reasoning hint
-
-- Low: small, well-scoped task.
-- Medium or high: unclear task, debugging, multi-file change, or meaningful risk.
-- Extra high: long-running, agentic, or reasoning-heavy task.
+- Goal and trigger.
+- Relevant files, docs, errors, examples, data, or state.
+- Scope and non-goals.
+- Constraints and risks.
+- Success, failure, and done criteria.
+- Verification command or behavior check.
 
 ## Output while clarifying
 
 ```md
-## Gaps
+Gap:
+- [gap]
 
-- [gap or assumption]
-
-## Questions
-
-1. [blocking question]
-
+Question:
+- [question]
 Recommended: [answer]
-Reason: [short reason]
+Reason: [reason]
 ```
 
 ## Output when ready
 
+If user needs handoff prompt:
+
 ```md
-## Summary
-
-- [task outcome]
-
-## Task Prompt
-
 Goal:
-- [desired change or outcome]
+- [outcome]
 
 Context:
-- [files, folders, docs, errors, examples, commands]
+- [facts, files, commands]
 
 Constraints:
-- [standards, architecture, safety, conventions, non-goals]
+- [rules, non-goals, risks]
 
 Done when:
-- [checks pass, behavior works, risk reviewed]
+- [checks and behavior]
 
-Reasoning:
-- [low | medium | high | extra high]
-
-## Requirements
-
-- Given [state], when [action], then [result]
-
-## Notes
-
-- Scope: [in]
-- Non-goals: [out]
-- Assumptions: [known]
-- Next: [smallest useful action]
+Next:
+- [smallest useful action]
 ```
+
+Otherwise summarize shared understanding and proceed.
