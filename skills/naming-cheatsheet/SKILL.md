@@ -1,6 +1,6 @@
 ---
 name: naming-cheatsheet
-description: Name code identifiers clearly and consistently. Use when naming or reviewing variables, functions, booleans, classes, files, modules, React hooks, event handlers, props callbacks, error values, and domain concepts; reducing ambiguity, duplicated context, contractions, or misleading singular/plural names. For larger code-quality review use discuss-code or code-reviewer.
+description: Name code identifiers clearly and consistently. Use when naming or reviewing variables, functions, booleans, classes, files, modules, React hooks, event handlers, props callbacks, error values, and domain concepts; reducing ambiguity, duplicated context, contractions, or misleading singular/plural names. For larger code-quality review use code-reviewer.
 ---
 
 # Naming Cheatsheet

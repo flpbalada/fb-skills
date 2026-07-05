@@ -1,4 +1,4 @@
-import { readdir, readFile } from 'node:fs/promises';
+import { access, readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 
 export type Skill = {
@@ -23,8 +23,13 @@ const skillsDirectory = path.join(process.cwd(), 'skills');
 
 export async function getSkills(): Promise<Skill[]> {
   const entries = await readdir(skillsDirectory, { withFileTypes: true });
-  const skillSlugs = entries.filter((entry) => entry.isDirectory()).map((entry) => entry.name);
-  const skills = await Promise.all(skillSlugs.map(getSkill));
+  const skillSlugs = entries
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name)
+    .filter((slug) => !slug.startsWith('_'));
+  const skillFiles = await Promise.all(skillSlugs.map(hasSkillFile));
+  const activeSlugs = skillSlugs.filter((_, index) => skillFiles[index]);
+  const skills = await Promise.all(activeSlugs.map(getSkill));
 
   return skills.sort((a, b) => a.name.localeCompare(b.name));
 }
@@ -95,6 +100,15 @@ async function getMarkdownPaths(directory: string, base = ''): Promise<string[]>
   );
 
   return paths.flat();
+}
+
+async function hasSkillFile(slug: string): Promise<boolean> {
+  try {
+    await access(path.join(skillsDirectory, slug, 'SKILL.md'));
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 function parseFrontmatter(content: string): Record<string, string> {

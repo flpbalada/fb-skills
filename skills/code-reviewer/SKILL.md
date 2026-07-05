@@ -1,6 +1,6 @@
 ---
 name: code-reviewer
-description: Review code for concrete defects and ranked risk. Use when asked to review diffs, pull requests, changed files, snippets, or implementation plans for bugs, security, performance, UX, API contracts, tests, concurrency, error handling, state/data hazards, accessibility, dependencies, or observability. Produces findings first with file:line evidence. For discussion without full review depth use discuss-code; for architecture-only review use architecture-review.
+description: Review code for concrete defects and ranked risk. Use when asked to review diffs, pull requests, changed files, snippets, or implementation plans for bugs, security, performance, UX, API contracts, tests, concurrency, error handling, state/data hazards, accessibility, dependencies, or observability. Produces findings first with file:line evidence. For factual diff explanation use explain-diff; for architecture-only review use architecture-review.
 ---
 
 # Code Reviewer
