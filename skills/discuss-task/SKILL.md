@@ -8,67 +8,29 @@ description: Build shared understanding before action by interviewing the user a
 Build shared understanding before acting.
 Walk the decision tree one branch at a time until next action is obvious.
 
-## Rules
+Convert uncertainty into action:
 
-- Inspect code, docs, errors, examples, or commands before asking when answer is discoverable.
-- Ask one question at a time.
-- Ask up to 3 only when questions are independent.
-- Ask only questions that change goal, scope, priority, risk, constraints, acceptance, or done state.
-- Include recommended answer and one short reason for each question.
-- Probe past first plausible answer when context, tradeoff, or intent is still missing.
-- Confirm important assumptions before treating them as settled.
-- Do not ask same question in tool and markdown.
-- Stop interviewing when shared understanding is enough to act.
+- Surface unknown unknowns by naming likely hidden gaps and assumptions.
+- Turn them into known unknowns with smart questions.
+- Turn known unknowns into known knowns with answers, evidence, or checks.
 
 ## Flow
 
-1. Name current gap or assumption.
-2. Resolve next blocking decision.
-3. Ask one question with recommendation.
-4. After answer, update shared understanding.
-5. Repeat until goal, scope, constraints, risks, success, and done state are clear.
-6. End with next action or handoff prompt.
+1. Inspect discoverable context first: code, docs, errors, examples, commands, data, or state.
+2. Name the current gap, hidden gap, or assumption.
+3. Ask the next smart question with a recommended answer and one short reason.
+4. Ask up to 3 questions only when they are independent; do not ask the same question in tool and markdown.
+5. After each answer, update shared understanding and repeat only while goal, scope, constraints, risks, success, or done state are unclear.
+6. End with the next action or handoff prompt.
 
-## Ask About
+## Root Cause
 
-- Goal and trigger.
-- Relevant files, docs, errors, examples, data, or state.
-- Scope and non-goals.
-- Constraints and risks.
-- Success, failure, and done criteria.
-- Verification command or behavior check.
+Use [INTERVIEW.md](INTERVIEW.md) to check whether the task should switch to [five-whys](../five-whys/SKILL.md).
 
-## Output while clarifying
+## Interview
 
-```md
-Gap:
-- [gap]
+Use [INTERVIEW.md](INTERVIEW.md).
 
-Question:
-- [question]
-Recommended: [answer]
-Reason: [reason]
-```
+## Output
 
-## Output when ready
-
-If user needs handoff prompt:
-
-```md
-Goal:
-- [outcome]
-
-Context:
-- [facts, files, commands]
-
-Constraints:
-- [rules, non-goals, risks]
-
-Done when:
-- [checks and behavior]
-
-Next:
-- [smallest useful action]
-```
-
-Otherwise summarize shared understanding and proceed.
+Use [TEMPLATE.md](TEMPLATE.md).
