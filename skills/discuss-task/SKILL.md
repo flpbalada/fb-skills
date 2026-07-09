@@ -16,12 +16,13 @@ Convert uncertainty into action:
 
 ## Flow
 
-1. Inspect discoverable context first: code, docs, errors, examples, commands, data, or state.
-2. Name the current gap, hidden gap, or assumption.
-3. Ask the next smart question with a recommended answer and one short reason.
-4. Ask up to 3 questions only when they are independent; do not ask the same question in tool and markdown.
-5. After each answer, update shared understanding and repeat only while goal, scope, constraints, risks, success, or done state are unclear.
-6. End with the next action or handoff prompt.
+1. Spawn a sub-agent with [deep-thinker](../deep-thinker/SKILL.md) to analyze the problem before asking the user questions.
+2. Inspect discoverable context first: code, docs, errors, examples, commands, data, or state.
+3. Use the deep-thinker result and inspected context to name the current gap, hidden gap, or assumption.
+4. Ask the next smart question with a recommended answer and one short reason.
+5. Ask up to 3 questions only when they are independent; do not ask the same question in tool and markdown.
+6. After each answer, update shared understanding and repeat only while goal, scope, constraints, risks, success, or done state are unclear.
+7. End with the next action or handoff prompt.
 
 ## Root Cause
 
