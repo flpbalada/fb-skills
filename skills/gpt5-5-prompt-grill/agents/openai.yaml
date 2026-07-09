@@ -1,0 +1,4 @@
+interface:
+  display_name: "GPT-5.5 Prompt Grill"
+  short_description: "Remove no-ops from GPT-5.5 prompts"
+  default_prompt: "Use $gpt5-5-prompt-grill to remove no-ops and rewrite this prompt for GPT-5.5."
