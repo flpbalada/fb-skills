@@ -48,8 +48,4 @@ Do not invent missing decisions.
 ## Acceptance Criteria / requirements
 
 - Given [context], when [action], then [outcome].
-
-## Open Questions
-
-- [Question]
 ```
