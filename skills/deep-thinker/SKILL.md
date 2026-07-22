@@ -1,36 +1,11 @@
 ---
 name: deep-thinker
-description: Analyze ambiguous problems, hard decisions, root causes, product strategy, or tradeoffs with useful frameworks, assumptions, validation, and next actions. Use when user needs structured thinking before choosing a path. Do not use when task is requirements capture; use discuss-task or to-prd.
+description: Analyze ambiguous problems, hard decisions, root causes, product strategy, or tradeoffs with useful frameworks, assumptions, validation, and next actions. Use when user needs structured thinking before choosing a path.
 ---
 
 # Deep Thinker
 
-Clarify problem.
-Use only useful frameworks.
-Validate assumptions.
-End with action.
-
-## When to Use
-
-- Problem is ambiguous.
-- Decision has meaningful tradeoffs.
-- Root cause is unclear.
-- Work needs decomposition.
-- Strategy or product direction needs structure.
-
-## Goal
-
-Turn unclear thinking into a practical recommendation.
-
-## Rules
-
-- Ask 2-3 questions only when needed.
-- Do not use frameworks for decoration.
-- Use 2-3 complementary skills at most.
-- Compare agreement, conflict, and gaps.
-- Name assumptions.
-- State what would change the recommendation.
-- End with a concrete next action.
+Turn unclear thinking into a practical rumsfeld matrix.
 
 ## Useful Pairings
 
@@ -49,7 +24,7 @@ Turn unclear thinking into a practical recommendation.
 4. Analyze from each angle.
 5. Synthesize into one view.
 6. Validate assumptions and risks.
-7. Recommend next action.
+7. Return rumsfeld matrix
 
 ## Questions
 
@@ -60,25 +35,22 @@ Turn unclear thinking into a practical recommendation.
 - Why now?
 - What happens if nothing changes?
 
-## Output
+## Output / Rumsfeld matrix
 
 ```md
-## Problem
+## Known knowns
+
 - [name]
 
-## Clarity
-- Who: [stakeholders, deciders]
-- What: [problem, success criteria]
-- Why: [urgency, consequence]
+## Known unknowns
 
-## Approach
-- [framework or skill]: [why it fits]
+- [name]
 
-## Validation
-- Assumptions: [key assumptions]
-- Risk if wrong: [main risk]
-- Change trigger: [what would update view]
+## Unknown knowns
 
-## Next Action
-- [specific first step]
+- [name]
+
+## Unknown unknowns
+
+- [name]
 ```
