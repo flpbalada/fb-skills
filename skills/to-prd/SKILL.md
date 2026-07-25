@@ -1,32 +1,15 @@
 ---
 name: to-prd
-description: Convert conversation notes, raw ideas, feature requests, or planning discussion into concise PRD requirements with goals, users, problem, requirements, non-goals, constraints, acceptance criteria, and open questions. Use when user asks for PRD, spec, requirements doc, or product brief. Do not interview first unless key decisions are missing; use discuss-task for clarification.
+description: Convert a discussion into a concise PRD covering users, the problem, acceptance criteria or requirements, and constraints. Use when the user asks to turn a discussion into a PRD.
 ---
 
-# Write PRD From Conversation
-
-Convert discussion into concise, testable product requirements.
-Preserve intent.
-Do not invent missing decisions.
-
-## Rules / constraints
+# Convert Discussion to PRD
 
 - Read the full conversation first.
-- Use only conversation context unless asked to infer.
-- Keep requirements measurable.
-- Separate goals, non-goals, constraints, and acceptance criteria.
+- Preserve its intent without inventing decisions.
+- Write requirements in Given/When/Then format.
+- Use only the sections in the template.
 - Prefer short bullets.
-
-## Flow
-
-1. Extract raw requirements.
-2. Identify context and constraints.
-3. Infer user goals only when strongly supported.
-4. Write concise PRD.
-
-## Input
-
-- Conversation context or raw notes.
 
 ## Output
 
@@ -37,11 +20,11 @@ Do not invent missing decisions.
 
 - [User group]
 
-## Problem (what)
+## Problem (why)
 
 - [Problem]
 
-## Acceptance Criteria / requirements
+## Acceptance Criteria / Requirements (what)
 
 - Given [context], when [action], then [outcome].
 
