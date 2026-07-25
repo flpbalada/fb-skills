@@ -41,11 +41,11 @@ Do not invent missing decisions.
 
 - [Problem]
 
-## Constraints / non-goals
-
-- [Constraint]
-
 ## Acceptance Criteria / requirements
 
 - Given [context], when [action], then [outcome].
+
+## Constraints
+
+- [Constraint]
 ```
