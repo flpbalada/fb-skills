@@ -5,12 +5,6 @@ description: Write a concise PR description from branch commit messages, using `
 
 # Summarize Branch
 
-## When to use
-
-- Branch needs PR text.
-- Commit history should drive summary.
-- User wants a short review-ready description.
-
 ## Goal
 
 Create one concise PR paragraph from branch commits.

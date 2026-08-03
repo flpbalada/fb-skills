@@ -8,13 +8,6 @@ description: Organize React, Next.js, or TypeScript projects with feature-based 
 Use feature-based architecture for React, Next.js, and TypeScript.
 Organize by domain, not file type.
 
-## When to Use
-
-- Starting React or Next.js project
-- Deciding where new code belongs
-- Reorganizing large codebase
-- Preventing cross-feature imports
-
 ## Goal
 
 Keep features independent.

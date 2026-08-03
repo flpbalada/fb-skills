@@ -8,12 +8,6 @@ description: Use loss-aversion analysis when perceived losses outweigh equivalen
 People feel losses more strongly than similar gains.
 Use only for real user value and real risk.
 
-## When to Use
-
-- Retention or churn prevention
-- Trial ending or downgrade flows
-- Progress, streaks, saved work, credits
-
 ## Goal
 
 Show what user may lose.

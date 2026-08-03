@@ -5,14 +5,6 @@ description: Structure product work from strategic themes to epics, stories, and
 
 # Theme, Epic, Story
 
-## When to use
-
-- Organizing roadmaps or backlogs.
-- Breaking large initiatives into actionable work.
-- Planning releases or quarters.
-- Explaining work structure to stakeholders.
-- Aligning delivery work with strategy.
-
 ## Goal
 
 Structure work from strategy to execution.

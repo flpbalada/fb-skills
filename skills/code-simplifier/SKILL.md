@@ -8,13 +8,6 @@ description: Simplify recently changed code without changing behavior. Use after
 Simplify code.
 Preserve behavior.
 
-## When to Use
-
-- Code was recently edited.
-- Logic works but reads harder than needed.
-- Nesting, repetition, or indirection grew during implementation.
-- User asks for cleanup without behavior change.
-
 ## Goal
 
 Make code easier to read, debug, and maintain.

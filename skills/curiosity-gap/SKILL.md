@@ -9,14 +9,6 @@ Reveal enough to create interest.
 Hide enough to motivate action.
 Deliver real payoff.
 
-## When to Use
-
-- Writing headlines or subject lines.
-- Designing notifications.
-- Planning onboarding or feature discovery.
-- Creating product reveals.
-- Improving content engagement.
-
 ## Goal
 
 Create useful information gaps.

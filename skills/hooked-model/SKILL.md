@@ -10,15 +10,6 @@ trigger -> action -> variable reward -> investment.
 
 Use ethically.
 
-## When to use
-
-- Engagement loop design.
-- Retention improvement.
-- Notification strategy.
-- Habit-forming product analysis.
-- Competitor engagement review.
-- Ethical engagement audit.
-
 ## Goal
 
 - Map current hook.

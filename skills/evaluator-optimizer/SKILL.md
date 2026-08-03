@@ -1,6 +1,6 @@
 ---
 name: evaluator-optimizer
-description: Run an evaluator-optimizer loop by generating candidate outputs, scoring against a rubric or tests, revising, and stopping on pass, budget, or plateau. Use when quality criteria are explicit and iterative refinement is cheaper than failure. Do not use when no reliable eval signal exists.
+description: Run an evaluator-optimizer loop by generating candidate outputs, scoring against a rubric or tests, revising, and stopping on pass, budget, or plateau. Use when quality criteria are explicit and iterative refinement is cheaper than failure; avoid when no reliable evaluation signal exists, speed matters more than polish, outputs are high-risk and require human review, or revision may drift from user intent.
 ---
 
 # Evaluator-Optimizer
@@ -9,22 +9,6 @@ Generate.
 Judge.
 Revise.
 Stop when good enough.
-
-## When to use
-
-- Quality bar is clear.
-- Output can improve from feedback.
-- Evaluation criteria can be written or coded.
-- Failure is costly.
-- Extra loop cost is acceptable.
-
-## Do not use
-
-- No reliable eval signal.
-- Feedback would be vague or subjective.
-- Fast answer matters more than polished answer.
-- Output is high-risk and needs human review.
-- Revision loops may drift from user intent.
 
 ## Goal
 

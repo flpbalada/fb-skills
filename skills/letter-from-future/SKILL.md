@@ -18,15 +18,6 @@ Turn vague ambition into a usable planning artifact:
 - Premortem: risks, warning signs, mitigations.
 - Next actions: owner-ready work.
 
-## Use For
-
-- Startup vision and strategy.
-- Product discovery and roadmap planning.
-- Project kickoff.
-- Pivot or positioning work.
-- Founder, PM, design, engineering, sales, and investor alignment.
-- Quarterly or annual planning.
-
 ## Rules
 
 - Write from specific future date.

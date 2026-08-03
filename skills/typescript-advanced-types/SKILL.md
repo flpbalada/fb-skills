@@ -5,14 +5,6 @@ description: Design readable advanced TypeScript types. Use when creating reusab
 
 # TypeScript Advanced Types
 
-## When to use
-
-- Creating reusable type utilities.
-- Building typed libraries, API clients, configs, or state helpers.
-- Modeling complex type relationships.
-- Replacing unsafe `any` or duplicated runtime/schema types.
-- Debugging inference, narrowing, or generic constraints.
-
 ## Goal
 
 Use advanced types to improve safety without making code unreadable.

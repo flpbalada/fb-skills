@@ -7,14 +7,6 @@ description: Map value creation, delivery, and capture with the Business Model C
 
 Map how a product creates, delivers, and captures value.
 
-## When to Use
-
-- Evaluate startup or product ideas.
-- Analyze competitor business models.
-- Plan pivots or expansions.
-- Explain strategy to stakeholders.
-- Find gaps in current model.
-
 ## Goal
 
 Produce a clear nine-block canvas.

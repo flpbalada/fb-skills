@@ -12,15 +12,6 @@ Analyze external macro factors:
 - Social
 - Technological
 
-## When to Use
-
-- Market entry
-- Product strategy
-- Business direction change
-- Annual planning
-- Competitive positioning
-- External risk review
-
 ## Goal
 
 Find external opportunities and threats.

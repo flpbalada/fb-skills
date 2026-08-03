@@ -8,13 +8,6 @@ description: Decide whether to abstract, duplicate, inline, or split code. Use w
 Prefer duplication over wrong abstraction.
 Wait for real patterns.
 
-## When to Use
-
-- Creating shared utilities or components.
-- Deciding whether duplication is acceptable.
-- Reviewing a bloated helper or facade.
-- Refactoring code with many options, flags, or conditionals.
-
 ## Goal
 
 Keep code easy to change.

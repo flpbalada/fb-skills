@@ -10,15 +10,6 @@ Find the job, not just the feature request.
 Do not start from feature usage.
 Start from progress, circumstance, and current alternative.
 
-## When to use
-
-- Product strategy.
-- Positioning.
-- User research.
-- Requirements and user stories.
-- Competitor mapping.
-- Switching behavior analysis.
-
 ## Goal
 
 - Understand desired progress.

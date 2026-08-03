@@ -8,14 +8,6 @@ description: Improve clarity by making content and interfaces easier to process.
 Easy to process feels safer, truer, and more useful.
 Clarity beats cleverness.
 
-## When to Use
-
-- Writing landing pages, UI copy, or documentation.
-- Auditing readability.
-- Improving onboarding or conversion.
-- Reviewing names, labels, and instructions.
-- Simplifying complex content.
-
 ## Goal
 
 Reduce mental effort.

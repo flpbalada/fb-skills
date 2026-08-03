@@ -1,17 +1,11 @@
 ---
 name: effort-estimator
-description: Estimate engineering effort from scope, risk, unknowns, and verification cost. Use when sizing features, splitting work, planning sprints, comparing implementation options, or deciding whether a task is XS through XL; avoid for product value, requirements quality, or business-case analysis.
+description: Estimate engineering effort from scope, risk, unknowns, and verification cost. Use when sizing features, splitting work, planning sprints, comparing implementation options, or deciding whether a task is XS through XL, provided enough task detail exists for a rough estimate; avoid for product value, requirements quality, or business-case analysis.
 ---
 
 # Effort Estimator
 
 Estimate work from scope, risk, and verification cost.
-
-## When to use
-
-- User asks for effort, sizing, sprint planning, or approach comparison.
-- Work has enough detail to estimate roughly.
-- Scope may need splitting.
 
 ## Goal
 

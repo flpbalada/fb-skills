@@ -8,13 +8,6 @@ description: Review software architecture before editing. Use when asked to asse
 Review architecture.
 Refactor only after explicit approval.
 
-## When to Use
-
-- User asks for architecture review.
-- Code structure, module boundaries, or interfaces feel wrong.
-- Refactor candidates need ranking.
-- Existing changes need architectural review.
-
 ## Goal
 
 Find structural friction.

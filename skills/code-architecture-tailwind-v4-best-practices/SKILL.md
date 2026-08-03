@@ -8,14 +8,6 @@ description: Choose Tailwind CSS v4 component styling patterns. Use when buildin
 Use Tailwind utilities first.
 Abstract only when variants justify it.
 
-## When to Use
-
-- Building Tailwind v4 components.
-- Choosing utilities, CVA, or tailwind-variants.
-- Creating button or card variants.
-- Setting Tailwind v4 theme tokens.
-- Migrating Tailwind v3 patterns.
-
 ## Goal
 
 Keep styling local, explicit, accessible, and easy to change.

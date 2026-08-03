@@ -5,14 +5,6 @@ description: Build or refactor React forms with React Hook Form. Use when workin
 
 # React Hook Form
 
-## When to use
-
-- Creating or refactoring React forms.
-- Using `useForm`, `register`, `handleSubmit`, or `formState`.
-- Adding validation, schema resolvers, or typed form values.
-- Integrating UI-library inputs with `Controller`.
-- Building repeatable fields with `useFieldArray`.
-
 ## Goal
 
 Use React Hook Form's uncontrolled-first model.

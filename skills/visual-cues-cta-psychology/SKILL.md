@@ -5,13 +5,6 @@ description: Guide attention toward the next valuable action with CTA hierarchy,
 
 # Visual Cues and CTA Psychology
 
-## When to use
-
-- Designing CTA hierarchy.
-- Improving landing page conversion flow.
-- Guiding attention through an interface.
-- Auditing button placement, labels, or visual emphasis.
-
 ## Goal
 
 Make the next valuable action easy to notice, understand, and take.

@@ -8,14 +8,6 @@ description: Write, review, or fix resilient Playwright tests around user-visibl
 Write tests around user-visible behavior.
 Avoid implementation details.
 
-## When to Use
-
-- Writing Playwright tests
-- Reviewing test changes
-- Fixing flaky tests
-- Choosing locators, assertions, fixtures, or projects
-- Debugging browser test failures
-
 ## Goal
 
 Create deterministic tests that act like users and fail for useful reasons.

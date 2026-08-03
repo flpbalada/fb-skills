@@ -8,14 +8,6 @@ description: Break known LLM work into fixed sequential steps with handoff schem
 Break work into fixed ordered steps.
 Validate each handoff.
 
-## When to Use
-
-- Task has clear sequence
-- Later step needs earlier output
-- Intermediate state should be inspected
-- Steps need different prompts, tools, or models
-- Guardrails between stages reduce errors
-
 ## Goal
 
 Reduce error by making each prompt do one job.

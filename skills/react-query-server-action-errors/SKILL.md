@@ -5,13 +5,6 @@ description: Handle expected Next.js Server Action errors with TanStack React Qu
 
 # React Query Server Action Errors
 
-## When to use
-
-- Next.js Server Actions feed TanStack Query mutations.
-- Expected action failures need toast or inline UI.
-- Production error messages are sanitized.
-- `throwOnError`, `QueryBoundary`, or error codes are involved.
-
 ## Goal
 
 Do not throw expected user-facing errors from Server Actions.

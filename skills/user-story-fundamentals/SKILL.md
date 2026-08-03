@@ -5,13 +5,6 @@ description: Write clear user stories with user, capability, benefit, and testab
 
 # User Story Fundamentals
 
-## When to use
-
-- Writing backlog items.
-- Turning requirements into user-centered work.
-- Defining acceptance criteria.
-- Splitting oversized product work.
-
 ## Goal
 
 Describe who needs what and why.

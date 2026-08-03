@@ -5,13 +5,6 @@ description: Choose TypeScript interface vs type aliases. Use when defining obje
 
 # TypeScript: Interface vs Type
 
-## When to use
-
-- Defining object shapes.
-- Extending or composing types.
-- Choosing between `interface`, `type`, and intersections.
-- Reviewing TypeScript type style.
-
 ## Goal
 
 Use `interface` until `type` features are needed.

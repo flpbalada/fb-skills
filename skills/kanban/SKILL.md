@@ -9,14 +9,6 @@ Visualize work.
 Limit WIP.
 Improve flow.
 
-## When to Use
-
-- Team work is hard to see
-- Too many tasks in progress
-- Bottlenecks delay delivery
-- Priorities change often
-- Delivery dates are unpredictable
-
 ## Goal
 
 Improve lead time, cycle time, throughput, and focus.

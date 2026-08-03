@@ -5,14 +5,6 @@ description: Improve TypeScript safety, readability, and maintainability. Use wh
 
 # TypeScript Best Practices
 
-## When to use
-
-- Reviewing TypeScript code quality.
-- Choosing typing strategy.
-- Configuring strictness.
-- Writing async or error-handling code.
-- Refactoring unsafe or hard-to-read types.
-
 ## Goal
 
 Make code safer and easier to change.

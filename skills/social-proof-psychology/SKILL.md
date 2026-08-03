@@ -5,13 +5,6 @@ description: Use credible evidence from relevant others to reduce uncertainty. U
 
 # Social Proof Psychology
 
-## When to use
-
-- Adding testimonials, reviews, logos, usage stats, or endorsements.
-- Designing landing pages or conversion sections.
-- Reducing doubt for unfamiliar products.
-- Matching proof to a specific audience or decision.
-
 ## Goal
 
 Show credible evidence that relevant others trust, use, or benefit from the product.

@@ -5,13 +5,6 @@ description: Use React useState for simple local component state. Use when addin
 
 # React useState
 
-## When to use
-
-- Adding local component state.
-- Handling simple UI state, form inputs, counters, and small local lists.
-- Choosing between `useState`, `useReducer`, `useRef`, derived values, or shared state.
-- Debugging stale updates or mutation bugs.
-
 ## Goal
 
 Use `useState` for simple local state that should trigger re-render.

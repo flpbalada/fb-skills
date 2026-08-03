@@ -5,13 +5,6 @@ description: Choose TypeScript satisfies, type annotations, as const, or asserti
 
 # TypeScript `satisfies`
 
-## When to use
-
-- Validating object shape while preserving literal types.
-- Defining config objects, route maps, locale maps, or handler maps.
-- Choosing between `: Type`, `satisfies Type`, `as const`, and `as Type`.
-- Fixing widened types caused by annotations.
-
 ## Goal
 
 Validate that a value matches a type without replacing the value's inferred type.

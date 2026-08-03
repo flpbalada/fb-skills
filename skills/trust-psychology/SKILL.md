@@ -5,13 +5,6 @@ description: Add trust signals that reduce perceived risk before important user 
 
 # Trust Psychology
 
-## When to use
-
-- Designing landing pages, checkout, signup, or onboarding.
-- Reducing user hesitation before a high-stakes action.
-- Building trust for new products or unfamiliar brands.
-- Auditing conversion friction caused by perceived risk.
-
 ## Goal
 
 Reduce perceived risk so users can act with confidence.

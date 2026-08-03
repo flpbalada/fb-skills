@@ -8,15 +8,6 @@ description: Reduce decision time by managing choice count and choice structure 
 More choices slow decisions.
 Reduce, group, default, or reveal later.
 
-## When to use
-
-- Navigation design.
-- Menus and settings.
-- Onboarding flows.
-- Forms with many options.
-- Dashboards.
-- Conversion funnels.
-
 ## Goal
 
 - Reduce decision effort.

@@ -5,13 +5,6 @@ description: Build internal triggers that make users return from their own needs
 
 # Self-Initiated Triggers
 
-## When to use
-
-- Improving retention without adding more notifications.
-- Designing habit-forming product loops.
-- Moving users from external prompts to self-motivated use.
-- Mapping emotions or situations that should bring users back.
-
 ## Goal
 
 Create a strong association between a user situation and the product.

@@ -5,14 +5,6 @@ description: Design for user resistance to change and preference for the current
 
 # Status Quo Bias
 
-## When to use
-
-- Planning product migrations.
-- Introducing new features or workflows.
-- Designing defaults.
-- Reducing resistance to adoption or switching.
-- Explaining why users keep old behavior.
-
 ## Goal
 
 Make change feel lower risk than staying still.

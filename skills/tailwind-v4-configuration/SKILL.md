@@ -5,15 +5,6 @@ description: Configure Tailwind CSS v4 with the CSS-first setup. Use when instal
 
 # Tailwind CSS v4 Configuration
 
-## When to use
-
-- Installing or configuring Tailwind CSS v4.
-- Migrating from Tailwind v3.
-- Setting up Vite, PostCSS, CLI, or framework integration.
-- Defining tokens with `@theme`.
-- Configuring plugins or utility changes.
-- Debugging v4 config issues.
-
 ## Goal
 
 Use Tailwind v4's CSS-first configuration.

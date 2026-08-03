@@ -8,14 +8,6 @@ description: Make structured product decisions with explicit goals, options, tra
 Make product decisions explicit.
 Separate decision quality from outcome.
 
-## When to Use
-
-- Multiple valid options exist
-- Stakes are high
-- Tradeoffs are unclear
-- Stakeholders disagree
-- Decision should be reviewed later
-
 ## Goal
 
 Choose option with rationale, owner, success criteria, and review date.

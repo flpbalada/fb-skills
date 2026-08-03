@@ -7,12 +7,6 @@ description: Implement Next.js image art direction with getImageProps(), picture
 
 Use art direction when viewport size needs different image content or crop.
 
-## When to Use
-
-- Mobile and desktop use different assets
-- Crop, focal point, or content hierarchy changes by viewport
-- Carousel has separate mobile and desktop images
-
 ## Goal
 
 Render one correct image per viewport.

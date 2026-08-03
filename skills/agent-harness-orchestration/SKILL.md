@@ -10,15 +10,6 @@ Coordinate many coding agents without corrupting shared state.
 Humans steer. Agents execute.
 Harness gives context, isolation, and feedback.
 
-## When to Use
-
-- Multiple agents work in one repo.
-- Tasks come from tickets, plans, or backlog items.
-- Work can run in parallel.
-- Path ownership or worktree isolation is needed.
-- CI, review, rebase, or PR shepherding is part of the job.
-- Human attention is the bottleneck.
-
 ## Goal
 
 Turn tasks into isolated, verifiable, review-ready work.

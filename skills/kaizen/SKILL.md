@@ -8,15 +8,6 @@ description: Improve processes through small continuous changes, waste reduction
 Continuous small improvement.
 Improve process with small tests, real observation, and measurement.
 
-## When to Use
-
-- Process slow, costly, or inconsistent
-- Recurring defects or complaints
-- Bottlenecks, waits, handoffs, or rework
-- Team wants practical continuous improvement
-- Before buying tools or adding headcount
-- Short improvement workshop needed
-
 ## Goal
 
 Improve one process.

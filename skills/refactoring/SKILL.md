@@ -9,15 +9,6 @@ Improve structure.
 Keep behavior same.
 Avoid breaking changes.
 
-## When to use
-
-- Restructure code.
-- Cut complexity.
-- Improve maintainability.
-- Apply framework or language best practices.
-- Improve types or organization.
-- Preserve existing behavior.
-
 ## Goal
 
 Improve code structure without changing behavior.

@@ -1,28 +1,11 @@
 ---
 name: follow-goals
-description: Shape long-running autonomous work into one durable goal with stop condition, validation loop, checkpoints, progress format, and pause rules. Use when user wants an agent to keep making scoped progress across migrations, refactors, prototypes, evals, retry loops, or prompt optimization until verifiably done. Do not use for loose backlog lists or one-shot answers.
+description: Shape long-running autonomous work into one durable goal with stop condition, validation loop, checkpoints, progress format, and pause rules. Use for scoped, verifiable progress across migrations, refactors, prototypes, evals, retry loops, or prompt optimization; avoid loose backlog lists, one-shot answers, hidden preferences or unavailable context, and autonomous work that risks production without human approval.
 ---
 
 # Follow Goals
 
 Create a goal contract before starting long-running autonomous work. Make the contract specific enough to keep progress moving without repeated steering.
-
-## Fit Check
-
-Use a goal when all are true:
-
-- Work needs multiple iterations or checkpoints.
-- Outcome can be stated as one objective.
-- Stop condition can be verified.
-- Worker can inspect files, docs, logs, issues, plans, or artifacts before acting.
-- Progress can be proven with commands, screenshots, evals, tests, diffs, or produced artifacts.
-
-Do not use a goal when:
-
-- Work is a loose list of unrelated tasks.
-- User wants brainstorming, discussion, or one short answer.
-- Success depends on hidden preferences or unavailable context.
-- Failure could damage production systems without human approval.
 
 ## Goal Contract
 

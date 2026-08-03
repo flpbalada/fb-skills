@@ -7,14 +7,6 @@ description: Design focused practice loops for skill improvement. Use when learn
 
 Improve skill through focused effort, fast feedback, and harder challenges.
 
-## When to Use
-
-- Learning a new technical skill.
-- Breaking a skill plateau.
-- Designing a practice routine.
-- Onboarding someone into a skill.
-- Checking whether practice time is effective.
-
 ## Goal
 
 Turn vague practice into targeted improvement.

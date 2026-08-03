@@ -5,13 +5,6 @@ description: Avoid unnecessary React useEffect and choose better alternatives. U
 
 # React: Avoid useEffect
 
-## When to use
-
-- Reviewing React code with `useEffect`.
-- Considering an effect for derived state, event handling, or resets.
-- Debugging extra renders or stale synchronization.
-- Choosing between render logic, event handlers, keys, stores, or effects.
-
 ## Goal
 
 Use `useEffect` only to sync with external systems.

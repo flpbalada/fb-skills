@@ -8,12 +8,6 @@ allowed-tools: Bash(agent-browser:*), Bash(npx agent-browser:*)
 
 Control Electron desktop apps with `agent-browser` through Chrome DevTools Protocol.
 
-## When to use
-
-- User asks to automate or test an Electron app.
-- App is Slack, VS Code, Discord, Figma, Notion, Spotify, or similar.
-- Task needs desktop app interaction through UI.
-
 ## Goal
 
 - Launch app with remote debugging.

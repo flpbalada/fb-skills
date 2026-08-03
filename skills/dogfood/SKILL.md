@@ -10,12 +10,6 @@ Explore a web app like a user.
 Find issues.
 Prove every finding.
 
-## When to use
-
-- User asks to dogfood, QA, exploratory test, bug hunt, or test a site/app.
-- Target is a web app or local URL.
-- User wants actionable issues with repro evidence.
-
 ## Inputs
 
 - Required: target URL.

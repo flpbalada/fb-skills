@@ -8,13 +8,6 @@ description: Apply CSS container queries for parent-size responsive components. 
 Use container queries when a component should adapt to its parent size.
 Use media queries for page layout.
 
-## When to Use
-
-- Reusable cards, widgets, forms, sidebars, or panels.
-- Component appears in narrow and wide contexts.
-- Internal component layout depends on available component width.
-- Building component library behavior.
-
 ## Goal
 
 Make responsive components portable.

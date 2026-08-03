@@ -5,13 +5,6 @@ description: Place React and Next.js "use client" boundaries correctly. Use when
 
 # React "use client" Boundary
 
-## When to use
-
-- Adding a client component in Next.js or React Server Components.
-- Fixing hook, event handler, browser API, or async component errors.
-- Deciding where a client boundary belongs.
-- Removing redundant `"use client"` directives.
-
 ## Goal
 
 Place the smallest useful client boundary.

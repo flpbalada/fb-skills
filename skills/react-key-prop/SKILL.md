@@ -5,13 +5,6 @@ description: Choose correct React key props for lists and remounts. Use when map
 
 # React Key Prop
 
-## When to use
-
-- Rendering arrays with `.map`.
-- Debugging list state bugs.
-- Adding, removing, sorting, or filtering list items.
-- Rendering form rows or stateful child components.
-
 ## Goal
 
 Give React stable item identity.

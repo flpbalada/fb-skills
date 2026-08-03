@@ -8,14 +8,6 @@ description: Split an oversized component into focused helpers, hooks, and sub-c
 Split a component into focused units.
 Keep behavior unchanged.
 
-## When to Use
-
-- Component mixes rendering, state, effects, and data shaping.
-- File is hard to scan.
-- Repeated logic belongs in a helper.
-- UI sections can become clear sub-components.
-- Hook extraction would improve locality or testing.
-
 ## Goal
 
 Improve readability and ownership.

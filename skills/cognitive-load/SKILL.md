@@ -8,15 +8,6 @@ description: Reduce unnecessary mental effort with Cognitive Load Theory. Use wh
 Design for limited working memory.
 Reduce unnecessary effort.
 
-## When to Use
-
-- Designing complex forms or workflows.
-- Creating onboarding.
-- Simplifying feature-rich interfaces.
-- Planning information architecture.
-- Improving task completion.
-- Reviewing usability problems.
-
 ## Goal
 
 Keep users within working memory limits.

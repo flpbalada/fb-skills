@@ -8,12 +8,6 @@ description: Organize information into Projects, Areas, Resources, and Archives.
 Organize information by actionability.
 Not by topic.
 
-## When to Use
-
-- Setting up notes, folders, or knowledge base
-- Sorting messy digital files
-- Deciding where information belongs
-
 ## Goal
 
 Put each item where future you will look for it.

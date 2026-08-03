@@ -8,14 +8,6 @@ description: Reveal complexity in stages so users see what they need when they n
 Show what user needs now.
 Reveal more when needed.
 
-## When to Use
-
-- Complex onboarding
-- Feature-rich interfaces
-- Long forms or wizards
-- Admin panels and settings
-- Advanced options
-
 ## Goal
 
 Reduce visible complexity without hiding essential work.

@@ -9,14 +9,6 @@ Preserve intent.
 Reduce logic complexity.
 Make instructions easier to follow.
 
-## When to Use
-
-- Prompt has many rules or branches
-- Workflow feels hard to execute
-- Conditions conflict or overlap
-- Agent output is inconsistent
-- Instructions need shorter structure
-
 ## Goal
 
 Keep behavior.

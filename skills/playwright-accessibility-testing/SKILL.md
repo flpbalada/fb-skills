@@ -10,14 +10,6 @@ dependencies:
 Use Playwright plus `@axe-core/playwright`.
 Axe helps, but does not prove full WCAG compliance.
 
-## When to Use
-
-- Writing a11y tests
-- Reviewing axe failures
-- Checking WCAG A/AA tags
-- Testing ARIA names and roles
-- Auditing critical pages or flows
-
 ## Goal
 
 Scan meaningful user states.

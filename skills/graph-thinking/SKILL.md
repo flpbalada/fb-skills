@@ -8,15 +8,6 @@ description: Model complex systems as nodes, edges, flows, and dependencies. Use
 Model a problem as nodes and relationships.
 Use it when linear lists hide dependencies.
 
-## When to use
-
-- Dependency mapping.
-- System architecture.
-- Stakeholder relationships.
-- Concept maps.
-- Recommendation or knowledge graph design.
-- Complex product or process analysis.
-
 ## Goal
 
 - Identify important nodes.

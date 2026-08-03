@@ -8,15 +8,6 @@ description: Break ambiguous questions into mutually useful hypotheses and tests
 Break a broad question into testable branches.
 Use MECE where practical.
 
-## When to use
-
-- Product idea validation.
-- Metric diagnosis.
-- Experiment planning.
-- User research planning.
-- Ambiguous strategic question.
-- Debugging cause categories.
-
 ## Goal
 
 - Turn vague problem into clear question.

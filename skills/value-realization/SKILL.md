@@ -5,14 +5,6 @@ description: Check whether users can discover, understand, believe, and experien
 
 # Value Realization
 
-## When to use
-
-- Evaluating a product concept or feature.
-- Diagnosing adoption or activation problems.
-- Checking whether users understand value.
-- Comparing product directions.
-- Improving onboarding, messaging, or first-use experience.
-
 ## Goal
 
 Determine whether users can discover, understand, believe, and experience product value.

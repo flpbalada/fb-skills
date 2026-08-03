@@ -8,15 +8,6 @@ description: Trace a specific problem to systemic root causes with Five Whys. Us
 Find root cause by asking why repeatedly.
 Focus on systems, not blame.
 
-## When to use
-
-- Recurring problem.
-- Incident or failure.
-- Customer churn.
-- Project delay.
-- Bug with unclear cause.
-- Process improvement.
-
 ## Goal
 
 - Define specific problem.

@@ -5,13 +5,6 @@ description: Classify inputs into specialized prompts, tools, models, agents, or
 
 # Routing
 
-## When to use
-
-- Inputs fall into clear request categories.
-- Categories need different prompts, tools, models, or agents.
-- Classification is cheaper than using one large path.
-- Cost, latency, safety, or quality differs by route.
-
 ## Goal
 
 Classify first.

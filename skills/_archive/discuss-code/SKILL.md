@@ -9,12 +9,6 @@ Review code critically.
 Focus on real issues.
 Keep output compact.
 
-## When to use
-
-- User asks to review code, diff, snippet, or design.
-- Code may have logic, naming, structure, or maintainability issues.
-- User wants discussion before or instead of edits.
-
 ## Goal
 
 - Find concrete problems.

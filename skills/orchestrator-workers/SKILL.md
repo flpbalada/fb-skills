@@ -9,14 +9,6 @@ Central planner.
 Specialized workers.
 Dynamic task assignment.
 
-## When to Use
-
-- Task shape is unknown upfront
-- Work needs runtime decomposition
-- Workers need different tools or skills
-- Results reveal more work
-- One fixed chain is too rigid
-
 ## Goal
 
 Let orchestrator plan, assign, inspect, replan, and synthesize.

@@ -5,13 +5,6 @@ description: Analyze feature requirements for clarity, scope, risk, assumptions,
 
 # Requirements Analyzer
 
-## When to use
-
-- Before building features.
-- Before splitting ambiguous work.
-- When scope, success criteria, or risks are unclear.
-- When requirements need to become testable tasks.
-
 ## Goal
 
 Check clarity, scope, feasibility, and risk before implementation.

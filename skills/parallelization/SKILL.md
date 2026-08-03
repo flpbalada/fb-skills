@@ -9,14 +9,6 @@ Split independent work.
 Run branches at same time.
 Merge results.
 
-## When to Use
-
-- Subtasks are independent
-- Latency matters
-- Work splits by item, source, section, or test
-- Need multiple judges or rankings
-- Merge step is simple
-
 ## Goal
 
 Reduce wall-clock time or improve judgment quality without adding merge risk.

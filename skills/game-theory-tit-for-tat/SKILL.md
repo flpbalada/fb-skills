@@ -1,6 +1,6 @@
 ---
 name: game-theory-tit-for-tat
-description: Use Tit for Tat to manage repeated interactions with reciprocity, cooperation, and boundaries. Use when navigating workplace dynamics, partnerships, negotiations, conflicts, vendor relationships, or product systems with reciprocal behavior; avoid for one-shot decisions or zero-sum framing.
+description: Use Tit for Tat to manage repeated interactions with reciprocity, cooperation, and boundaries. Use for workplace dynamics, partnerships, negotiations, conflicts, vendor relationships, or product systems with observable reciprocal behavior; avoid one-shot or zero-sum situations, severe abuse or safety issues, hidden actions where reciprocity cannot be observed, and unethical or illegal retaliation.
 ---
 
 # Tit for Tat
@@ -8,21 +8,6 @@ description: Use Tit for Tat to manage repeated interactions with reciprocity, c
 Cooperate first.
 Then mirror their last move.
 Forgive when cooperation returns.
-
-## When to use
-
-- Repeated interaction.
-- Workplace conflict.
-- Partnership or negotiation.
-- Trust system design.
-- Ongoing reciprocal relationship.
-
-## Do not use
-
-- One-shot interaction.
-- Severe abuse or safety issue.
-- Hidden actions where response cannot be observed.
-- Situation where retaliation would be unethical or illegal.
 
 ## Goal
 

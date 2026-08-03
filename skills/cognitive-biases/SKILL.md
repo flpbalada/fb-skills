@@ -8,14 +8,6 @@ description: Identify cognitive biases shaping product decisions and user behavi
 Use psychology to explain user behavior and improve decisions.
 Use ethically.
 
-## When to Use
-
-- Designing onboarding or conversion flows.
-- Reviewing pricing, positioning, or messaging.
-- Explaining unexpected user behavior.
-- Checking for dark patterns.
-- Planning user research.
-
 ## Goal
 
 Identify relevant biases.

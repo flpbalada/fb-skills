@@ -5,13 +5,6 @@ description: Decide when to use React useCallback. Use when callback identity af
 
 # React useCallback
 
-## When to use
-
-- Passing callbacks to memoized children.
-- Returning functions from custom hooks.
-- Keeping a function dependency stable for an effect.
-- Debugging avoidable renders caused by changing function references.
-
 ## Goal
 
 Use `useCallback` only for needed function identity stability.

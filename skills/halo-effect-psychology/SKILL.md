@@ -9,15 +9,6 @@ One strong first impression changes how users judge everything else.
 Positive halo lifts trust.
 Negative halo creates horn effect.
 
-## When to use
-
-- First impression design.
-- Landing page or onboarding review.
-- Brand and positioning work.
-- Feature launch presentation.
-- Polish versus functionality tradeoff.
-- Trust or conversion issue.
-
 ## Goal
 
 - Find touchpoints shaping first judgment.

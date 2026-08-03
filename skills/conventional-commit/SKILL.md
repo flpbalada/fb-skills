@@ -7,13 +7,6 @@ description: Draft or review Conventional Commits messages with type, optional s
 
 Write machine-readable commit messages.
 
-## When to Use
-
-- Drafting commit messages.
-- Reviewing commit message quality.
-- Preparing release notes or changelogs.
-- Creating consistent team conventions.
-
 ## Goal
 
 Use Conventional Commits format.

@@ -8,15 +8,6 @@ description: Diagnose behavior change with B=MAP motivation, ability, and prompt
 Behavior happens when motivation, ability, and prompt meet at same moment.
 If behavior fails, one element is missing.
 
-## When to use
-
-- Onboarding design.
-- Conversion improvement.
-- Habit building.
-- Feature adoption.
-- Drop-off diagnosis.
-- Behavior change intervention.
-
 ## Goal
 
 - Define target behavior.

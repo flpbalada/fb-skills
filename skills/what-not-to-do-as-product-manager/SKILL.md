@@ -5,13 +5,6 @@ description: Identify product-management anti-patterns and replace them with bet
 
 # What Not to Do as a Product Manager
 
-## When to use
-
-- Reviewing product leadership behavior.
-- Diagnosing team dysfunction.
-- Coaching or onboarding product managers.
-- Reflecting on decision quality, communication, or delivery problems.
-
 ## Goal
 
 Identify product management anti-patterns.

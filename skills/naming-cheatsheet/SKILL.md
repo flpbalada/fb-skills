@@ -7,12 +7,6 @@ description: Name code identifiers clearly and consistently. Use when naming or 
 
 Use names that are short, intuitive, and descriptive.
 
-## When to Use
-
-- Naming variables, functions, classes, files, or modules
-- Reviewing code names
-- Refactoring unclear identifiers
-
 ## Goal
 
 Make code read naturally.

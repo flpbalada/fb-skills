@@ -8,15 +8,6 @@ description: Extract one reusable skill pattern from current session, such as a 
 Extract reusable patterns from current session.
 Turn repeated value into a skill only when it will help future work.
 
-## When to Use
-
-- Error fix should be reused
-- Debugging technique worked well
-- Tool combination saved time
-- Library quirk needs remembering
-- Project convention became clear
-- Workflow should become a skill
-
 ## Goal
 
 Capture one reusable pattern.
