@@ -1,0 +1,32 @@
+diff --git a/src/important.txt b/src/important.txt
+index 1111111..2222222 100644
+--- a/src/important.txt
++++ b/src/important.txt
+@@ -1,4 +1,4 @@
+ keep
+-old behavior
+-old formatting
++new behavior
++new formatting
+ end
+diff --git a/dist/generated.min.js b/dist/generated.min.js
+index 3333333..4444444 100644
+--- a/dist/generated.min.js
++++ b/dist/generated.min.js
+@@ -1 +1 @@
+-var a=1;
++var a=2;
+diff --git a/src/added.txt b/src/added.txt
+new file mode 100644
+index 0000000..5555555
+--- /dev/null
++++ b/src/added.txt
+@@ -0,0 +1 @@
++new contract
+diff --git a/src/deleted.txt b/src/deleted.txt
+deleted file mode 100644
+index 6666666..0000000
+--- a/src/deleted.txt
++++ /dev/null
+@@ -1 +0,0 @@
+-obsolete behavior

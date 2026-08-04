@@ -1,0 +1,4 @@
+interface:
+  display_name: "Render Reading Diff"
+  short_description: "Render meaningful Git changes as safe HTML"
+  default_prompt: "Use $render-reading-diff to abridge this Git diff and render a self-contained HTML review."

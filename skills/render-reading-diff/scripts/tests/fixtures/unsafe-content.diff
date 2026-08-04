@@ -1,0 +1,9 @@
+diff --git "a/src/na\303\257ve <& \"quote\">.txt" "b/src/na\303\257ve <& \"quote\">.txt"
+index 1111111..2222222 100644
+--- "a/src/na\303\257ve <& \"quote\">.txt"
++++ "b/src/na\303\257ve <& \"quote\">.txt"
+@@ -1,2 +1,2 @@
+-<style>bad & 'single' "double" `tick`</style>
+-<span onclick="bad()">old</span>
++<script>alert("unsafe & risky")</script>
++<div data-value='single' title="double">`tick` & text</div>

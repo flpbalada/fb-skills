@@ -1,0 +1,10 @@
+diff --git "a/docs/old guide.md" "b/docs/new guide.md"
+similarity index 88%
+rename from docs/old guide.md
+rename to docs/new guide.md
+index 1111111..2222222 100644
+--- "a/docs/old guide.md"
++++ "b/docs/new guide.md"
+@@ -1 +1 @@
+-Old title
++New title
