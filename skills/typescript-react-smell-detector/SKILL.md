@@ -12,6 +12,7 @@ List potential TypeScript and React code smells for review.
 1. Run `scripts/scan.sh [path]` or add `--changed` for Git changes.
 2. Review `signal` findings before `hotspot` findings.
 3. Inspect context and separate confirmed issues from dismissed matches.
+4. Follow [OUTPUT.md](OUTPUT.md) for the synthesized review.
 
 ## Commands
 
@@ -28,7 +29,8 @@ skills/typescript-react-smell-detector/scripts/scan.sh \
   --exclude 'examples/**' .
 ```
 
-See [REFERENCE.md](REFERENCE.md) for flags, rules, output, exclusions, and limits.
+See [REFERENCE.md](REFERENCE.md) for flags, rules, scanner output, exclusions,
+and limits.
 
 ## Rules
 
