@@ -7,28 +7,14 @@ description: Convert a discussion into a concise PRD covering users, the problem
 
 - Read the full conversation first.
 - Preserve its intent without inventing decisions.
-- Write requirements in Given/When/Then format.
+- Write requirements as a nested Given/When/Then tree.
+- Group requirements that share context or steps under their common parent.
+- Each nested item inherits every ancestor condition; do not repeat inherited text.
+- A branch may be nested as deeply as needed. Each leaf must state a testable outcome.
+- Start nodes with `Given`, `When`, or `Then`. Use `And` only to extend the parent clause.
 - Use only the sections in the template.
 - Prefer short bullets.
 
 ## Output
 
-```md
-# PRD: [Title]
-
-## Users (who)
-
-- [User group]
-
-## Problem (why)
-
-- [Problem]
-
-## Acceptance Criteria / Requirements (what)
-
-- Given [context], when [action], then [outcome].
-
-## Constraints
-
-- [Constraint]
-```
+Use [OUTPUT.md](OUTPUT.md).
