@@ -12,6 +12,7 @@ description: Convert a discussion into a concise PRD covering users, the problem
 - Each nested item inherits every ancestor condition; do not repeat inherited text.
 - A branch may be nested as deeply as needed. Each leaf must state a testable outcome.
 - Start nodes with `Given`, `When`, or `Then`. Use `And` only to extend the parent clause.
+- Bold Given/When/Then/And keywords to make the requirement tree easy to scan.
 - Use only the sections in the template.
 - Prefer short bullets.
 
