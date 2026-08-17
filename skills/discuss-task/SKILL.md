@@ -6,24 +6,36 @@ description: Build shared understanding before action by interviewing the user a
 # Discuss Task
 
 Build shared understanding before acting.
-Walk the decision tree one branch at a time until next action is obvious.
+Map material uncertainty as a dependency-aware decision tree.
 
 Convert uncertainty into action:
 
-- Surface unknown unknowns by naming likely hidden gaps and assumptions.
-- Explore edge cases and failure scenarios that could change the scope, decision, or definition of done.
-- Turn them into known unknowns with smart questions.
-- Turn known unknowns into known knowns with answers, evidence, or checks.
+- Surface hidden gaps, assumptions, constraints, risks, edge cases, and failure scenarios.
+- Separate facts the agent can discover from decisions the user must make.
+- Ask only questions whose prerequisites are settled.
+- Stop when no unresolved decision could materially change scope, design, risk, success, or verification.
+
+## Decision States
+
+- **Settled**: resolved by evidence, a user answer, or a delegated agent decision.
+- **Frontier**: unresolved, with every prerequisite settled; ready to ask now.
+- **Blocked**: waiting on another decision or investigation.
+- **Discarded**: made irrelevant by an earlier decision.
 
 ## Flow
 
 1. Spawn a sub-agent with [deep-thinker](../deep-thinker/SKILL.md) to analyze the problem before asking the user questions.
 2. Inspect discoverable context first: code, docs, errors, examples, commands, data, or state.
-3. Use the deep-thinker result and inspected context to name the current gap, hidden gap, assumption, edge case, or failure scenario.
-4. Ask the next smart question with a recommended answer and one short reason.
-5. Ask up to 3 questions only when they are independent; do not ask the same question in tool and markdown.
-6. After each answer, update shared understanding and repeat only while goal, scope, constraints, risks, relevant edge cases, success, or done state are unclear.
-7. End with the next action or handoff prompt.
+3. Build the initial decision tree from the deep-thinker result and inspected context. Include only uncertainty that could materially affect the outcome.
+4. Compute the frontier: every unresolved decision whose prerequisites are settled.
+5. Ask independent frontier questions together, up to the structured question tool's limit. Give a recommended answer first and one short reason.
+6. Do not ask the user for discoverable facts. Investigate them, block only dependent branches, and continue with the rest of the frontier.
+7. After each answer or investigation, settle answered nodes, record assumptions, discard irrelevant branches, add newly exposed decisions, and recompute the frontier.
+8. Continue until no material frontier or blocked decision remains.
+9. Summarize the shared understanding and require explicit user confirmation before acting.
+10. After confirmation, route to [to-prd](../to-prd/SKILL.md) by default unless the user requested another next action.
+
+Do not ask the same question in a tool and Markdown.
 
 ## Root Cause
 

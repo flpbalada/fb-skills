@@ -1,20 +1,55 @@
 # Template
 
-## Output while clarifying
+## Output While Clarifying
+
+Use the structured question tool when available. Ask independent frontier decisions in one round, up to the tool's limit. Put the recommended option first and include one short reason.
+
+Use this Markdown fallback only when no structured question tool is available:
 
 ```md
 Questions:
-- [question] Recommended: [answer]. Reason: [reason].
-- [question] Recommended: [answer]. Reason: [reason].
-- [question] Recommended: [answer]. Reason: [reason].
+
+1. [Decision question]
+   Recommended: [answer]. Reason: [reason].
+2. [Independent decision question]
+   Recommended: [answer]. Reason: [reason].
 ```
 
-## Output when ready
+Do not repeat tool questions in Markdown.
+
+## Output When Ready
 
 ```md
-Known knowns:
-- [goal, scope, constraints, done state]
+## Shared understanding
 
-Question:
-- Ready to proceed to to-prd?
+### Goal
+- [goal and trigger]
+
+### Decisions
+- [settled decision and reason]
+
+### Scope
+- Included: [scope]
+- Excluded: [non-goals]
+
+### Constraints
+- [constraint or dependency]
+
+### Risks and edge cases
+- [risk, failure behavior, or recovery]
+
+### Acceptance and verification
+- [testable success or done criterion]
+- [verification command or behavior check]
+
+### Assumptions
+- [assumption, or none]
+
+### Unresolved items
+- None.
+
+### Next action
+- Run `to-prd` by default, or [user-requested action].
 ```
+
+Then ask for explicit confirmation. Do not run the next action until the user confirms the summary.
