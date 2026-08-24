@@ -5,42 +5,35 @@ description: Review code for concrete defects and ranked risk. Use when asked to
 
 # Code Reviewer
 
-## Overview
+## Goal
 
-Review like a senior engineer.
-Assume real issues may exist.
-Find evidence, rank risk, and stay concise.
+Report concrete, actionable defects in the reviewed code.
 
 ## Rules
 
-- Review before suggesting fixes.
-- Findings first.
-- Highest risk first.
-- Maximum 5 findings.
-- No praise unless there are no findings.
-- No speculative issues without code evidence.
+- Report findings before summaries.
+- Report at most 5 findings, ordered by risk.
+- Require code evidence for every finding.
 - Use exact `file:line` references when possible.
-- Prefer small fixes over broad rewrites.
-- Mention missing tests only when changed behavior needs coverage.
+- Suggest the smallest useful fix.
+- Report missing tests only for changed behavior that lacks coverage.
 
 ## Priority
 
 Rank in this order:
 
 1. Security.
-2. Performance.
-3. Broken UX.
-4. Bugs.
-5. Nits.
+2. Data loss or corruption.
+3. Broken behavior or UX.
+4. Performance.
+5. Maintainability, only when it is likely to cause defects.
 
 ## Flow
 
-1. Analyze diff, changed files, or provided snippet.
-2. Detect file types, frameworks, and risky code patterns.
-3. Select relevant smell groups.
-4. Apply general code review.
-5. Deep-dive top 5 risks.
-6. Output what, where, and why.
+1. Inspect the diff, changed files, or provided snippet.
+2. Check only smell groups supported by the code and change context.
+3. Verify the highest-risk candidates against the code.
+4. Report confirmed findings.
 
 ## Smell Groups
 
@@ -60,21 +53,11 @@ Performance:
 - Unbounded lists.
 - Missing pooling or rate limits.
 
-Architecture:
-- SRP or OCP violations.
-- God objects.
-- Anemic models.
-- Shotgun surgery.
-- Feature envy.
-
 Code quality:
-- High complexity.
-- Nested conditionals.
-- Long functions.
+- Complexity that obscures a defect.
 - Harmful duplication.
 - Weak error handling.
-- Poor names.
-- `any` abuse.
+- `any` that permits an invalid value or contract violation.
 
 Testing:
 - Changed paths untested.
@@ -134,7 +117,7 @@ Observability:
 
 Adjust review focus by evidence:
 
-- Tests changed or missing: testing, error paths.
+- Behavior changed without tests: testing, error paths.
 - Async, promises, queues, workers: concurrency, errors, performance.
 - React, JSX, TSX: accessibility, state, rendering performance.
 - Database code: injection, N+1, transactions, indexes.
@@ -143,7 +126,7 @@ Adjust review focus by evidence:
 - Config or environment code: secrets, dependency risk, hardcoded values.
 - `any`: type safety and contract erosion.
 - Tailwind or CSS: accessibility, responsive behavior, visual regressions.
-- Refactor signs: wrong abstraction, shotgun surgery, behavior drift.
+- Refactor signs: behavior drift or a wrong abstraction.
 
 ## Related Skills
 
