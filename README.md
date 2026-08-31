@@ -1,3 +1,5 @@
+
+
 # Skills
 
 Personal skill library for AI coding agents, built from my second brain.
@@ -14,7 +16,7 @@ all from repo:
 
 ## Demo Site
 
-Local Astro demo for browsing skills in `./skills`.
+Local Astro demo for browsing skills in `./skills`. Use `pnpm` (`package.json` pins `pnpm@9.15.9`).
 
 ```bash
 pnpm install
