@@ -8,11 +8,17 @@
 
 ## Acceptance Criteria / Requirements (what)
 
-- [Settled requirement, scope, or exclusion]
-- **Given** [known context]
-  - **When** [known action]
-    - **Then** [observable result]
+- **Given** [shared context]
+  - **When** [action]
+    - **Then** [outcome]
+  - **When** [different action]
+    - **Then** [different outcome]
+    - **And** [additional outcome]
+- **Given** [other context]
+  - **When** [action]
+    - **And** [additional condition or action]
+      - **Then** [outcome]
 
 ## Open Questions
 
-- [Requirement or area]: [What needs a decision?]
+- [Question that names the relevant behavior?]

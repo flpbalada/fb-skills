@@ -18,16 +18,32 @@ Write down what is known. List what still needs a decision.
 - Find the users, problem, goal, and stated requirements.
 - Keep known scope, exclusions, and limits. Do not invent decisions.
 - Put known behavior in the requirements section. Make each result easy to test.
-- Use **Given** / **When** / **Then** when the action and result are clear.
-- Use plain bullets for other requirements.
 - Check each requirement for gaps. Consider users, triggers, results, paths, access, errors, limits, and success.
 - Put gaps that could change a requirement in **Open Questions**.
 - Add questions for requirements that are too unclear to write as requirements.
 - Check that every request and relevant source detail appears in the spec.
-- Link each question to its requirement. Note when one answer depends on another.
+- Name the relevant behavior in each question. Note when one answer depends on another.
 - Group related questions. Remove repeats and minor questions.
 
 Ask before writing only if the task itself is unclear. Do not wait for all questions to be answered.
+
+## Requirements
+
+- Write requirements as a nested Given/When/Then tree.
+- Group requirements that share context or steps under their common parent.
+- Each nested item inherits every ancestor condition. Do not repeat inherited text.
+- A branch may be nested as deeply as needed. Each leaf must state a testable outcome.
+- Start nodes with **Given**, **When**, or **Then**.
+- Use **And** only to extend the parent clause.
+- Bold the **Given** / **When** / **Then** / **And** keywords.
+- Do not use flat requirement summaries or title prefixes.
+- Do not add requirement IDs such as R1, R2, or R3.
+
+## Open Questions
+
+- Write each question as a plain bullet.
+- Include enough context to make the question clear on its own.
+- Do not add requirement IDs, numbered labels, or title prefixes.
 
 ## Writing
 
