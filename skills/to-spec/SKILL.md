@@ -1,31 +1,37 @@
 ---
 name: to-spec
-description: Write a short spec with users, problem, requirements, and open questions. Use for tasks or discussions with open requirements.
+description: Write a short spec in ASD-STE100 Simplified Technical English with users, problem, requirements, and open questions. Use for tasks or discussions with open requirements.
 ---
 
 # To Spec
 
-Write down what is known. List what still needs a decision.
-
 ## Steps
 
 - Read the full conversation and each source the user gives.
-- Check code or docs for facts you can find. Do not ask the user for those facts.
-- Use source facts that shape the users, problem, requirements, or questions.
-- Keep exact names, limits, and settled choices from the sources.
-- Link key facts to their sources when a stable link is available.
-- If sources disagree, put the conflict in **Open Questions**. Do not guess.
-- Find the users, problem, goal, and stated requirements.
-- Keep known scope, exclusions, and limits. Do not invent decisions.
-- Put known behavior in the requirements section. Make each result easy to test.
+- Gather **Project Context**, then identify the users, problem, goal, and stated requirements.
+- Preserve exact names, scope, exclusions, limits, and settled choices. Do not invent decisions.
+- Write known behavior as testable requirements.
 - Check each requirement for gaps. Consider users, triggers, results, paths, access, errors, limits, and success.
-- Put gaps that could change a requirement in **Open Questions**.
-- Add questions for requirements that are too unclear to write as requirements.
+- Search relevant sources to resolve gaps before you apply the **Open Questions** rules.
 - Check that every request and relevant source detail appears in the spec.
-- Name the relevant behavior in each question. Note when one answer depends on another.
-- Group related questions. Remove repeats and minor questions.
 
 Ask before writing only if the task itself is unclear. Do not wait for all questions to be answered.
+
+## Project Context
+
+- Identify the project from the current workspace, project instructions, repository metadata, and conversation details such as task IDs or links.
+- Determine where that project keeps code, tasks, documentation, designs, and decisions. Use project instructions and existing references to select relevant sources.
+- Gather context from those sources with available local tools and connectors, beyond the links the user supplies. Tool availability alone is not a reason to search a source.
+- For example, if the project uses GitHub, check relevant code, tests, docs, issues, pull requests, and discussions. If it uses ClickUp, check tasks, descriptions, comments, linked docs, and dependencies.
+- Use other project sources, such as Notion, design files, or project discussions, when they can clarify scope or behavior.
+- Search with project-specific names and terms. Follow relevant links and references. Read enough surrounding context to understand each decision.
+- Focus on sources that establish requirements or answer gaps. Stop when context is sufficient and further searches add no useful facts.
+- Check source status, date, and authority. Distinguish proposals from accepted decisions and current behavior from intended behavior.
+- Treat code and tests as evidence of current behavior. Do not assume they settle the behavior requested for a change.
+- Use the user's latest explicit instructions to resolve earlier conflicting instructions. Do not assume the newest external source overrides an accepted decision.
+- Resolve source conflicts through later decisions or source authority. Keep unresolved conflicts for **Open Questions**.
+- If a relevant source is unavailable, use accessible sources and state the specific context limit in the relevant existing section. Do not invent its contents.
+- Link key facts to their sources when stable links are available.
 
 ## Requirements
 
@@ -33,30 +39,31 @@ Ask before writing only if the task itself is unclear. Do not wait for all quest
 - Group requirements that share context or steps under their common parent.
 - Each nested item inherits every ancestor condition. Do not repeat inherited text.
 - A branch may be nested as deeply as needed. Each leaf must state a testable outcome.
-- Start nodes with **Given**, **When**, or **Then**.
-- Use **And** only to extend the parent clause.
-- Bold the **Given** / **When** / **Then** / **And** keywords.
-- Do not use flat requirement summaries or title prefixes.
-- Do not add requirement IDs such as R1, R2, or R3.
+- Start nodes with bold **Given**, **When**, or **Then**. Use bold **And** only to extend the parent clause.
+- Do not use flat summaries, title prefixes, or requirement IDs.
 
 ## Open Questions
 
-- Write each question as a plain bullet.
-- Include enough context to make the question clear on its own.
-- Do not add requirement IDs, numbered labels, or title prefixes.
+- Include only questions that still need an answer or a decision and could change the users, problem, scope, or acceptance criteria.
+- Check the conversation, project context, and requirements for answers. Put known, settled, or unambiguously implied answers in the relevant spec section instead of asking for confirmation.
+- A plausible default, common practice, or personal preference is not a clear answer. Do not invent a decision to remove a real question.
+- For unresolved conflicts, name the conflicting facts and link their sources when available.
+- Ask only about the unresolved part of a behavior. Include enough known context to make each question clear on its own.
+- After you draft the spec, check every question again. Remove questions that the spec itself already answers.
+- Group related questions, remove repeats and minor questions, and note dependencies between answers.
+- Write plain bullets without requirement IDs, numbered labels, or title prefixes.
 
 ## Writing
 
-- Write the spec in simple English.
-- Use short sentences and common words.
+- Write the spec in ASD-STE100 Simplified Technical English (STE). Apply [STE writing rules](STE.md) to each section.
 - Put one idea in each bullet.
 - Do not treat an open question as a settled requirement.
+- Before delivery, complete the final check in STE.md.
 
 ## Output
 
 Use only the four sections in [OUTPUT.md](OUTPUT.md). Keep their names and order.
 
-- Leave out lines that do not fit.
-- If a section has no known facts, write `- Not yet known.` Add a matching question.
+- If a facts section has no known facts after the context search, write `- Not yet known.` Add a matching question only if it meets the **Open Questions** rules.
 - If no questions remain, write `- None.`
 - Do not add a tech plan or approval request.
