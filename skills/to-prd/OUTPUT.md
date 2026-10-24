@@ -1,7 +1,4 @@
-[When technical details are incomplete, place this warning before the PRD:]
-
-> [!WARNING]
-> The technical specification is incomplete: [missing or unclear areas]. Consider using `discuss-task` to resolve these implementation decisions.
+[Use this template only after the readiness check passes. If material questions remain, stop and ask the user to use `discuss-task` instead of generating a PRD.]
 
 # PRD: [Title]
 
@@ -55,14 +52,12 @@ flowchart TD
 - **Errors and edge cases:** [Failure behavior, recovery, and observability]
 - **Testing:** [Automated tests and verification]
 - **Migration and rollout:** [Compatibility, migration, deployment, and rollback]
-- [Mark relevant missing decisions as unspecified; omit irrelevant categories]
+- [Mark only non-blocking unspecified areas; omit irrelevant categories]
 
 ### Technical constraints
 
 - [One confirmed constraint explicitly settled in the discussion or required by authoritative project instructions]
 - [One additional confirmed constraint]
-- **Unspecified:** [One unresolved constraint decision; include it in the warning and suggest `discuss-task`]
-- **Unspecified:** [One additional unresolved constraint decision]
 
 [Write one constraint per line. Do not infer constraints from general best practices.]
 
