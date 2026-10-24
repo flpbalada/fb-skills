@@ -21,16 +21,19 @@ A gap is material when its answer could change scope, design, risk, success, or 
 - Investigate discoverable facts instead of asking the user.
 - Ask the user for product, scope, preference, and trade-off decisions.
 - If the user delegates a decision, settle it with the recommended answer and record the reason.
+- Accept “I don't know” without pressure to choose. Defer the question and continue with independent questions.
+- Record whether resolution needs stakeholder input, research, or LLM-assisted exploration. Suggestions from an LLM remain proposals until supported by evidence or accepted by the user.
+- Offer help resolving unknowns, but do not treat uncertainty as permission to choose an answer or contact stakeholders.
 - When repository evidence contradicts an answer, surface the conflict as a frontier decision.
 
 ## Rounds
 
-1. Mark each decision as settled, frontier, blocked, or discarded.
+1. Mark each decision as settled, frontier, blocked, deferred, or discarded.
 2. Ask frontier decisions together up to the structured question tool's limit.
-3. Put the recommended option first and give one short reason.
+3. Put the recommended option first and give one short reason. Include “I don't know yet” in structured choices and the Markdown fallback.
 4. Keep decisions blocked when they depend on an unresolved answer or investigation.
 5. Recompute the tree after every round.
-6. Stop when no material frontier or blocked decision remains.
+6. Finish when all material questions are settled, discarded, or deferred, with dependent branches left blocked. Return deferred questions and their blocked branches as open questions rather than repeating them or requiring answers to finish the interview.
 
 ## Root Cause
 
