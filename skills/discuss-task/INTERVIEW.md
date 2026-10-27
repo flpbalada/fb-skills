@@ -20,6 +20,7 @@ A gap is material when its answer could change scope, design, risk, success, or 
 - Inspect relevant files, docs, errors, examples, commands, data, and state before asking.
 - Investigate discoverable facts instead of asking the user.
 - Ask the user for product, scope, preference, and trade-off decisions.
+- Surface implicit domain rules, terminology, defaults, and workarounds. Treat suspected knowledge as unconfirmed until its holder or an authoritative source makes it explicit.
 - If the user delegates a decision, settle it with the recommended answer and record the reason.
 - Accept “I don't know” without pressure to choose. Defer the question and continue with independent questions.
 - Record whether resolution needs stakeholder input, research, or LLM-assisted exploration. Suggestions from an LLM remain proposals until supported by evidence or accepted by the user.
